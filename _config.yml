@@ -8,7 +8,7 @@
 remote_theme: "mmistakes/minimal-mistakes"
 
 # not sure if i added this
-theme: minimal-mistakes-jekyll
+#theme: minimal-mistakes-jekyll
 
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
