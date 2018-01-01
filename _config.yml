@@ -8,6 +8,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# abb
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -27,6 +30,7 @@ twitter_username:
 github_username:
 logo: # path of site logo, e.g. "/assets/images/logo.png"
 
+# abb - jekyll-remote-theme
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-basically-basic
@@ -35,6 +39,8 @@ plugins: # previsously gems
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-remote-theme
+
 feed:
   path: atom.xml
 
