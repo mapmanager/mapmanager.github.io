@@ -48,10 +48,6 @@ Map Manager is software to annotate and analyze 3D image time-series
 - Robert Cudmore's blog <A HREF="http://cudmore.github.io/">Blog</A>
 - Software for <A HREF="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</A>
 
-### About
-
-All code and documentation written by [Robert Cudmore][2].
-
 
 [1]: http://wavemetrics.com
 [2]: http://robertcudmore.org
