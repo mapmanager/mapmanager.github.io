@@ -1,41 +1,59 @@
----
+# Site title and subtitle. This is used in _includes/header.html
+title: 'Map Manager'
+subtitle: ''
 
-port: 4000
-host: 0.0.0.0
-safe: false
+# if you wish to integrate disqus on pages set your shortname here
+disqus_shortname: ''
 
+# if you use google analytics, add your tracking id here
+google_analytics_id: ''
 
-### Original design
-### https://github.com/t413/SinglePaged
+# Enable/show navigation. There are there options:
+#   0 - always hide
+#   1 - always show
+#   2 - show only if posts are present
+navigation: 2
 
-### site serving configuration ###
-exclude: [CNAME, README.md, .gitignore]
-permalink: /:title ## disables post output
-timezone: null
-lsi: false
+# URL to source code, used in _includes/footer.html
+author: 'Robert Cudmore'
+codeurl: 'https://github.com/cudmore/mapmanager'
+myhomepage: 'http://robertcudmore.org/index.html'
+
+# Default categories (in order) to appear in the navigation
+sections: [
+    ['workflow', 'Workflows'],
+    ['imagingcore', 'Imaging Core'],
+    ['interface', 'Interface Windows'],
+    ['plot', 'Plots'],
+    ['analysis', 'Analysis'],
+    ['post', 'Blog Posts']
+]
+
+# Keep as an empty string if served up at the root. If served up at a specific
+# path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
+baseurl: '/mapmanager'
+
+# To provide a link to .pdf for each post
+#pdfurl: '/Vascular-Analysis/_siteprint'
+
+# Dates are not included in permalinks
+#permalink: none
+permalink: /:title
+
+# Syntax highlighting
+#highlighter: rouge
+
+# Since these are pages, it doesn't really matter
+future: true
+
+# Exclude non-site files
+exclude: ['bin', 'README.md']
+
+# Use the redcarpet Markdown renderer
 markdown: kramdown
 
-
-### content configuration ###
-title:       "Map Manager"
-keywords:    "SinglePaged, jekyll, template, github, blog, single page"
-description: "A single-page template for Jekyll based blogs (like what you'd use on github pages!)"
-source_link: "https://github.com/mapmanager/mapmanager.github.io"
-favicon:     "img/favicon.ico"
-touch_icon:  "img/apple-touch-icon.png"
-google_analytics_key: # UA-49607422-1 ## put YOUR key here to enable tracking! (blank to disable)
-
-
-### template colors, used site-wide via css ###
-colors:
-  black:     '#111111'
-  white:     '#f8f8f8'
-  blue:      '#49a7e9'
-  green:     '#9bcf2f'
-  purple:    '#c869bf'
-  orange:    '#fab125'
-  turquoise: '#0fbfcf'
-
 kramdown:
-  auto_ids:  false
-
+   input: GFM
+   syntax_highlighter: rouge
+   hard_wrap: false
+  

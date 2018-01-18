@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class=page-header>
+    <h3>{{ page.title }}
+        {% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}
+    </h3>
+</div>
+
+{{ content }}
+
+{% include post-tags.html %}

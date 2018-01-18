@@ -1,0 +1,26 @@
+<div class="post-tags">
+  {% if post %}
+    {% assign tags = post.tags %}
+  {% else %}
+    {% assign tags = page.tags %}
+  {% endif %}
+  
+  {% if tags != empty %}
+    <b>Tags:</b>  
+  {% endif %}
+  
+  {% for tag in tags %}
+    <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="{{site.pdfurl}}{{page.path | replace:'.md','.pdf'}}">print pdf</a>
+   <BR>
+   -->
+    
+</div>
