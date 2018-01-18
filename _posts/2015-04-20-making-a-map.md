@@ -3,7 +3,7 @@ layout: page
 title: "Making a map"
 category: workflow
 date: 2015-04-20 22:46:33
-order: 2
+order: 3
 tags:
 - Workflow
 - Getting Started

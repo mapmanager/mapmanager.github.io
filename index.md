@@ -11,7 +11,7 @@ Map Manager is software to annotate and analyze 3D image time-series
 
 <BR>
 
-<IMG class="img-float-right" SRC="/mapmanager/images/imagingcore/stack_example_spines.jpg" width="400">
+<IMG class="img-float-right" SRC="/images/imagingcore/stack_example_spines.jpg" width="400">
 
 ### Features
 

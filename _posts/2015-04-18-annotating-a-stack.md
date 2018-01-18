@@ -3,7 +3,7 @@ layout: page
 title: "Annotating a stack"
 category: workflow
 date: 2015-02-21 22:46:33
-order: 1
+order: 2
 tags:
 - Imaging core
 - Workflow
