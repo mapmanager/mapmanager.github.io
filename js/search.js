@@ -44,8 +44,20 @@ jQuery(function() {
         results.forEach(function(result) {
           var item = loaded_data[result.ref];
 
+console.log(item)
+
           // Build a snippet of HTML for this result
-          var appendString = item.date + ' - <a href="' + '/mapmanager' + item.url + '">' + item.title + '</a><BR>';
+          // changed 20180118
+          // was this and works
+          //var appendString = item.date + ' - <a href="' + '/mapmanager' + item.url + '">' + item.title + '</a><BR>';
+          
+          // now this
+          //works but has date
+          //var appendString = item.date + ' - <a href="' + '' + item.url + '">' + item.title + '</a><BR>';
+          
+          var appendString = '' + '<a href="' + '' + item.url + '">' + item.title + '</a><BR>';
+
+          //var appendString = item.date + ' - <a href="' + item.url + '">' + item.title + '</a><BR>';
 		  //console.log(appendString);
 
           // Add it to the results
