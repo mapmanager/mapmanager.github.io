@@ -44,7 +44,7 @@ jQuery(function() {
         results.forEach(function(result) {
           var item = loaded_data[result.ref];
 
-console.log(item)
+		//console.log(item)
 
           // Build a snippet of HTML for this result
           // changed 20180118

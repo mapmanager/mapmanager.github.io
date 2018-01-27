@@ -4,55 +4,72 @@
 	width:100%;
     border:0px; /* solid #000000; */
 }
-table.my-header-table td{
+table.my-header-table td {
     border:0px; /* solid #000000; */
-    padding: 5px;
+    padding: 2px;
+	font-size: 1.2em;
+  vertical-align:middle;
+}
+
+#nav {
+	font-size: 1.2em;
+    text-align: justify;
+    min-width: 500px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+#nav:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+#nav li {
+    display: inline-block;
+}
+
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+    margin-top: 16px;
+    margin-bottom: 0px;
+  min-width: 500px;
+	font-size: 1.3em;
 }
 </style>
 </header>
 
 <div class=no-print>
 
-<div style="float: right;"><A HREF="search.html">Search...</A></div>
+<!-- <ul id="nav"> -->
+<ul class="myul">
 
-<table class="my-header-table">
+	<li>
+		<a class=brand href="{{ site.baseurl }}/">{{ site.title }}</a>
+	    {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
+	</li>
 
-<tr>
+	<li>
+	<A HREF="{{ site.baseurl }}/features">Features</a>
+	</li>
 
-<td>
-<h4>
-	<a class=brand href="{{ site.baseurl }}/">{{ site.title }}</a>
-    {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
-</h4>
-</td>
+	<li>
+	<A HREF="{{ site.baseurl }}/download">Download</a>
+	</li>
 
-<td>
-<h4>
-<A HREF="{{ site.baseurl }}/features">Features</a>
-</h4>
-</td>
+<!--
+	<li>
+	<A HREF="{{ site.baseurl }}/getting-started">Getting Started</a>
+	</li>
+-->
 
-<td>
-<h4>
-<A HREF="{{ site.baseurl }}/download">Download</a>
-</h4>
-</td>
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
 
-<td>
-<h4>
-<A HREF="{{ site.baseurl }}/getting-started">Getting Started</a>
-</h4>
-</td>
-
-<td>
-<h4>
-<A HREF="{{ site.baseurl }}/about">About</a>
-</h4>
-</td>
-
-</tr>
-</table>
-
+</ul>
 <!--
 <div float=right>
 <a href="javascript:window.print()" float=right>print</a>
@@ -61,4 +78,4 @@ table.my-header-table td{
 
 
 
-</div>
+</div> <!-- no-print -->
