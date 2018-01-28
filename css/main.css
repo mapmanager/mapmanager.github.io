@@ -59,7 +59,7 @@ kbd {
 /* if it was p.capital you would use <p class="capital"> */
 #header {
     border-bottom: 1px solid #eee;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
 }
 
 #header a:hover {
@@ -68,7 +68,7 @@ kbd {
 
 #footer {
     margin: 20px 0;
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #999;
     text-align: center;
 }
@@ -86,7 +86,7 @@ kbd {
 
 
 #navigation {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 /* this effects all <a> inside <li> */
@@ -98,6 +98,7 @@ kbd {
 #navigation .nav-header {
     padding-left: 0;
     padding-right: 0;
+    font-size: 1.0em;
 }
 
 /* i added these */

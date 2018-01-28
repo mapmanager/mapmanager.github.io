@@ -1,49 +1,21 @@
 <header>
 <style>
-.my-header-table {
-	width:100%;
-    border:0px; /* solid #000000; */
-}
-table.my-header-table td {
-    border:0px; /* solid #000000; */
-    padding: 2px;
-	font-size: 1.2em;
-  vertical-align:middle;
-}
-
-#nav {
-	font-size: 1.2em;
-    text-align: justify;
-    min-width: 500px;
-    margin-top: 12px;
-    margin-bottom: 0px;
-}
-#nav:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-}
-#nav li {
-    display: inline-block;
-}
-
 .myul {
   display: flex;
   justify-content:space-between;
   list-style-type: none;
-    margin-top: 16px;
-    margin-bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   min-width: 500px;
-	font-size: 1.3em;
+  font-size: 1.3em;
 }
+
 </style>
 </header>
 
 <div class=no-print>
 
-<!-- <ul id="nav"> -->
 <ul class="myul">
-
 	<li>
 		<a class=brand href="{{ site.baseurl }}/">{{ site.title }}</a>
 	    {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}
@@ -57,25 +29,11 @@ table.my-header-table td {
 	<A HREF="{{ site.baseurl }}/download">Download</a>
 	</li>
 
-<!--
-	<li>
-	<A HREF="{{ site.baseurl }}/getting-started">Getting Started</a>
-	</li>
--->
-
 	<li>
 		<form action="/search2.html" method="get">
 			<input placeholder="Search..." type="text" id="search-box" name="query">
 		</form>
 	</li>
-
 </ul>
-<!--
-<div float=right>
-<a href="javascript:window.print()" float=right>print</a>
-</div>
--->
-
-
 
 </div> <!-- no-print -->
