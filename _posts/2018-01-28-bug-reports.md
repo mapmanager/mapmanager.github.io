@@ -1,11 +1,9 @@
 ---
 layout: page
-title: "Support"
-category: xxx
-date: 2018-01-18 00:00:10
-order: 2
-tags:
-- Main Menu
+title: "Bug Reports"
+category: post
+date: 2018-01-28 00:00:01
+order: 7
 ---
 
 <head>
@@ -14,11 +12,11 @@ tags:
 </style>
 </head>
 
-Contact Robert Cudmore directly or fill out the form.
+Contact Robert Cudmore directly
 
-We are always looking for feedback, ideas, and collaborations...
+Or, fill out this form
 
-### Map Manager Support
+### Map Manager Bug Report
 
 <form action="//formspree.io/robert.cudmore@gmail.com"
       method="POST">
@@ -82,7 +80,7 @@ Message
 
 	<input type="hidden" name="_format" value="plain" />
 
-	<input type="hidden" name="whereicamefrom" value="MapManagerSupport" />
+	<input type="hidden" name="whereicamefrom" value="MapManagerBug" />
 
     <input type="hidden" name="_next" value="thanks" />
 
@@ -95,12 +93,5 @@ Message
  </TD>
  </TR>
 </form>
-
-<BR>
-
-- Robert Cudmore's <A HREF="http://robertcudmore.org/" target="_blank">Home Page</A>
-- Robert Cudmore's blog <A HREF="http://cudmore.github.io/" target="_blank">Blog</A>
-- <A HREF="https://github.com/mapmanager" target="_blank">Map Manager Github repository</A>
-- <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji macros and plugins</A> (GitHub)
 
 <BR>

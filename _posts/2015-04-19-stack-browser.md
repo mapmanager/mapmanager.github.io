@@ -15,6 +15,8 @@ tags:
  
 The stack browser is the main starting point for using Map Manager. The stack browser provides an interface to load and browse folders of .tif [stacks][3].
 
+Open the stack browser from the main menu 'MapManager &rarr; Stack Browser'.
+
 The list on the left is a list of loaded folders. Select a folder (on the left) and the list on the right will show the individual stacks within that folder. Double click a stack to open a [stack][3] window.
 
 ### Loading stacks

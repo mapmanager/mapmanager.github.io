@@ -9,7 +9,9 @@ tags:
 ---
 
 
-The Map Manager time-series panel provides an interface to load, save and browse Map Manager time-series (maps). Open the time-series panel using the menu 'MapManager - Time Series'
+The time-series panel provides an interface to load, save and browse Map Manager time-series (maps).
+
+Open the time-series panel using the menu 'MapManager &rarr; Time Series'
 
 Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right.
 

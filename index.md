@@ -36,17 +36,16 @@ Map Manager is software to annotate and analyze 3D image time-series
 - [Making a map][4].
 
 ### Extending Map Manager analysis
-- <A HREF="https://github.com/cudmore/MapManager-Matlab">Map Manager - Matlab</A> - A Matlab class library to load, analyze, and plot Map Manager files. Allows for arbitrary new analysis to be easily scripted.
-- <A HREF="https://github.com/cudmore/PyMapManager">PyMapManager</A> - A Python package   to load, analyze, and plot Map Manager files. Allows for arbitrary new analysis to be easily scripted.
+- <A HREF="https://github.com/cudmore/MapManager-Matlab" target="_blank">Map Manager - Matlab</A> - A Matlab class library to load, analyze, and plot Map Manager files. Allows for arbitrary new analysis to be easily scripted.
+- <A HREF="http://blog.cudmore.io/PyMapManager" target="_blank">PyMapManager</A> - A Python package   to load, analyze, and plot Map Manager files. Allows for arbitrary new analysis to be easily scripted.
 
 
 ### Links
 
-- <A HREF="https://github.com/cudmore/mapmanager">Map Manager</A> (Github)
-- <A HREF="https://github.com/cudmore/bob-fiji-plugins">Fiji macros and plugins</A> (GitHub)
-- Robert Cudmore's <A HREF="http://robertcudmore.org/">Home Page</A>
-- Robert Cudmore's blog <A HREF="http://cudmore.github.io/">Blog</A>
-- Software for <A HREF="http://cudmore.github.io/Vascular-Analysis/">Vascular Analysis</A>
+- <A HREF="https://github.com/mapmanager" target="_blank">Map Manager</A> (Github)
+- <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji macros and plugins</A> (GitHub)
+- Robert Cudmore's <A HREF="http://robertcudmore.org/" target="_blank">Home Page</A>
+- Robert Cudmore's blog <A HREF="http://cudmore.github.io/" target="_blank">Blog</A>
 
 
 [1]: http://wavemetrics.com

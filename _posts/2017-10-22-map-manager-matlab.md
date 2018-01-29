@@ -9,7 +9,9 @@ tags:
 ---
 
 
-[Map Manager - Matlab][1] is an easy to use Matlab class library that will open and plot Map Manager (Igor) files. The reason we created this was to allow the user to extend the analysis of Map Manager annotations in the familiar Matlab environment.
+<A HREF="https://github.com/cudmore/MapManager-Matlab" target="_blank">Map Manager - Matlab</A> is an easy to use Matlab class library that will open and plot Map Manager (Igor) files.
+
+The reason we created this was to allow the user to extend the analysis of Map Manager annotations in the familiar Matlab environment.
 
 
 [1]: https://github.com/cudmore/MapManager-Matlab

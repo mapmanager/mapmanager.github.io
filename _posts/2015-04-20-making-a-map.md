@@ -20,14 +20,11 @@ The time-series panel shows a list of open maps on the left. When a map is selec
 ### Pre-process your raw data
 Map Manager will only import single channel .tif stacks. If your stacks have two or more color channels, they need to be de-interleaved into separate .tif files, one .tif file per color channel. We have [Fiji plugins][21] to do exactly this for Zeiss LSM/CZI, Prairie View, and ScanImage.
 
- - ScanImage, use **[bAlignBatch][21]**
- - Zeiss, use **[bFolder2MapManager][21]**
- - Prairie, use **[bPrairie2tif][21]**
+ - Zeiss LSM/CZI, use **[bFolder2MapManager][21]**
+ - ScanImage, use **[bFolder2MapManager][21]**
+ - Prairie View, use **[bPrairie2tif][21]**
 
 ### 1. Open and initialize Map Manager 
-
-<p class="important"><B>Important.</B> Map Manager will only work with Igor Pro 6. Please make sure you have Igor Pro 6 or <A HREF="https://www.wavemetrics.com/order/order_igordownloads6.htm">download a trial version of Igor Pro 6.3</A>.
-</p>
 
  1. Open Igor Pro with MapManager.ipf
  2. Click on the empty command window to activate Map Manager and its menus
@@ -38,7 +35,7 @@ Map Manager will only import single channel .tif stacks. If your stacks have two
 In the time-series window 'Map Making' tab
 
  1. Enter a new map name.
- 2. Set the number of channels for each stack in your map
+ 2. Set the number of channels for each stack in your map. 
  2. Create a new map with '<span style="color:green">New Map</span>'.
  
 #### 2.1 Appending stacks to your map

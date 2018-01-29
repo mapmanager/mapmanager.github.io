@@ -19,22 +19,28 @@ This describes a workflow for annotating 3D annotations in a **single stack**. T
 - Click in the Igor Pro command window to compile (the command window is titled 'Untitled').
 - Open the [Stack Browser][2] window by selecting the main menu 'MapManager - Stack Browser'.
 
-#### 2. Load a stack
+#### 2. Load a folder of .tif stacks
 
-Load a folder of .tif files in the [Stack Browser][2] using the 'Load Tiff Folder' button.
+Load a folder of .tif stacks in the [Stack Browser][2] using the 'Load Tiff Folder' button.
 
-<p class="important">You need to set the proper X/Y/Z stack scale, in um, with keyboard shift+p. This is a critical step in Map Manager as many measurements are made using um. Once annotations are created the scale can not be changed.</p>
+Single channel .tif stacks can be opened directly into the Stack Browser.
+
+If you have multi-channel stacks or stacks acquired using Zeiss Zen, Scan Image, or Prairie View software then please see the [Fiji Plugins](fiji-plugins) page to easily convert these formats before import.
 
 #### 3. Display a stack
 
 Once a stack is loaded in the [Stack Browser][2], double-click on its name in the list to display the stack in a [stack][1] window.
 
 #### 4. Add 3D annotations
+
 - In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
 - Add a new 3D annotation with shift+click.
 - Delete an annotation by selecting the point (single left-click) and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>.
 - Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Notes can then be searched using the [search][6] panel.
 - See [stack annotations][12] for more information.
+
+<p class="important">Before a stack can be annotated, the voxel size (in um) needs to be set. If you use the <A HREF="fiji-plugins">Fiji plugins</A> this should already be taken care of. If not, open the stack and use keyboard shift+p to set the voxel size</p>
+
 
 #### 5. Saving and loading annotations
 
