@@ -3,7 +3,7 @@ layout: page
 title: "Stack Annotations"
 category: imagingcore
 date: 2015-04-20 22:46:33
-order: 3
+order: 4
 tags:
 - Imaging core
 ---
@@ -13,6 +13,9 @@ tags:
 ### Creating and Editing 3D annotations
 
 <IMG class="img-float-right" SRC="images/imagingcore/stack_db.png" WIDTH="500">
+
+There are two types of annotations, **spines** and **other**. To create **spines**, a [line segment](#creating-line-segments) has to be traced and then spines are attached to this segment.
+ 
 
 #### Creating an annotation
 

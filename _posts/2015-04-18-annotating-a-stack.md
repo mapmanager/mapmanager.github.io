@@ -33,14 +33,22 @@ Once a stack is loaded in the [Stack Browser][2], double-click on its name in th
 
 #### 4. Add 3D annotations
 
+<p class="important">Before a stack can be annotated, the voxel size (in um) needs to be set. If you use the <A HREF="fiji-plugins">Fiji plugins</A> this should already be taken care of. If not, open the stack and use keyboard shift+p to set the voxel size</p>
+
+There are two types of annotations, **spines** and **other**. To create **spines**, a line segment has to be traced and then spines are attached to this segment. See [stack annotations][12] for instructions on creating line segments.
+
 - In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
 - Add a new 3D annotation with shift+click.
 - Delete an annotation by selecting the point (single left-click) and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>.
 - Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Notes can then be searched using the [search][6] panel.
 - See [stack annotations][12] for more information.
 
-<p class="important">Before a stack can be annotated, the voxel size (in um) needs to be set. If you use the <A HREF="fiji-plugins">Fiji plugins</A> this should already be taken care of. If not, open the stack and use keyboard shift+p to set the voxel size</p>
+#### 4.1 Marking annotations bad
 
+Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given image stack and see you already decided **not** to include a putative spine in your analysis.
+
+ - Select an annotation with a single mouse click (selected annotations are yellow).
+ - Right-click and select 'bad'
 
 #### 5. Saving and loading annotations
 
@@ -59,9 +67,10 @@ The search panel will search all annotations in a stack and return a list of ann
 
 Different types of searches are performed with buttons:  
 
-- All : Generate a list of all annotations in a stack.
-- Notes : Generate a list of all annotations with notes.  
-- Close : Search for annotations that have other annotations within a 3D distance.
+- **All** : Generate a list of all annotations in a stack.
+- **Notes** : Use '*' to generate a list of all annotations with notes. You 'mynote' to generate a list of annotations with notes beginning with 'mynote'.
+- **Bad** : Generate a list of all annotations marked as 'bad'.  
+- **Close** : Generate a list of annotations that have other annotations within a 3D distance.
 
 If you zoom the stack window (ctrl+mouse wheel or keyboard <kbd>+</kbd>) you can snap to different points while maintaining the zoom using the search panel 'Snap' checkbox.
 

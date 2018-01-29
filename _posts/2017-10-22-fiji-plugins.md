@@ -49,6 +49,15 @@ This is done seemlesly from within Map Manager and only requires an installed Fi
 
 The Map Manager code to fit dendritic segments is a modified version of the <A HREF="https://imagej.net/Simple_Neurite_Tracer" target="_blank">Simple Neurite Tracer</A> Fiji plugin.
 
+### Exporting stack annotations to Fiji
+
+A Fiji plugin (bMergeChannels) is provided to open all the annotations and segments from a stack into Fiji and display them in the ROI manager, a 3D viewer, and in Simple Neurite Tracer.
+
+ - From a stack window select the main menu 'MapManager - Experimental - Export To Fiji'. This will generate a number of text files in a folder named 'MapManagerExport' on the desktop.
+ - Open Fiji and drag and drop the 'bMergeChannelsv1_.py' plugin onto the Fiji window. The plugin is in the main map manager source code in the 'Tracing' folder.
+ - In Fiji, run the plugin and select the .txt file corresponding to the stack that was just exported. The plugin will display the stack, create an ROI manager, and display a 3D view of the stack with line segments and annotations included.
+ - The tracing can also be opened in [Simple Neurite Tracer][5]. In Fiji, with the stack window frontmost, select 'Plugins - Segmentation - Simple Neurite Tracer'. In Simple Neurite Tracer, load the .swc file (in the MapManagerExport folder) corresponding to the stack that was just exported.
+ 
 
 [1]: https://github.com/cudmore/bob-fiji-plugins
 [2]: hdd-paths

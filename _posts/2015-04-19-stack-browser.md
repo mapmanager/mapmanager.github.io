@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Stack Browser"
-category: interface
+category: imagingcore
 date: 2015-04-19 22:46:33
 order: 1
 tags:

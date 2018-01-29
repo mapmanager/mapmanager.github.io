@@ -102,10 +102,16 @@ Dendritic tracings are specified with control points and then fit using a custom
     - **Delete** a spine with right-click 'Delete' or keyboard <kbd>delete</kbd>.
     - All spines are automatically connected to the dendritic segment with a line. Edit the connection point with right-click 'Manual Connect'.
  
-<p class="tip"><B>Tip.</B> Be very liberal in your scoring, mark anything you think might be a spine. All annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad objects stay in the database but are **not** included in the final analysis. As your datasets grow, marking putative spines with an annotation and then as bad allows you to return to a given image stack and see you already decided **not** to include a putative spine in your analysis.</p>
+### 5.1 Marking annotations bad
+
+Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given image stack and see you already decided **not** to include a putative spine in your analysis.
+
+ - Select an annotation with a single mouse click (selected annotations are yellow).
+ - Right-click and select 'bad'
    
 
 ### 6. Edit the dynamics of annotations between timepoints
+
 
 #### 6.1 Editing annotation dynamics manually from a run plot
 

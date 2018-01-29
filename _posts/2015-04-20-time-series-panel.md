@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Time Series"
-category: interface
+category: imagingcore
 date: 2015-04-20 22:46:33
 order: 2
 tags:
@@ -19,33 +19,36 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-small.png" WIDTH="225">
 
+#### Opening, saving, and closing maps
+
  - **Open Map**. Open/Load a map from the hard-drive.
  - **Save Map**. Save selected map to hard-drive. By default, only the portions of the map that need saving are saved. Ctrl+click will save the entire map.
-
+ - **Close Map**. Right click a map and select 'Close Map'.
+ 
 <p class="important"><B>Opening Maps.</B> When opening a map, select the maps '.ipf' file. If a map is named 'mymap', load 'mymap.ipf'.
 </p>
 
 #### Plot
  - **Object Map**. Open a [map plot][12]. For spines, this will plot the position of each spine along its dendritic segment versus time-points (Sessions). For other annotations, this will plot annotations in their creation order. In both cases, these plots are crucial tools to visualize annotation dynamics.
  - **Segment Map**. Open a [map plot][12] showing the segments within each session and the connectivity of segments across sessions. This is only for spine annotations that have segment tracings.
- - **X Axis**. Choose different X-Axis for Object and Segment map plots. Available X-Axis are:
-    - Sessions 
-    - Datetime
-    - Days
-    - Hours
-    - Zero Sessions
-    - Zero Days
-    - Zero Hours
- - **X-Axis Condition**.
-    
-Datetime, Days and Hours require stacks to have a date/time specified. A stacks date/time can be manually edited by turning on 'Edit Date/Time' in the Utility Tab. The X-Axis options 'Zero Sessions', 'Zero Days', 'Zeros Hours' use a session in the map as a zero timepoint. Specify this by right-clicking on a stack and selecting 'Zero Session'. The zero session for a map will have a '*' in its session list. Zero session is also used when plotting from time-series panel tabs including: Dynamics, Trajectory, and Intensity.
+ - **X Axis**. Choose different X-Axis for Object and Segment map plots.
+    - **Sessions.** Will plot the X-Axis as 0, 1, 2, ... 
+    - **Datetime.** Will plot the X-Axis is calendar month, day, and year. This require stacks to have a date and time specified. If stacks were converted using the [Fiji plugins](fiji-plugins), this should be done automatically. A stacks date and time can be manually edited by turning on 'Edit Date/Time' in the Utility Tab.
+    - **Days.** Will plot the X-Axis as days with the first session as day zero. Same requirements as Datetime.
+    - **Hours.** Will plot the X-Axis as hours, with the first session as hour zero. Same requirements as Datetime.
+    - **Zero Sessions.** Use a session in the map as a zero timepoint. Specify this by right-clicking on a stack and selecting 'Zero Session'. The zero session for a map will have a '*' in its session list. Zero session is also used when plotting from time-series panel tabs including: Dynamics, Trajectory, and Intensity.
+    - **Zero Days.** Will plot the X-Axis as days from a zero session. Same requirements as Zero Session.
+    - **Zero Hours.** Will plot the X-Axis as hours from a zero session. Same requirements as Zero Session.
+ - **X-Axis Condition**. Will plot the X-Axis as a condition string. Session conditions can be edited by a right-click in the session list header (the row with column labels above the session list) and selecting 'Edit Conditions'. Session conditions are also used to merge annotation measurements across sessions in the [map pool](map-pool).
+ 
+
     
 #### Panels
 
- - **Search**. Open the [search panel][5].
- - **Plot**. Open the [plot panel][6].
- - **Pool**. Open the [map pool panel][16].
- - **Map DB**. Open a map database panel to quickly browse and load maps from hard-drive. **No documentation yet**.
+ - **Search**. Open the [search panel][5] to search annotations in a map.
+ - **Plot**. Open the [plot panel][6] to make advanced plots.
+ - **Pool**. Open the [map pool panel][16] to pool spine annotations across sessions and maps.
+ - **Map DB**. Open a [map database panel](map-database) to quickly browse and load maps from hard-drive.
 
 
 #### Miscellaneous

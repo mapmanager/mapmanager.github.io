@@ -8,10 +8,16 @@ tags:
 - faq
 ---
 
-### 20180117
+### 201801
  
  - Fixed map 'subtraction' search. Previously was not returning 'transient' objects as subtraction
  - All windows should now have a main menu help that brings user to web page for help for that window.
+ - Revamped documentation with lots of changes including
+   - [stack](stack) documentation now inclused 'global contrast' and 'buttons'. Open both from the main MapManager menu.
+   - Added [map database](map-database) documentation.
+ - Added Fiji plugin to open stack annotations and segments in ROI manager, 3D view, and Simple Neurite Tracer.
+ - Added floating panel to give feedback when moving and manually connecting an annotation.
+ - Map manager documentation is now at http://mapmanager.github.io
  
 ### 20171030
 
