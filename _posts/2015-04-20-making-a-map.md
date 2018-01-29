@@ -17,28 +17,30 @@ A map is a time-series of [stacks][2]. You create a map by appending stacks from
 
 The time-series panel shows a list of open maps on the left. When a map is selected (het3b in this example), a list of sessions in the map are shown on the right (in this example there are 12 sessions).
 
-### Pre-process your raw data
-Map Manager will only import single channel .tif stacks. If your stacks have two or more color channels, they need to be de-interleaved into separate .tif files, one .tif file per color channel. We have [Fiji plugins][21] to do exactly this for Zeiss LSM/CZI, Prairie View, and ScanImage.
+### 1. Pre-process your raw data
+Map Manager is designed to import single channel .tif stacks in a particular format. If your stacks have been acquired with proprietary software such as Zeiss Zen, Scan Image, or Prairie view, they need to be massaged into separate .tif files. One .tif file per color channel.
+
+We have [Fiji plugins][21] to do exactly this for Zeiss LSM/CZI, Prairie View, and ScanImage.
 
  - Zeiss LSM/CZI, use **[bFolder2MapManager][21]**
  - ScanImage, use **[bFolder2MapManager][21]**
  - Prairie View, use **[bPrairie2tif][21]**
 
-### 1. Open and initialize Map Manager 
+### 2. Open and initialize Map Manager 
 
  1. Open Igor Pro with MapManager.ipf
  2. Click on the empty command window to activate Map Manager and its menus
  3. Open the [stack browser][1] window with menu 'MapManager - Stack Browser'.
  4. Open the [time-series][13] window with menu 'MapManager - Time series'.
  
-### 2. Make a new map
+### 3. Make a new map
 In the time-series window 'Map Making' tab
 
  1. Enter a new map name.
  2. Set the number of channels for each stack in your map. 
  2. Create a new map with '<span style="color:green">New Map</span>'.
  
-#### 2.1 Appending stacks to your map
+#### 3.1 Appending stacks to your map
  1. In the stack browser, select the stack you want to append to a map. If your stacks have more than one color channel, you can select any of the color channels.
  2. In the time-series panel 'Map Making' tab, press 'Append Stack' button.
  3. Repeat for each stack you want in your map.
@@ -49,19 +51,19 @@ In the time-series window 'Map Making' tab
  - **Stack scale is important.** Make sure the scale of each imported stack is correct. It is hard to change the scale later. If you use the provided Fiji plugins this should be taken care of. If necessary, set the scale of a stack in its stack window with <kbd>shift</kbd>+<kbd>p</kbd>.
  - **The order of stacks is important.** Make sure the timepoints in your map are imported in the correct order. It is hard to change the order later.
  
-#### 2.2 Saving a map
+#### 3.2 Saving a map
 
 Save the map with 'Save Map' button. New maps are saved to a default hard-drive folder specified in the [Hard Drive Paths][10] panel.
 
-#### 2.3 Opening a map
+#### 3.3 Opening a map
 
 Open a Map Manager map using the 'Open Map' button in the [time-series][13] panel. When you open a map named 'mymap', you need to open the file 'mymap.ipf'.
 
-#### 2.4 Congratulations, you just made a Map Manager map.
+#### 3.4 Congratulations, you just made a Map Manager map.
 
 The rest of this workflow covers tracing dendritic segments, adding spines, and connecting spines across timepoints. Before you do any of this, play with the stacks in your map. From the time-series window, open a run of stacks by right-clicking on a session and selecting 'Plot Run +- 1'.
 
-### 3. Create dendritic tracings
+### 4. Create dendritic tracings
 
 Dendritic tracings are specified with control points and then fit using a custom Fiji plugin. Before fitting a line in Fiji, you need to specify the path to your Fiji application in the [Hard Drive Paths][10] panel.
 
@@ -81,7 +83,7 @@ Dendritic tracings are specified with control points and then fit using a custom
 <p class="tip"><B>Tip.</B> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the time-series panel. This way, you can see the line segments you are making in each session of your map.</p>
 
 
-### 4. Connect your line segments together
+### 5. Connect your line segments together
  1. Close all stack windows using the <span style="color:blue">Close Windows</span> button in the time-series panel.
  2. Open a new stack run by right-clicking a session in your map and selecting the '**Plot Run +- All**' menu.
  3. Turn on the 'Segments' edit checkbox in the left control bar of a stack window. Open the left control bar with keyboard <kbd>[</kbd>.
@@ -92,7 +94,7 @@ Dendritic tracings are specified with control points and then fit using a custom
 
 <p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the time-series panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
    
-### 5. Mark spines in each timepoint
+### 6. Mark spines in each timepoint
  1. Open a single timepoint [stack][2] window by double clicking a session in the time-series window.
  2. Make sure 'Segments' edit checkbox is off.
  3. See [stack annotations][4] to mark spines along your new segment.
@@ -102,7 +104,7 @@ Dendritic tracings are specified with control points and then fit using a custom
     - **Delete** a spine with right-click 'Delete' or keyboard <kbd>delete</kbd>.
     - All spines are automatically connected to the dendritic segment with a line. Edit the connection point with right-click 'Manual Connect'.
  
-### 5.1 Marking annotations bad
+### 6.1 Marking annotations bad
 
 Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given image stack and see you already decided **not** to include a putative spine in your analysis.
 
@@ -110,10 +112,10 @@ Be very liberal in your scoring, mark anything you think might be a spine. Annot
  - Right-click and select 'bad'
    
 
-### 6. Edit the dynamics of annotations between timepoints
+### 7. Edit the dynamics of annotations between timepoints
 
 
-#### 6.1 Editing annotation dynamics manually from a run plot
+#### 7.1 Editing annotation dynamics manually from a run plot
 
 ##### Opening a run plot
 
@@ -132,7 +134,7 @@ As you edit the dynamics between annotations, all connections are automatically 
 
 Before you make any edits to an annotation, it is both added and subtracted by default (e.g. transient). Annotations in the first timepoint can never be marked as added. Likewise, annotations in the final timepoint can never be marked as subtraction.
 
-#### 6.2 Editing annotation dynamics with [Find Points][16]
+#### 7.2 Editing annotation dynamics with [Find Points][16]
 
 <span style="color:red">WARNING: As of 20171023, the interface to find point is a bit broken</span>
 
@@ -147,9 +149,9 @@ The Find Points panel will generate an automatic guess for the best connections 
 This is the core of Map Manager and you will spend most of your time doing this. 
 
  
-### 7. Curating your connected objects
+### 8. Curating your connected objects
 
-#### 7.1 Review your work by using search to query all addition, subtraction and transient
+#### 8.1 Review your work by using search to query all addition, subtraction and transient
 
  - Open the [search panel][5] from the time-series panel with the 'Search' button.
  - Search for added annotations with the 'Addition' button. The 'Addition' button is in the 'Map' tab.
@@ -158,7 +160,7 @@ This is the core of Map Manager and you will spend most of your time doing this.
  - Visually check that you agree the annotation is an addition and edit if necessary. Once you are in a run plot, you can always add and delete annotations, and edit the dynamics manually.
  - Do the same by searching for 'Subtraction' and then 'Transient'
  
-#### 7.2 Browse the connections visually and edit as necessary
+#### 8.2 Browse the connections visually and edit as necessary
 
 <span style="color:red">This is a repeat of what we already described above</span>
 
