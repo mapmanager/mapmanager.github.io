@@ -8,20 +8,18 @@ tags:
 - Fiji
 ---
 
-Map Manager uses a number of custom <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins to convert raw data into a format that can be imported into Map Manager.
 
 Map Manager also has an internal Fiji plugin to fit dendritic segments.
 
-### Converting raw 3D data to open in Map Manager
+### Converting image stacks to open in Map Manager
 
-Map Manager can open 3D .tif image stack with 1, 2, or 3 color channels.
+Map Manager has a number of custom <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins to convert raw image stacks into a format that can be imported into Map Manager.
+
+Map Manager will open 3D .tif image stack with 1, 2, or 3 color channels.
 
  - Map Manager **will** open single color channel 3D .tif files.
  - Map Manager will <span style="color:red">not</span> open 3D volumes that have interleaved color channels.
  - Map Manager will <span style="color:red">not</span> open 3D volumes saved as individual .tif files
-
-Fiji plugins are provided to make these conversions fast and easy.
-
 
 Please see the <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</A> Github repository for the most recent version of each of these plugins.
 
@@ -51,11 +49,11 @@ The Map Manager code to fit dendritic segments is a modified version of the <A H
 
 ### Exporting stack annotations to Fiji
 
-A Fiji plugin (bMergeChannels) is provided to open all the annotations and segments from a stack into Fiji and display them in the ROI manager, a 3D viewer, and in Simple Neurite Tracer.
+A Fiji plugin (bMergeChannels) is provided to open all annotations and segments in a stack into Fiji, displaying them in the Fiji ROI manager, 3D viewer, and in Simple Neurite Tracer.
 
- - From a stack window select the main menu 'MapManager - Experimental - Export To Fiji'. This will generate a number of text files in a folder named 'MapManagerExport' on the desktop.
+ - From a stack window, select the main menu 'MapManager - Experimental - Export To Fiji'. This will generate a number of text files in a folder named 'MapManagerExport' on the desktop.
  - Open Fiji and drag and drop the 'bMergeChannelsv1_.py' plugin onto the Fiji window. The plugin is in the main map manager source code in the 'Tracing' folder.
- - In Fiji, run the plugin and select the .txt file corresponding to the stack that was just exported. The plugin will display the stack, create an ROI manager, and display a 3D view of the stack with line segments and annotations included.
+ - In Fiji, run the plugin and select the .txt file corresponding to the stack that was just exported. The plugin will display the stack, all annotations in the ROI manager, and display a 3D view of the stack with line segments and annotations included.
  - The tracing can also be opened in [Simple Neurite Tracer][5]. In Fiji, with the stack window frontmost, select 'Plugins - Segmentation - Simple Neurite Tracer'. In Simple Neurite Tracer, load the .swc file (in the MapManagerExport folder) corresponding to the stack that was just exported.
  
 

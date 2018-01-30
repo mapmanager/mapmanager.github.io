@@ -8,7 +8,7 @@ tags:
 - Analysis
 ---
 
-### Algorithm and Strategy
+### Algorithms
 
 All intensity analysis is performed by calculating statistics (Sum, Mean, standard-deviation, N) from the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.
 
