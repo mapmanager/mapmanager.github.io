@@ -10,73 +10,92 @@ tags:
 - Getting Started
 ---
 
-This describes a workflow for annotating 3D annotations in a **single stack**. To annotate a timeseries of stacks, please see [making a map][3].
+This is a workflow for annotating 3D annotations in a **single time-point stack**. To annotate a **time-series of stacks**, please see [making a map][3].
 
 
-#### 1. Open and initialize Map Manager
+#### 1. Run Map Manager
 
-- Open Map Manager in Igor Pro (double-click the MapManager.ipf file).
-- Click in the Igor Pro command window to compile (the command window is titled 'Untitled').
-- Open the [Stack Browser][2] window by selecting the main menu 'MapManager - Stack Browser'.
+- Run Map Manager in Igor Pro by double-clicking on the MapManager .ipf file.
+- Click in the Igor Pro command window to activate Map Manager. The Igor Pro command window is titled 'Untitled'.
 
-#### 2. Load a folder of .tif stacks
+#### 2. Load a folder of Tiff stacks
 
-Load a folder of .tif stacks in the [Stack Browser][2] using the 'Load Tiff Folder' button.
+Open the Map Manager [Stack Browser][2] by selecting the main menu 'MapManager &rarr; Stack Browser'.
 
-Single channel .tif stacks can be opened directly into the Stack Browser.
+In the Map Manager [Stack Browser][2], load a folder of .tiff files using the 'Load Tiff Folder' button.
 
-If you have multi-channel stacks or stacks acquired using Zeiss Zen, Scan Image, or Prairie View software then please see the [Fiji Plugins](fiji-plugins) page to easily convert these formats before import.
+Single channel .tif stacks can be opened directly into the Stack Browser. If you have multi-channel stacks or stacks acquired using propietary software such as Zeiss Zen, Scan Image, or Prairie View then please see the [Fiji Plugins](fiji-plugins) page to easily convert these formats before import.
 
 #### 3. Display a stack
 
-Once a stack is loaded in the [Stack Browser][2], double-click on its name in the list to display the stack in a [stack][1] window.
+Once a folder of stacks is loaded in the [Stack Browser][2], double-click on a stack in the stack list to display the stack in a [stack][1] window.
 
 #### 4. Add 3D annotations
 
-<p class="important">Before a stack can be annotated, the voxel size (in um) needs to be set. If you use the <A HREF="fiji-plugins">Fiji plugins</A> this should already be taken care of. If not, open the stack and use keyboard shift+p to set the voxel size</p>
+Map Manager has two types of annotations: **spines** and **other**. A global option needs to be set to work with one or the other
 
-There are two types of annotations, **spines** and **other**. To create **spines**, a line segment has to be traced and then spines are attached to this segment. See [stack annotations][12] for instructions on creating line segments.
+- Open the global options panel with 'MapManager - Options'.
+- For spines, select 'spines' in the 'Default scoring' popup.
+- For other, select 'Cell Bodies' in the 'Default scoring' popup.
+
+<p class="important">Before a stack can be annotated, the voxel size (in um) needs to be set. If you use the <A HREF="fiji-plugins">Fiji plugins</A> this should already be taken care of. If not, display the stack and use keyboard shift+p to set the voxel size</p>
+
+
+#### 4.1 Adding line segments (for spine annotations)
+
+To create **spines**, a line segment has to be traced and then spines are attached to this segment. See [stack annotations][12] for detailed instructions on creating line segments.
+
+- In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
+- Enable segment editing with the ‘Segments’ checkbox.
+- Create a new (empty) line segment with the + button.
+- Shift+click to make a series of 3D control point annotations along a dendritic segment.
+- Continue making control points along the dendritic segment.
+- Fit the line segment in Fiji with a right-click on the new line segment (in the top left list of segment) and select ‘Make From Control Points - FIJI’.
+
+#### 4.2 Adding annotations (spines and/or other)
 
 - In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
 - Add a new 3D annotation with shift+click.
-- Delete an annotation by selecting the point (single left-click) and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>.
+
+#### 5. Editing annotations
+
+- Select an existing annotation with a single-click. Selected annotations appear yellow.
+- Delete an annotation by first selecting the annotation and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>.
 - Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Notes can then be searched using the [search][6] panel.
 - See [stack annotations][12] for more information.
 
-#### 4.1 Marking annotations bad
+#### 5.1 Marking annotations bad
 
-Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given image stack and see you already decided **not** to include a putative spine in your analysis.
+Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given stack and see you already decided **not** to include a putative spine in your analysis.
 
  - Select an annotation with a single mouse click (selected annotations are yellow).
  - Right-click and select 'bad'
 
-#### 5. Saving and loading annotations
+#### 6. Saving and loading annotations
 
 - Save stack annotations using the 'Save Stack' button.
 - The next time a folder of .tif files is opened, the annotations for each stack will automatically be opened
 
-#### 6. Generating reports
+#### 7. Generating reports
 
 Map Manager provides tabular reports for annotation density. See [reports][11].
 
-#### 7. Searching annotations
+#### 8. Searching annotations
 
-Open the [Search][6] panel from the main menus 'Map Manager - Search'.
+Open the [Search][6] panel from the main menu 'MapManager &rarr; Search'.
 
-The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in the [stack][1] window.
+The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in a [stack][1] window.
 
 Different types of searches are performed with buttons:  
 
 - **All** : Generate a list of all annotations in a stack.
-- **Notes** : Use '*' to generate a list of all annotations with notes. You 'mynote' to generate a list of annotations with notes beginning with 'mynote'.
+- **Notes** : Use '&#42;' to generate a list of all annotations with notes. Enter 'mynote&#42;' to generate a list of annotations that have notes beginning with 'mynote'.
 - **Bad** : Generate a list of all annotations marked as 'bad'.  
 - **Close** : Generate a list of annotations that have other annotations within a 3D distance.
 
 If you zoom the stack window (ctrl+mouse wheel or keyboard <kbd>+</kbd>) you can snap to different points while maintaining the zoom using the search panel 'Snap' checkbox.
 
 The search results are a static output report. Once a search is performed, if annotations in the stack window are modified (added, deleted, moved, etc.) the search results will not be automatically updated. If the annotations are modified in the stack window, simply regnerate the search results by perform the search again.
-
-
 
 <div class="print-page-break"></div>
 

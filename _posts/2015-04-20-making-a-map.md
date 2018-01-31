@@ -63,9 +63,9 @@ Open a Map Manager map using the 'Open Map' button in the [time-series][13] pane
 
 The rest of this workflow covers tracing dendritic segments, adding spines, and connecting spines across timepoints. Before you do any of this, play with the stacks in your map. From the time-series window, open a run of stacks by right-clicking on a session and selecting 'Plot Run +- 1'.
 
-### 4. Create dendritic tracings
+### 4. Create dendritic tracings (for spine annotations)
 
-Dendritic tracings are specified with control points and then fit using a custom Fiji plugin. Before fitting a line in Fiji, you need to specify the path to your Fiji application in the [Hard Drive Paths][10] panel.
+All spine annotations are connected to a dendritic tracing. Dendritic tracings are specified with control points and then fit using a custom Fiji plugin. Before fitting a line in Fiji, you need to specify the path to your Fiji application in the [Hard Drive Paths][10] panel.
 
  1. **Open a [stack][2] window.** In the time-series panel, double-click the first session in your map.
  2. **Create a line segment.** See instruction in stack annotations ['Creating and editing line segments'][19].
@@ -83,7 +83,7 @@ Dendritic tracings are specified with control points and then fit using a custom
 <p class="tip"><B>Tip.</B> When specifying control points and setting segment pivots, you can open multiple stack windows at the same time. Just double-click on each session in the time-series panel. This way, you can see the line segments you are making in each session of your map.</p>
 
 
-### 5. Connect your line segments together
+### 5. Connect line segments together (for spine annotations)
  1. Close all stack windows using the <span style="color:blue">Close Windows</span> button in the time-series panel.
  2. Open a new stack run by right-clicking a session in your map and selecting the '**Plot Run +- All**' menu.
  3. Turn on the 'Segments' edit checkbox in the left control bar of a stack window. Open the left control bar with keyboard <kbd>[</kbd>.
@@ -94,17 +94,34 @@ Dendritic tracings are specified with control points and then fit using a custom
 
 <p class="tip"><B>Tip.</B> You can see how your segments are connected by plotting a 'Segment Map' from the time-series panel. In the segment map window, right-click a segent and select 'Plot Run' to plot a run of segments.</p>
    
-### 6. Mark spines in each timepoint
- 1. Open a single timepoint [stack][2] window by double clicking a session in the time-series window.
- 2. Make sure 'Segments' edit checkbox is off.
- 3. See [stack annotations][4] to mark spines along your new segment.
-    - Select the segment to add a spine to by selecting it in the list of segments or single click a point along the tracing (in the image).
-    - **Create** a spine with shift+click. The spine should be marked at the membrane limit of the spine head, somewhere near the tip of the spine. Remember, all points are in 3D, take care in creating the spine in the correct image plane.
-    - **Move** a spine with right-click 'Move'.
-    - **Delete** a spine with right-click 'Delete' or keyboard <kbd>delete</kbd>.
-    - All spines are automatically connected to the dendritic segment with a line. Edit the connection point with right-click 'Manual Connect'.
+### 6. Create and edit annotations in each timepoint
+
+Map Manager has two types of annotations: **spines** and **other**. A global option needs to be set to work with one or the other
+
+- Open the global options panel with 'MapManager - Options'.
+- For spines, select 'spines' in the 'Default scoring' popup.
+- For other, select 'Cell Bodies' in the 'Default scoring' popup.
+
+All annotations are in 3D points, take care in creating the annotation in the correct image plane. See [stack annotations][4] for more detailed instructions.
+
+Spines should be marked at the membrane limit of the spine head, somewhere near the tip of the spine.
+
+### 6.1 Creating annotations
+
+- Open a single timepoint [stack][2] window by double clicking a session in the time-series window.
+- Make sure 'Segments' edit checkbox is off.
+- For spines, select the segment to add a spine to by selecting it in the list of segments or single click a point along the tracing (in the image).
+- **Create** an annotation with shift+click.
+
  
-### 6.1 Marking annotations bad
+### 6.2 Editing annotations
+
+- **Select** an annotation with a single-click, selected annotations appear yellow.
+- **Move** an annotion with right-click 'Move'.
+- **Delete** an annotation with right-click 'Delete' or keyboard <kbd>delete</kbd>.
+- Spines are automatically **connected** to the dendritic segment with a line. Edit the connection point with right-click 'Manual Connect' and then single-click the new connection point on the segment line.
+
+### 6.3 Marking annotations bad
 
 Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given image stack and see you already decided **not** to include a putative spine in your analysis.
 
@@ -114,13 +131,33 @@ Be very liberal in your scoring, mark anything you think might be a spine. Annot
 
 ### 7. Edit the dynamics of annotations between timepoints
 
+This is the core of Map Manager and you will spend most of your time doing this. 
 
-#### 7.1 Editing annotation dynamics manually from a run plot
+#### 7.1 Manually specifying pivot points
+
+Pivot points tell Map Manager how to snap images between time-point in a [run plot](run-plot) and allow for automatic connections to be generated. The quality of the automatic connection will depend on the accuracy of manually specified pivot point.
+
+Pivot points should correspond to a region of the image that is easily identifiable between timepoint. For spines, this would correspond to a large persistent spine, for other (Cell bodies) this would correspond to a stable cell body.
+
+**Pivot points for spine annotations** are a point along the segment tracing. Right-click a point on the tracing line and select 'Set as Segment Pivot'. This needs to be done for each segment in each time-point.
+
+**Pivot points for other(cell body) annotations** are existing annotations flagged as a pivot. Right-click and existing annotation and select menu 'Set as map pivot'. For pivot points to work, the annotation flagged as a pivot needs to first be connected through the map as persistent. Briefly: (1) select the annotation in the source timepoint, (2) select the desired annotation in the destination timepoint, (3) in the destination timepoint, press keyboard <kbd>p</kbd>.
+
+
+#### 7.2 Automatically connect annotations between time-points
+
+- Open a map window with 'Object Map' button in the [time-series](time-series-panel) panel.
+- Single-click an annotation in the desired time-point (selected annotations appear yellow).
+- Right-click and select menu 'Dynamics - Connect objects to next'.
+
+<p class="important">Automatic connections between time-points relies on manually specified pivot points. If pivot point are not specified or are poorly specified, automatic connections will not work.</p>
+
+#### 7.3 Editing annotation dynamics manually from a run plot
 
 ##### Opening a run plot
 
  - Open an object map from the time-series panel 'Object Map' button
- - In the object map, right-click an annotation and select 'Plot Run +` 1'.
+ - In the object map, right-click an annotation and select 'Plot Run +- 1'. This will open a [run plot](run-plot) which is a series of [stack](stack) windows, one time-point per window.
  - In a stack window in the run, control+click an annotation to snap all stacks in the run to the same image position. This will also automatically select all annotations that are persistent with the one you control+clicked.
  - Once a spine is selected, use <kbd>ctrl</kbd>+<kbd>left arrow</kbd> and <kbd>ctrl</kbd>+<kbd>right arrow</kbd> to select the next spine along the tracing. As you do this, the other stack windows in the run will snap to the same image position and automatically select spines that have been marked as persistent.
 
@@ -132,21 +169,17 @@ Be very liberal in your scoring, mark anything you think might be a spine. Annot
  
 As you edit the dynamics between annotations, all connections are automatically maintained. For example, marking an annotation as addition will automatically disconnect it from any previous annotation it was marked as persistent with.
 
-Before you make any edits to an annotation, it is both added and subtracted by default (e.g. transient). Annotations in the first timepoint can never be marked as added. Likewise, annotations in the final timepoint can never be marked as subtraction.
+New annotation are not connected to other time-points and are thus always both added and subtracted (e.g. transient). Annotations in the first timepoint can never be marked as added or transient. Likewise, annotations in the final timepoint can never be marked as subtraction or transient.
 
-#### 7.2 Editing annotation dynamics with [Find Points][16]
-
-<span style="color:red">WARNING: As of 20171023, the interface to find point is a bit broken</span>
+#### 7.4 Editing annotation dynamics with [Find Points][16]
 
 The dynamics of annotations can be edited using the [Find Points][16] panel. This is done pair-wise between timepoints. For example, if your map has 4 sessions, you will use Find Points first between session 1 and 2, then between sessions 2 and 3, and finally between sessions 3 and 4.
 
 The Find Points panel will generate an automatic guess for the best connections and allow you to set them manually. This automatic guess is using the pivot point in your dendritic segment, if this pivot point does not correspond to a similar region of the segment between timepoints, the guess will be incorrect.
 
  1. Close all stack windows with 'Close Windows' button in time-series panel.
- 2. Open the [Find Points Pane][16] by right-clicking the first session in your map and selecting 'Find Points'.
- 3. In the Find Points panel, you are given a list of all annotations in the source timepoint. Click on a spine in the list and Find Points will open both the source and destination timepoints, zoomed onto that spine.
- 
-This is the core of Map Manager and you will spend most of your time doing this. 
+ 2. Open the [Find Points][16] panel by right-clicking the first session in your map and selecting 'Find Points'.
+ 3. In the Find Points panel, you are given a list of all annotations in the source timepoint. Click on an annotation in the list and Find Points will open both the source and destination timepoints, zoomed onto that annotation.
 
  
 ### 8. Curating your connected objects
