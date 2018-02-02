@@ -8,21 +8,16 @@ tags:
 - Fiji
 ---
 
-
-Map Manager also has an internal Fiji plugin to fit dendritic segments.
-
-### Converting image stacks to open in Map Manager
+### Converting stacks to open in Map Manager
 
 Map Manager has a number of custom <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins to convert raw image stacks into a format that can be imported into Map Manager.
 
 Map Manager will open 3D .tif image stack with 1, 2, or 3 color channels.
 
- - Map Manager **will** open single color channel 3D .tif files.
- - Map Manager will <span style="color:red">not</span> open 3D volumes that have interleaved color channels.
- - Map Manager will <span style="color:red">not</span> open 3D volumes saved as individual .tif files
+ - Map Manager will **not** open 3D .tif files that have interleaved color channels.
+ - Map Manager will **not** open 3D .tif files saved as individual .tif files (Like with Prairie View).
 
 Please see the <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</A> Github repository for the most recent version of each of these plugins.
-
 
 #### Zeis LSM/CZI
 
