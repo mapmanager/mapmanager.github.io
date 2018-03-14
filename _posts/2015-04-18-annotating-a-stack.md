@@ -15,20 +15,20 @@ This is a workflow for annotating 3D annotations in a **single time-point stack*
 
 #### 1. Run Map Manager
 
-- Run Map Manager in Igor Pro by double-clicking on the MapManager .ipf file.
+- Run Map Manager in Igor Pro by double-clicking on the MapManager.ipf file.
 - Click in the Igor Pro command window to activate Map Manager. The Igor Pro command window is titled 'Untitled'.
 
 #### 2. Load a folder of Tiff stacks
 
-Open the Map Manager [Stack Browser][2] by selecting the main menu 'MapManager &rarr; Stack Browser'.
+Single channel Tiff stacks can be opened directly into the Stack Browser. If you have multi-channel stacks or stacks acquired using propietary software such as **Zeiss Zen**, **Scan Image**, or **Prairie View** then please see the [Fiji Plugins](fiji-plugins) page to easily convert these formats before import.
 
-In the Map Manager [Stack Browser][2], load a folder of .tiff files using the 'Load Tiff Folder' button.
+- Open the Map Manager [Stack Browser][2] by selecting the main menu 'MapManager &rarr; Stack Browser'.
 
-Single channel .tif stacks can be opened directly into the Stack Browser. If you have multi-channel stacks or stacks acquired using propietary software such as Zeiss Zen, Scan Image, or Prairie View then please see the [Fiji Plugins](fiji-plugins) page to easily convert these formats before import.
+- In the Map Manager [Stack Browser][2], load a folder of .tiff files using the 'Load Tiff Folder' button.
 
 #### 3. Display a stack
 
-Once a folder of stacks is loaded in the [Stack Browser][2], double-click on a stack in the stack list to display the stack in a [stack][1] window.
+ - Double-click on a stack in the stack list to display the stack in a [stack][1] window.
 
 #### 4. Add 3D annotations
 
@@ -43,14 +43,14 @@ Map Manager has two types of annotations: **spines** and **other**. A global opt
 
 #### 4.1 Adding line segments (for spine annotations)
 
-To create **spines**, a line segment has to be traced and then spines are attached to this segment. See [stack annotations][12] for detailed instructions on creating line segments.
+To create **spines**, a line segment has to be traced and then spines are attached to this segment. Fitting segments is done in Fiji and you need to set the path to Fiji in the [hard drive paths](hdd-paths) panel. See [stack annotations][12] for detailed instructions on creating line segments.
 
 - In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
 - Enable segment editing with the ‘Segments’ checkbox.
 - Create a new (empty) line segment with the + button.
-- Shift+click to make a series of 3D control point annotations along a dendritic segment.
+- Shift+click to make a series of 3D control point annotations along a dendritic segment. Make sure the X/Y position is near the center of the segment and the Z image plane is the brightest plane.
 - Continue making control points along the dendritic segment.
-- Fit the line segment in Fiji with a right-click on the new line segment (in the top left list of segment) and select ‘Make From Control Points - FIJI’.
+- Fit the line segment in Fiji with a right-click on the new line segment (in the top left list of segment) and select ‘Make From Control Points - FIJI’. If this does not work, check your Fiji path in [hard drive paths](hdd-paths).
 
 #### 4.2 Adding annotations (spines and/or other)
 
@@ -62,19 +62,21 @@ To create **spines**, a line segment has to be traced and then spines are attach
 - Select an existing annotation with a single-click. Selected annotations appear yellow.
 - Delete an annotation by first selecting the annotation and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>.
 - Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Notes can then be searched using the [search][6] panel.
+- Each annotation can have a 'user type'. Set the 'user type' with a right-click and select 'user type'. User types can then be searched using the [search][6] panel.
 - See [stack annotations][12] for more information.
 
 #### 5.1 Marking annotations bad
 
-Be very liberal in your scoring, mark anything you think might be a spine. Annotations can be flagged as 'bad' using the right-click menu 'bad'. Bad annotations remain in the database but are **not** included in output [reports](reports). As your datasets grow, marking questionable spines with an annotation and then as bad allows you to return to a given stack and see you already decided **not** to include a putative spine in your analysis.
-
  - Select an annotation with a single mouse click (selected annotations are yellow).
  - Right-click and select 'bad'
+
+Be very liberal in your scoring, mark anything you think might be a valid annotation. Annotations marked 'bad' remain in the database but are **not** included in output [reports](reports) and can be toggled on/off in plots. As your datasets grow, marking questionable annotations as 'bad' allows you to return to a given stack and see you already decided **not** to include a putative annotation in your analysis.
+
 
 #### 6. Saving and loading annotations
 
 - Save stack annotations using the 'Save Stack' button.
-- The next time a folder of .tif files is opened, the annotations for each stack will automatically be opened
+- The next time a folder of Tiff files is loaded, the annotations for each stack will automatically be opened.
 
 #### 7. Generating reports
 
