@@ -19,9 +19,9 @@ Map Manager is software to annotate and analyze 3D image time-series
 
 
 - Track 3D annotations in time-series images including dendritic spines, axonal boutons, cell bodies, and vascular branch points.
-- Semi-automatically identifies corresponding annotions between time-points.
+- Semi-automatically identifies corresponding annotations between time-points.
 - Automatically aligns images between time-points.
-- Designed to work with any image volume including in vivo, ex vivo, and fixed tissue.
+- Designed to work with any 3D/2D image volume including in vivo, ex vivo, and fixed tissue.
 
 ### Analysis
  - Track the dynamics of 3D annotations including persistence, addition, subtraction, and transient.
