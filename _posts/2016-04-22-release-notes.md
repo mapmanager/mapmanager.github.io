@@ -8,6 +8,21 @@ tags:
 - faq
 ---
 
+### 20180330
+
+Working on new version, seeded to
+
+ - SeungEon (Worley). MapManager 20180328. To browse stacks and time-series acquired on Prairie Scope. Also exclusively using Canvas on prairie scope (motor controller, video controller, loading prairie view files).
+ - Yevgeniya (Bergles). MapManager_20180316. To annotate filopodia density in single time-point immuno and to track filopodia dynamics in time-series
+
+ - Will work in Igor 7 (Yevgeniya and SeungEon are using Igor 7)
+ - Fiji tracing plugin will work with spaces in folder paths
+ - Added mean/sd/se/n of filament/spine length to segment report (Yevgeniya)
+ - Cleaned up Point List interface
+ - Marquee to mask now has invert option (useful to make dijoint selection)
+ - Added include/exclude 'bad' annotations option to all searches
+ - Removed edit box from most output report tables. These are to be copied and pasted, not edited
+ 
 ### 201801
  
  - Fixed map 'subtraction' search. Previously was not returning 'transient' objects as subtraction
@@ -15,8 +30,8 @@ tags:
  - Revamped documentation with lots of changes including
    - [stack](stack) documentation now inclused 'global contrast' and 'buttons'. Open both from the main MapManager menu.
    - Added [map database](map-database) documentation.
- - Added Fiji plugin to open stack annotations and segments in ROI manager, 3D view, and Simple Neurite Tracer.
- - Added floating panel to give feedback when moving and manually connecting an annotation.
+ - Added Fiji plugin /tracing/bMergeChannelsv1_.py to open stack annotations and segments in ROI manager, 3D view, and Simple Neurite Tracer.
+ - Added floating panel (inside stack window) to give feedback when moving and manually connecting an annotation.
  - Map manager documentation is now at http://mapmanager.github.io
  
 ### 20171030
