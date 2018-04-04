@@ -22,7 +22,7 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 #### Opening, saving, and closing maps
 
  - **Open Map**. Open/Load a map from the hard-drive.
- - **Save Map**. Save selected map to hard-drive. By default, only the portions of the map that need saving are saved. Ctrl+click will save the entire map.
+ - **Save Map**. Save selected map to hard-drive.
  - **Close Map**. Right click a map and select 'Close Map'.
  
 <p class="important"><B>Opening Maps.</B> When opening a map, select the maps '.ipf' file. If a map is named 'mymap', load 'mymap.ipf'.

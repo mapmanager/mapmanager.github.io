@@ -10,18 +10,26 @@ tags:
 
 ### 20180330
 
+To Do:
+
+- Allow tracing to be reversed (Julia).
+- Provide button to recalculate segment length and spine poisiotn (Zeng-You).
+
 Working on new version, seeded to
 
  - SeungEon (Worley). MapManager 20180328. To browse stacks and time-series acquired on Prairie Scope. Also exclusively using Canvas on prairie scope (motor controller, video controller, loading prairie view files).
  - Yevgeniya (Bergles). MapManager_20180316. To annotate filopodia density in single time-point immuno and to track filopodia dynamics in time-series
 
- - Will work in Igor 7 (Yevgeniya and SeungEon are using Igor 7)
+ - Now works in Igor 7 (Yevgeniya and SeungEon are using Igor 7)
  - Fiji tracing plugin will work with spaces in folder paths
  - Added mean/sd/se/n of filament/spine length to segment report (Yevgeniya)
- - Cleaned up Point List interface
- - Marquee to mask now has invert option (useful to make dijoint selection)
+ - Can now edit user type, bad, and note in search results
  - Added include/exclude 'bad' annotations option to all searches
- - Removed edit box from most output report tables. These are to be copied and pasted, not edited
+ - Cleaned up Point List interface
+ - Marquee to mask now has invert option (useful to make disjoint selections)
+ - Columns can be turned on/off with right-click (in column header) in windows with a list including the Stack Browser, Time-series, Point List, Find Points, and Search.
+ - Added 'Average' to sliding Z-Projection options. Allows time series to be frame averaged.
+ - Removed edit box from all output report tables. These are to be copied and pasted to other programs, not edited within Igor.
  
 ### 201801
  
@@ -85,17 +93,17 @@ Working on new version and have seeded it to the following people
  - fixed errors when initially opening search panel
  - fixed search for added
  
-### 20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)
+#### 20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)
 
 This is a major release with new features, improvements, and bug fixes. A full list of these will follow.
 
-### 20161012, Distributed MapManager to Julia (Linden)
+#### 20161012, Distributed MapManager to Julia (Linden)
 
-### 20160722. Distributed MapManager to Allen (Linden)
+#### 20160722. Distributed MapManager to Allen (Linden)
 
-### 20160630. Distributed MapManager to Mengnan (Huganir)
+#### 20160630. Distributed MapManager to Mengnan (Huganir)
 
-### 20160422 Update (file version 20151224)
+#### 20160422 Update (file version 20151224)
 
 This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!
 

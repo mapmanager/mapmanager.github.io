@@ -8,7 +8,7 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="images/mm3/stack-browser.png" WIDTH="800">
+<IMG class="img-float-left" SRC="images/mm3/stack-browser.png" WIDTH="850">
 
 <div class="print-page-break"></div>
 
@@ -17,7 +17,13 @@ The stack browser is the main starting point for using Map Manager. The stack br
 
 Open the stack browser from the main menu 'MapManager &rarr; Stack Browser'.
 
-The list on the left is a list of loaded folders. Select a folder (on the left) and the list on the right will show the individual stacks within that folder. Double click a stack to open a [stack][3] window.
+The list on the left is a list of loaded folders. Select a folder (on the left) and the list on the right will show the individual stacks within that folder.
+
+To display a [stack][3]:
+
+ - Right click the stack and select 'Display Stack'
+ - Select the stack and hit <kbd>d</kbd> for 'D'isplay.
+ - Double click a stack
 
 ### Loading stacks
 
@@ -31,17 +37,31 @@ The **Load ScanImage Folder** loads a folder of ScanImage .tif stacks.
 
 <p class="important"><B>Important.</B> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
 
+#### Canvas
+
+The **Load Canvas** load an entire canvas of an imaging session. The canvas includes both video snap-shots and the location of two-photon imaging stacks. Please see the <A HREF="http://blog.cudmore.io/canvas">canvas</A> documentation for more information.
 
 #### Drag and drop
 
-A simplest way to load a single stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened in this way will appear in a special folder (in the list on the left) called 'DragAndDrop'.
+A simple way to load a single stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened with drag-and-drop will appear in a special folder named 'DragAndDrop'.
 
-<p class="tip"><B>Tip.</B> The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager map</B></p>. 
+### Browsing stacks
 
-### Browsing loaded data
+Select a folder on the left and the stacks in that folder will be shown on the right.
 
- - Select a loaded folder (on the left) and the stacks in that folder will be shown (on the right).
- - Double click a stack to open a [stack][3] window.
+#### Display a [stack][3]:
+
+ - Right click the stack and select 'Display Stack'
+ - Select the stack and hit <kbd>d</kbd> for 'D'isplay.
+ - Double click a stack
+
+#### Unload a [stack][3]:
+
+Once a stack is displayed, it will remain loaded until it is explicity unloaded with keyboard <kbd>u</kbd>. In this way displaying a stack is faster as the stack does not have to be re-loaded.
+
+#### Sorting stacks
+
+The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select 'Date' in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager map</B>. 
 
 
 
@@ -52,7 +72,7 @@ A simplest way to load a single stack is to drag and drop a .tif file onto the I
 
  - **Unload Folder**. Unload the folder and all its stacks.
 
- - **Stack Report (all stacks)**.
+ - **Stack Report (all stacks)**. Generate a stack [report][reports] for all stacks.
 
  - **Segment Report (all stacks)**. Generate a segment [report][reports] for all stacks.
 

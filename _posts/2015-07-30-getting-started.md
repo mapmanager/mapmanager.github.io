@@ -11,8 +11,9 @@ tags:
 
 #### Install Igor Pro
 
-- Map Manager runs in <A HREF="https://www.wavemetrics.com" target="_blank">Igor Pro</A> on either Windows or Mac OS.
-- Either <A HREF="https://www.wavemetrics.com/order/order1.php?type=Academic">purchase</A> Igor Pro or download a fully function but time limited <A HREF="https://www.wavemetrics.com/support/demos.htm" target="_blank">demo</A>.
+- Map Manager runs in <A HREF="https://www.igorpro.net" target="_blank">Igor Pro</A> 6 or 7 on both Windows and Mac OSX.
+- Please <A HREF="https://www.wavemetrics.com/order/order1.php?type=Academic" target="_blank">purchase Igor Pro</A>
+- Or download a fully function but time limited <A HREF="https://www.wavemetrics.com/support/demos.htm" target="_blank">demo</A>.
 
 <!--
 <p class="important"><B>Important.</B> Map Manager will only work with Igor Pro 6. Please make sure you have Igor Pro 6 or <A HREF="https://www.wavemetrics.com/order/order_igordownloads6.htm">download a trial version of Igor Pro 6.3</A>.
@@ -22,7 +23,7 @@ tags:
 #### Install Map Manager
 
  - Once Igor Pro is installed, there is no formal installation of Map Manager.
- - The source code will be in a folder named `'MapManager_<date>'` where `<date>` is the date the software was created. The folder will be something like `'MapManager_20171021'`.
+ - The source code will be in a folder named `'MapManager_<date>'` where `<date>` is the date the Map Manager was created. The folder will be something like `'MapManager_20180311'`.
  - The source code folder can be placed anywhere on your hard-drive.
  
 #### Run Map Manager

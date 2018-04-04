@@ -8,38 +8,37 @@ tags:
 - Interface
 ---
 
-The find points panel allows you to browse objects between two timepoints/sessions, will show you the best-guess for putative connections, and allow you to connect/disconnect objects across timepoints/sessions.
+The find points panel is used to browse annotations between two timepoints, shows the best-guess for correspondence, and allows annotation correspondence to be edited between timepoints.
 
 To open the find points panel:
 
-  - Right-click a spine in a map and selecting 'Find Points'.
-  - Right-click a session in the time-series panel and selecting 'Find Points'.
-  - Right-click a map in the time-series panel and selecting 'Find Points'.
+  - Right-click an annotation in a [map plot][2] and select 'Find Points'.
+  - Right-click a timepoint in the time-series panel and selecting 'Find Points'.
 
 
 #### Overview
 
-- The find points panel displays a list of all spines in the source timepoint (sIdx). In this example there are 21 spines in the source timepoint.
-- For each spines in the source timepoint, it shows if it is connected to the destination timepoint (dIdx). It will color the dIdx cell red if there is no connection.
-- Any remaining spines in the destination timepoint (spines not connected to the source timepoint) will be displayed at the bottom of the list. In this example there are 3 of these spines.
-- Each spine in the source timepoint will also have a best 'Guess' connection in the 'Guess' column. For spines, this is using your 'Segment Pivot' for the two segments listed in Find Points and will connect spines across timepoints/sessions that are within 'Connect spines within this distance (um)'. See the Map Manager Options Panel to set this.
+- The find points panel displays a list of all annotations in the source timepoint (smIdx). 
+- For each annotation in the source timepoint, it shows if it is connected to the destination timepoint (dmIdx). It will color the dmIdx cell red if there is no connection.
+- Any remaining annotations in the destination timepoint (annotations not connected to the source timepoint) will be displayed at the bottom of the list.
+- Each annotation in the source timepoint ('smIdx') will have a best guess ('mGuess') connection. For spines, this is using the 'Segment Pivot' for the two segments listed in Find Points and will connect spines across timepoints that are within 'Connect spines within this distance (um)'. See the Map Manager [Options Panel][3] to set this.
  
 <IMG class="img-float-left" SRC="images/mm3/mm3-find-points-panel.png" WIDTH="500">
 <div class="print-page-break"></div>
 
 #### Interface
 
-  - **From TP.** Source timepoint/session (From TP)
-  - **To.** Destination timepoint/session (To timepoint)
+  - **From TP.** Source timepoint.
+  - **To.** Destination timepoint.
   - **Object Type.** Select the type of objects to display.
   - **ShowBad.** If checked, bad points will be included in the list. Bad points will always have their 'Idx' column in red.
   - **Segment ID.** Limit the list to one segment ID.
   - **All Segments.** Generate the list for all segments. If you are connecting spines, leave this off (unchecked).
-  - **Refresh.** Will refresh the Find Points list. [as of Nov 2015, there may be some edits to the map that do not refresh the list automatically.]
+  - **Refresh.** Refresh the Find Points list.
 
 #### Column Names
 
-Clicking on any column name will sort the list by the values in that column. Column names starting with 's' are for the source timepoint (from TP), column names starting with 'd' are for the destination timepoint (to TP).
+Clicking on a column name will sort the list by the values in that column. Column names starting with 's' are for the source timepoint (from TP), column names starting with 'd' are for the destination timepoint (to TP).
 
   - **Idx** - The row index in the table (no relation to object index).
   - **sIdx** - Source object stack db index.
@@ -84,3 +83,4 @@ Example usage of find points panel. Here, we have a run of sessions 1/2/3 (top r
 
 [1]: run-plot
 [2]: map-plot
+[3]: stackdb-options-panel
