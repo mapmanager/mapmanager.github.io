@@ -9,55 +9,89 @@ tags:
 ---
 
 
+Use the search panel to find annotations in a single stack or map or all loaded stacks and maps.
+
+Opening the search panel
+
+ - From the main menu 'MapManager - Search'
+ - From the time-point window 'Search' button
+
 <IMG class="img-float-left" SRC="images/mm3/mm3-search-panel.png" WIDTH="900">
 
 <div class="print-page-break"></div>
 
-The search panel allows a stack or map to be searched for stack db objects.
+
+### Searching
+
+Select the type of object to search with the 'Object Type' popup.
+
+Select the scope of the search, either a stack or a map, and choose wether to 'include bad' annotations in the search.
+
+Click any of the buttons down the left hand side of the panel to perform a search. The resulting annotations will be show as a list on the right.
 
 #### Interacting with results
 
-Performing a search will create a list of object matching the search criteria. Selecting an entry in the search results will select that object in any open [stack][3] and [map][2] plots. Likewise, selecting an object in a [stack][3] or [map][2] plot will select the object in the search list (if it is in the list).
+All searches will return a list of annotations. Right-click an annotation to open the annotation in a [stack][3] or [run plot][4]. Selecting an annotation (left-click) will select that annotation in any open [stack][3] and [map][2] plots. Likewise, selecting an annotation in a [stack][3] or [map][2] plot will select the annotation in the search result list (if it is in the list).
 
-  - Single-click or scroll with keyboard will select the object in existing stack windows (it will not open or pan/zoom the existing stack windows).
-  - Double-click to open and select the object in its corresponding [stack][3].
-  - Option-click to zoom the object in an already open stack plot.
-  - Right-click to open a [run plot][4].
+Sort the results by clicking on the column header. Additional 'smart' sorting is provided with the sort buttons:
 
-#### Types of searches
+ - **Sort.** Sort by idx, map, segmentID, sess, pnt
+ - **Sort Mod Time.** Sort by mSeconds, idx
+ - **Sort Segments.** Sort by map, sess, segmentID, pDist, idx
 
-First select the type of object with 'Object Type' popup. Start by selecting 'Spine'.
+Right-click the columns to choose the columns to display. This includes 'Date Time', 'Note', 'Errors and Warnings', and 'Spine Info'.
 
-#### Objects
 
-  - **All.** All objects of 'Object Type'
-  - **Bad.** Objects marked bad
-  - **Errors and Warning.** Objects with [Intensity Analysis][5] errors and warnings. USe the Error and Warning checkboxes in the upper right of the panel to toggle these columns on and off.
-  - **Int Dirty.** Returns spines with dirty intensity analysis. Spines with dirty intensity analysis can be analyzed in the main [map manager panel][6], intensity tab.
-  - **Int User.**
-  - **Int Bad.**
-  - **Notes.** Objects with notes matching the search criteria. Use '\*' as a wildcard. Use '\*' to return all objects with notes, use 'thistext\*' to search for notes starting with 'thistext'.
-  - **Closeness.** Returns object that are within specified distance (um) of each other.
-  - **V Spines.** Return spines where the z-plane of the spine head is farther (in z) from the connected backbone/dendrite line.
-  - **ROI Bounds.** Return spines with background ROI within specified distance (um) from edges of image. This is useful if stack alignment has been run causing images to be shifted/rotated resulting in undefined regions on the edge of the image.
-  - **Segment Ends.** Return objects within specified distance (um) of the end of their segment/backbone line.
+### Editing searches
+
+<IMG class="img-float-right" SRC="images/mm3/search/search-right-click.png" WIDTH="200">
+
+Once a search is performed, right click on an annotation in the results list to open a popup to either display or edit the annotation. Annotations can be tagged as bad or as a particular user type.
+
+
+### Types of searches
+
+#### Annotations
+
+  - **All.** Find all annotations of 'Object Type'.
+  - **Bad.** Find annotations marked bad.
+  - **Notes.** Find annotations with notes matching the search criteria. Use an asterix (\*) as a wildcard. Use \* to return all annotations with a note, use thistext\* to find annotation with notes starting with 'thistext' or ending with 'thistext' using \*thistext.
+  - **Closeness.** Find annotations that are within specified distance (um) of each other. This is useful for finding erroneous/duplicate annotations.
+  - **User Bool.**
+  - **User Type.** Find annotations tagged with a user type 0, 1, 2, ...
   
+#### Spines
+
+  - **V Spines.** Find spines where the z-plane of the spine head is farther (in z) from the connected backbone/dendrite line. This is useful for finding spines that project out of the imaging plane. 
+  - **Segment Ends.** Find spines within specified distance (um) of the end of their segment/backbone line. This is useful for finding problematic spines during [spine intensity analysis][5].
+
 #### Map Tab
 
-  - **Addition.**
-  - **Subtraction.**
-  - **Persistent.**
-  - **Transient.**
-  - **Bad Runs.** Return a list of objects that have a mixture of good and bad within their respective run. This is used for debugging and will be removed.
-  - **Re Added.** Return a list of added spines that have a previous subtraction (on a previous timepoint) that is within specified distance along the backbone/dendrite.
+  - **Addition.** Find annotations that are addition.
+  - **Subtraction.** Find annotations that are subtraction.
+  - **Persistent.** Find annotations that are persistent (not that usefull).
+  - **Transient.** Find annotations that are transient. Transient annotations occur in only one time-point.
+  - **Bad Runs.** Find annotations that have a mixture of good and bad within their respective run. This is used for debugging and will be removed.
+  - **Re Added.** (Spines) Find added spines that have a previous subtraction (on a previous timepoint) that is within specified distance along the backbone/dendrite.
+  - **Jumping.**
+  - **Changing User 1.**
+  - **Changing User Type.** Find all annotations that are connected to other annotations with a different user type. In general, user types (like bad) should be the same for all connected annotations.
   
 #### Manual Tab
-  Return a list of objects matching a user specified criterion.
+  Find annotations matching a user specified criterion.
   
   Do this by selecting a statistic in the list, specify a value, and an operator (>, >=, <, <=, =, Not).
   
-  For example, to generate a search of all long spines, select sLen2d/IntCh1, enter a spine length (um) like 4, select '>' operator and press the 'Manual Search' button.
-     
+  For example, to find all spines/filapodia longer than 3 um, select 'Stat:sLen2d Type:IntCh1', enter a value 3, select '>' operator and press the 'Manual Search' button.
+
+#### Intensity Tab
+
+  - **Int Dirty.** Find spines with dirty intensity analysis. Spines with dirty intensity analysis can be analyzed in the main [map manager panel][6], intensity tab.
+  - **Int User.**
+  - **Int Bad.**
+  - **ROI Bounds.** Find spines with background ROI within specified distance (um) from edges of image. This is useful if stack alignment has been run causing images to be shifted/rotated resulting in undefined regions on the edge of the image.
+  - **Errors and Warning.** Find annotations with [Intensity Analysis][5] errors and warnings. To display the Errors and Warnings columns, right-click the column headers and select 'Errors and Warnings'. See [intensity analysis][5].
+ 
 [1]: stack-browser
 [2]: map-plot
 [3]: stack-plot

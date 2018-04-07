@@ -162,46 +162,77 @@ See the [intensity analysis][4] page for a thouough decription.
 
  - **Close Fiji When Done**. Always leave this on. This has been depreciated and will be remove.
 
-### Miscellaneous
+### Object Properties
 
 <IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="250">
 
-A table to set how annotations are displayed. Right-click on 'marker' or 'color' to set. Double-click on 'size' to set. Note, 'size' is in arbitrary Igor Pro centric units.
+Use this table to set how annotations and lines are displayed. Right-click on 'marker' or 'color' to set. Double-click on 'size' to set. Note, 'size' is in arbitrary Igor centric units, generally between 1 and 10.
 
 |Idx      |Name		|Meaning
 | :-------------- | :------------- | :-------------
+| Annotation Display	|	| Set the size, color and marker of annotations
 |0	|spineROI		| Spine marker in stack and map plot
 |1	|boutonROI		| 
 |2	|controlPnt		| 	
 |3	|pivotPnt		| 
-|4	|lineROI		| 
-|5	|otherROI		| 
-|6	|pntSel			| Point selection marker
-|7	|runSel			| Run selection marker
-|8	|maskSel		| Mask selection marker
-|9	|flashSel		| Marker used to flash point selections (makes them easier to visually locate)
-|10	|globalPivot	| 
-|11	|lineSel		| 
-|12	|line			| Segment tracing line
-|13	|radius			| Segment tracing radius
-|14	|sROI			| Spine intensity ROI
-|15	|dROI			| Dendrite/segment intensity ROI
-|16	|sbROI			| Spine background ROI
-|17	|dbROI			| Dendrite/segment background ROI
-|18	|Bad			| Bad annotations
-|19	|Add			| Added
-|20	|Subtract		| Subtracted
-|21	|Persistent		| Persistent
-|22	|Transient		| Transient
-|28	|User Type 0..9		| Markers for user type 0..9
+|4	|otherROI		| 
+|5	|lineROI		| 
+|6	|rectROI		| 
+|7	|ovalROI		| 
+| Annotation Selection	| 	|
+|8	|pntSel			| Point selection, when an annotation is selected
+|9	|runSel			| Run selection, when a run is selected
+|10	|maskSel		| Mask selection, when a mask is selected
+|11	|flashSel		| On selection, annotations are flashed
+| Other	|	|
+|12	|globalPivot	| 
+|13	|lineSel		| Not sure any more, go figure out the brain
+|14	|line			| Segment tracing line
+|15	|radius			| Segment tracing radius
+|16	|plotLine		| Line connecting corresponding annotations in map plots
+| Spine Intensity	|	|
+|17	|sROI			| Spine intensity ROI
+|18	|dROI			| Dendrite/segment intensity ROI
+|19	|sbROI			| Spine background ROI
+|20	|dbROI			| Dendrite/segment background ROI
+| Annotation dynamics	|	|
+|21	|Bad			| Bad annotations
+|22	|Add			| Added
+|23	|Subtract		| Subtracted
+|24	|Persistent		| Persistent
+|25	|Transient		| Transient
+| User 1/2/3	|	|
+|26	|User 1_1		| Not used
+|27	|User 1_2		| Not used
+|28	|User 1_3		| Not used
+|29	|User 1_4		| Not used
+|30	|User 1_5		| Not used
+| User Type	|	|
+|31	|User Type 0	| User type 0
+|32	|User Type 1	| User type 1
+|33	|User Type 2	| User type 2
+|34	|User Type 3	| User type 3
+|35	|User Type 4	| User type 4
+|36	|User Type 5	| User type 5
+|37	|User Type 6	| User type 6
+|38	|User Type 7	| User type 7
+|39	|User Type 8	| User type 8
+|40	|User Type 9	| User type 9
  
 
 ### Load Stacks From Special Folder
 
 <IMG class="img-float-right" SRC="images/mm3/options/options-special-folder.png" WIDTH="250">
 
-Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the **channels8** option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin bConvertTo8Bit_v5_.py to convert entire directories of tiff stacks to 8-bit.
+Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the **channels8** option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin [bConvertTo8Bit_v5_.py][7] to convert entire directories of tiff stacks to 8-bit.
 
+ - **folder_channels**
+ - **folder_channels_channels8**
+ - **folder_channels8**
+ - **folder_userRaw**
+ - **folder_out:folder_out_aligned**
+ - **Raw Prairie**
+ 
 <div class="print-page-break"></div>
 
 ### Stack Browser Options
@@ -212,6 +243,7 @@ Additional option are available in the Stack Browser Options panel.
 
 Open the Stack Browser Options panel using the 'Options' button in the [stack browser][6].
 
+Sorry for the inconvenience, we are moving all option to the main map manager options and downgrading the stack browser options.
 
 <div class="print-page-break"></div>
 
@@ -221,3 +253,4 @@ Open the Stack Browser Options panel using the 'Options' button in the [stack br
 [4]: intensity
 [5]: time-series-panel
 [6]: stack-browser
+[7]: https://github.com/cudmore/bob-fiji-plugins/blob/master/bConvertTo8Bit_v5_.py
