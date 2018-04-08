@@ -1,7 +1,14 @@
 # Site title and subtitle. This is used in _includes/header.html
 title: 'Map Manager'
 subtitle: ''
+description: 'Software to annotate image volume time-series'
+url: 'https://mapmanager.github.io'
 
+social:
+  name: Robert Cudmore
+  links:
+    - https://github.com/cudmore
+    
 # if you wish to integrate disqus on pages set your shortname here
 disqus_shortname: ''
 
@@ -16,8 +23,8 @@ navigation: 2
 
 # URL to source code, used in _includes/footer.html
 author: 'Robert Cudmore'
-codeurl: 'https://github.com/cudmore/mapmanager'
-myhomepage: 'http://robertcudmore.org/index.html'
+codeurl: 'https://mapmanager.github.io'
+myhomepage: 'http://robertcudmore.org'
 
 # Default categories (in order) to appear in the navigation
 sections: [
@@ -57,4 +64,8 @@ kramdown:
    input: GFM
    syntax_highlighter: rouge
    hard_wrap: false
+   
+plugins:
+  - jekyll-seo-tag
+
   
