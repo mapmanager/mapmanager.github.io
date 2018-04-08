@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Map Manager Documentation"
+title: "Map Manager"
 ---
 
 <BR>
 
 <p style="font-size:20px">
-Map Manager is software to annotate and analyze 3D image time-series
+Map Manager is software to annotate and analyze image volume time-series
 </p>
 
 <BR>
