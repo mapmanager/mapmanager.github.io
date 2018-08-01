@@ -39,17 +39,49 @@ To open a point list panel
 
 ### Interface
 
-Select individual annotations in the list and the selection will propagate to open [stack windows][1], [stack][5] plots and [map][2] plot windows.
+Select individual annotations in the list and the selection will propagate to open [stack windows][1], [stack][5] plots and [map][2] plot windows. The action performed when an annotation is selected can be specified in the 'On Selection' popup.
 
-The behavior of selecting is defined by the 'On Selection' popup. Choose one of 'Select', 'Select + Snap Image', and 'Select + Snap Image + Zoom'.
+ - **Select.** Select the annotation .
+ - **Select + Snap Image.** Select the annotation and snap to the (z) image plane.
+ - **Select + Snap Image + Zoom.** Select the annotation, snap to the (z) image plane, and zoom in on the annotation. The amont of zoom is controlled in [Options][options] - Stack Display - Default Zoom Width/Height.
+
+Choose the type of annotation to display with the 'Object Type' popup. For spine annotations, the list can be limited to one or all segments.
 
 <strike>Keyboard 'b' will toggle the selected object between bad and good.</strike>
 
 ### Edit User Type
 
-Turn on the 'Edit User Type' checkbox and use keyboard 0-9 to set the value of 'userType':
+Turn on the 'Edit User Type' checkbox and use keyboard 0-9 to set the value of 'User Type'. Counts for each User Type are included for each segment in each [segment report][4].
 
-Counts for each of these user types are included for each segment in each [segment report][4].
+
+<div class="print-page-break"></div>
+
+### Columns
+
+<IMG class="img-float-right" SRC="images/mm3/point-list2-columns.png" WIDTH="170">
+
+A left-click on a column header will sort the table by that column. Shit+click the column header to reverse sort. Columns can be turned on and off with a right-click in the column headers. 
+
+Here is a partial list of the meaning of each column. See [intensity][5] for a list of the meaning of additional columns.
+
+
+|Column	|Meaning
+| :-------------- | :-------------
+|Idx		|The row in the table
+|roiType		|The type of annotation (spineROI, controlPnt, otherROI). Control the displayed types with the 'Object Type' popup.
+|channel		|The channel the annotation was created in.
+|isBad		|Bad annotations are shown as '1'. In single time-point analysis, set annotations bad with keyboard <kbd>b</kbd>.
+|parentID	|The segment number a spine annotation is attached to
+|z			|The z-image plane the annotation is in
+|nnDist		|Distance (um) to the nearest spine annotation.
+|pDist		|Only for spine annotation maps, the distance (plus or minus) away from the pivot point
+|cDate/cTime	| The creation date and time
+|mDate/mTime	| The modification date and time
+|userType	| The User Type for an annotation. User types can be edited by turning on 'Edit User Type' and using keyboard 0-9.
+|sLen2d	| The 2D length of each spine annotation
+|sLen3d	| The 3D length of each spine annotation
+
+<BR>
 
 ### Plotting
 
@@ -65,32 +97,6 @@ For example, to plot 'spine length 3d' versus 'background subtracted spine sum'.
  - Right-click on 'ubssSum' column and select 'Set X Stat'
  - Click the 'Plot' button.
 
-<div class="print-page-break"></div>
-
-### Columns
-
-To make the table easier to read, columns can be turned on and off with a right-click in the column headers.
-
-A left-click on a column header will sort the table by that column. Shit+click the column header to reverse sort.
-
-Here is a partial list of the meaning of each column. See [intensity][5] for a list of the meaning of additional columns.
-
-
-|Column	|Meaning
-| :-------------- | :-------------
-|Idx		|The row in the table
-|parentID	|The segment number a point (spine) belongs to
-|dbIdx		|The row in the stack db
-|roiType		|The type of the point (spineROI, controlPnt, otherROI)
-|isBad		|A '1' if the point is marked bad. Toggle this with keyboard 'b'
-|intBad		|A '1' if the point ismarked intensity bad
-|z			|The z-image plane the point is in
-|nnDist		|Distance (um) to the nearest spine.
-|dDist		|The distance (um) along the segment the point (spine) is attached to.
-|pDist		|Only for maps, the distance (plus or minus) away from the pivot point
-
-<BR>
-
 
 [1]: stack
 [2]: map-plot
@@ -99,3 +105,4 @@ Here is a partial list of the meaning of each column. See [intensity][5] for a l
 [5]: intensity
 [5]: stack-plot
 [6]: intensity
+[options]: stackdb-options-panel
