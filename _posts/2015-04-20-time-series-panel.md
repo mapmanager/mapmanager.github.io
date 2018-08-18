@@ -83,8 +83,8 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
  - **Plot Run +- n**.
  - **Zero Session**. Set the selected stack to the zero session. Zero sessions are used when plotting a map with X-Axis set to 'Zero Session', 'Zero Days', and 'Zero Hours'. The zero session will have an Asterix (\*) before its session index in the list of sessions.
  - **Find Points**. Open [find points panel][15].
- - **Edit Table**. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.
- - **Unload Stack**. Unload the raw image data for a stack. Unloading a stack does not unload the stack annotations.
+ - **Edit Table**. This will display the contents of the stack list in a text table. This is useful to copy/paste information for each stack in a time-series into another program.
+ - **Unload Stack**. Unload the raw image data for a time-point. This can also be done by selecting the time-point and hitting keyboard <kbd>u</kbd>. This is useful to conserve memory by unloading the raw image data for a given time-point. Time-points that have their raw image data loaded are denoted with an 'X' in the 'D' column.
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-right-click-header.png" WIDTH="140">
 

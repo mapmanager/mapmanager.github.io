@@ -102,8 +102,9 @@ Options that control the display of [stack][1] windows. Changes will be applied 
  - **Warn On Delete Objects**.
  - **New Objects On Mouse Click (no shift)**.
  - **Allow New Objects When Viewing Sliding Z-Projection**.
- - **Search line points when connecting spine/bouton**.
- - **New Object (Shift+Click)**. The default object to make on shift+click.
+ - **Always Show Object Info**. When checked, the object info panel will always be shown when opening a stack window.
+ - **Search Line Pnts When Connecting Spine/Bouton**. Set the number of candidate lines to search for brightest path from the spine/bouton head to the segment backbone. See [algorithms][algorithms].
+ - **New Objects**. The default object to make on shift+click.
  - **Default plot object**.
 
 ### Object Map
@@ -254,3 +255,4 @@ Sorry for the inconvenience, we are moving all option to the main map manager op
 [5]: time-series-panel
 [6]: stack-browser
 [7]: https://github.com/cudmore/bob-fiji-plugins/blob/master/bConvertTo8Bit_v5_.py
+[algorithms]: algorithms

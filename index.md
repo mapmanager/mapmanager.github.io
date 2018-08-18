@@ -27,7 +27,11 @@ Map Manager is software to annotate and analyze image volume time-series
  - Track the dynamics of 3D annotations including persistence, addition, subtraction, and transient.
  - Trajectory analysis to track the motility of annotations.
  - ROI based neuronal spine intensity analysis.
-  
+
+### Gallery
+
+ - Please see the [gallery][gallery] for screenshots and movies of Map Manager in action.
+ 
 ### Getting started
 
 - [Annotating a stack][3].
@@ -43,4 +47,4 @@ Map Manager is software to annotate and analyze image volume time-series
 [3]: annotating-a-stack
 [4]: making-a-map
 [5]: getting-started
-[6]: gallery
+[gallery]: gallery
