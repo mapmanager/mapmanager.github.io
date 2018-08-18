@@ -101,7 +101,7 @@ The movie bar can not be moved. It is always at the bottom of a stack window.
 
 ## Example
 
-Here is an example of a 'Scale Bar' in the lower right and an 'Image Label' in the upper right.
+Here is an example of a 'Scale Bar' in the lower right and an 'Image Label' in the upper right. This movie was exported from Map Manager using the 'Buttons Panel - Stack Tab - Export Movie'.
 
 <table id="videotable">
 <tr>

@@ -75,7 +75,7 @@ The following statistics are calculated and displayed in the X/Y statistics list
 
 A table of these statistics can be displayed for each stack. In a stack window, open the annotation bar with keyboard '[', right-click an annotation in the annotations list and select 'intensity table'.
 
-Please note, 'u' is for user stat. User stats perform algebra between ROIs. For example, 'ubssSum' is the background subtracted spine sum which is (sum spine roi) - (sum background roi).
+Please note, 'u' is for user statistic. User statistics are derived by performing algebra between ROIs. For example, 'ubssSum' is the background subtracted spine sum calculated as (sum spine roi) - (sum spine background roi).
 
 ##### Spine ROI
 ```
