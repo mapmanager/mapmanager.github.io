@@ -31,13 +31,13 @@ To display a [stack][3]:
 
 Load a folder of single channel .tif files from hard-drive. If these .tif files have been converted with one of the [Map Manager Fiji plugins][10], the voxel size, date, and time should be correctly set.
 
-#### ScanImage Import
+#### ScanImage Import - Load ScanImage Folder
 
 The **Load ScanImage Folder** loads a folder of ScanImage .tif stacks.
 
 <p class="important"><B>Important.</B> When importing ScanImage .tif files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
 
-#### Canvas
+#### Canvas - Load Canvas
 
 The **Load Canvas** load an entire canvas of an imaging session. The canvas includes both video snap-shots and the location of two-photon imaging stacks. Please see the <A HREF="http://blog.cudmore.io/canvas">canvas</A> documentation for more information.
 
@@ -45,15 +45,15 @@ The **Load Canvas** load an entire canvas of an imaging session. The canvas incl
 
 A simple way to load a single stack is to drag and drop a .tif file onto the Igor program icon. Stacks opened with drag-and-drop will appear in a special folder named 'DragAndDrop'.
 
-### Browsing stacks
+### Displaying stacks
 
 Select a folder on the left and the stacks in that folder will be shown on the right.
 
 #### Display a [stack][3]:
 
- - Right click the stack and select 'Display Stack'
- - Select the stack and hit <kbd>d</kbd> for 'D'isplay.
  - Double click a stack
+ - Right click the stack and select 'Display Stack'
+ - Select the stack and use keyboard <kbd>d</kbd> for 'D'isplay.
 
 #### Unload a [stack][3]:
 

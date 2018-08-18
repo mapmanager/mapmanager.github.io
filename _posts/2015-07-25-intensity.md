@@ -8,6 +8,8 @@ tags:
 - Analysis
 ---
 
+Activate the display of intensity analysis ROIs by turning on the 'Intensity Analysis' check-box in the [options panel][options].
+
 ### Algorithms
 
 All intensity analysis is performed by calculating statistics (Sum, Mean, standard-deviation, N) from the intensity values of pixels within a number of 3D regions-of-interest (ROI). Further analysis is then derived by performing algebra between these ROIs.
@@ -32,7 +34,7 @@ Please note, parameters controlling the grid of candidate background positions i
 
 ### Running Intensity Analysis
 
-For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button. This button is in the left panel, open the left panel for a stack with keyboard '['.
+For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button in the 'Intensity' tab of the annotation (left) control bar. Open the annotation control bar with keyboard '['.
 
 <IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
 
@@ -45,7 +47,7 @@ For a **map**, intensity analysis is run from the main [map manager panel][3] us
 <IMG class="img-float-right" SRC="images/mm3/intensity/intensity-parameters.png" WIDTH="300">
 
 
-Global intensity analysis parameters are set in the [stack db options][2] panel. These parameters are used for every spine in a map.
+Global intensity analysis parameters are set in the [options panel][options]. These parameters are used for every spine in a map.
 
 Once intensity analysis has been run, the parameters of individual spines can be set using the 'Object Info' panel in a stack. Open the Object Info window in a stack with keyboard 'i'.
 
@@ -71,9 +73,9 @@ Once intensity analysis has been run, the parameters of individual spines can be
 
 The following statistics are calculated and displayed in the X/Y statistics lists in the [Plot Panel][1].
 
-A table of these statistics can be displayed for each stack in the stack db panel. To do this: (1) in a stack window, open the stack db panel with keyboard '[', (2) click on the point list and (3) use keyboard 'i' for intensity.
+A table of these statistics can be displayed for each stack. In a stack window, open the annotation bar with keyboard '[', right-click an annotation in the annotations list and select 'intensity table'.
 
-Please note, 'u' is for user. User stats are simple algebra on the core intensity analysis.
+Please note, 'u' is for user stat. User stats perform algebra between ROIs. For example, 'ubssSum' is the background subtracted spine sum which is (sum spine roi) - (sum background roi).
 
 ##### Spine ROI
 ```
@@ -221,7 +223,7 @@ A spines intensity analysis becomes dirty when:
   - Its dynamics are changed (addition, subtraction, persistent)
 
 [1]: plot-panel
-[2]: stackdb-options-panel
+[options]: stackdb-options-panel
 [3]: time-series-panel
 [4]: search-panel
 [5]: point-list
