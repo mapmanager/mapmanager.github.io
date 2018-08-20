@@ -83,8 +83,8 @@ Please note, 'u' is for user statistic. User statistics are derived by performin
 ```
 sSum		:	spine sum
 sMean		:	spine mean
-sSD		:	spine standard deviation
-sN		:	# pixels in spine roi
+sSD			:	spine standard deviation
+sN			:	# pixels in spine roi
 ```
 
 ##### Spine Background ROI
@@ -140,12 +140,16 @@ utsmdodm	:	this spine mean divided by other dendrite mean
 
 <IMG class="img-float-right" SRC="images/mm3/intensity/spine-roi-example-edit.png" WIDTH="350">
 
-Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions.
+Note, background ROIs are not shown until the spine is analyzed, see 'Running Intensity Analysis' above for how to do this.
 
-  - Mouse-Click to set a new position.
-  - 'Enter' to accept new position.
-  - 'r' to reset spine position. A new position will automatically be chosen next time spine is analyzed.
-  - 'esc' to cancel move
+Clicking on the spine backgrond ROI will enable an edit mode where the user can specify the background position. This edit mode also shows the candidate background positions (blue circles).
+
+  - Select a spine and spine, segment, and background ROIs will be shown with solid blue lines.
+  - Single-Click the background ROI and it will be shown in 'move' mode with dotted yellow lines.
+  - Single-click in the image to set a new background ROI position.
+  - Keyboard 'Enter' to accept new position.
+  - Keyboard 'r' to reset spine position. A new position will automatically be chosen next time spine is analyzed.
+  - Keyboard 'esc' to cancel move.
   
 
 <div class="print-page-break"></div>
