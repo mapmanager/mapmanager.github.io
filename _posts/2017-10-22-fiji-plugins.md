@@ -10,30 +10,26 @@ tags:
 
 ## Importing 3D Tif stacks into map manager
 
- 1. **Map Manager will not** import 3D .tif files that have interleaved color channels (as is the case with Vidreo - ScanImage).
- 2. **Map Manager will not** import 3D .tif files saved as individual .tif files (as is the case with Bruker - Prairie View).
-
-
-## Using the Fiji plugins
-
-Map Manager has a number of <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins to convert raw image stacks from a number of proprietary vendors into a format that can be imported into the Map Manager - [Stack Browser][stack-browser]. Please see the <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</A> Github repository for the most recent version of each of these plugins.
+Map Manager uses <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins to convert raw image stacks from a number of proprietary vendors into a format that can be imported into the Map Manager - [Stack Browser][stack-browser]. Please see the <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</A> Github repository for the most recent version of each of these plugins.
 
 Great care was taken to extract the voxel size, date, and time. This is critical for rapid workflows to always score annotations at um scale and to make time-series in the correct order. After using these plugins, if the voxel size, date, or time is not correct, please contact Robert Cudmore directly and we can make them work for you.
 
-We are assuming you know how to use Fiji and if you do not, this is beyond the scope of this tutorial. Basically, save a plugin to your hard-drive and drag and drop it into Fiji.
+We are assuming you know how to use Fiji and if you do not, this is beyond the scope of this tutorial. Basically, save a plugin to your hard-drive and drag and drop it into Fiji. Make sure the name of your file ends with '_.py'.
 
-## Converting proprietary files into Tif files for import into map manager
-
-#### Zeis lsm/czi, Nikon nd2, ScanImage, (Olympus coming soon)
+#### Zeis lsm/czi, Nikon nd2, ScanImage
 
  - Use [bFolder2MapManager][bFolder2MapManager].
 
- - Nikon nd2 files do not seem to have date or time in the header???
  
 #### Bruker - Prairie View
 
  - Use [bPrairie2tif][bPrairieToTif]
 
+ 1. **Map Manager will not** import 3D .tif files that have interleaved color channels (as is the case with Vidreo - ScanImage).
+ 2. **Map Manager will not** import 3D .tif files saved as individual .tif files (as is the case with Bruker - Prairie View).
+
+Note, Nikon nd2 files do not have date or time in the header???
+Note, Olympus coming soon
 
 <p class="important"><B>Important:</B> When stacks are first imported into the stack browser, please verify the voxel size, date, and time are set correctly. If these are not set correctly, contact Robert Cudmore and we can make it work.
 </p>
