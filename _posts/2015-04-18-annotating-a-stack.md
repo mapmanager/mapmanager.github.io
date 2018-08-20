@@ -12,15 +12,20 @@ tags:
 
 This is a workflow for annotating 3D annotations in a **single time-point stack**. To annotate a **time-series of stacks**, please see [making a map][3].
 
+<p class="important">
+Please use Igor Pro Version 6/7. Do not use Igor Pro version 8. Fully functional demo versions of Igor Pro 6/7 can be downloaded from <A HREF="https://www.wavemetrics.com/">Wavemetrics</A>
+</p>
+
 
 #### 1. Run Map Manager
 
-- Run Map Manager in Igor Pro by double-clicking on the MapManager.ipf file.
-- Click in the Igor Pro command window to activate Map Manager. The Igor Pro command window is titled 'Untitled'.
+- Run Map Manager in Igor Pro by double-clicking on the provided MapManager .ipf file. This is normally a file that looks like 'MapManager_yyyymmdd.ipf' where yyyymmdd specifies the release date of your particular Map Manager version.
+- In Igor Pro, activate the Map Manager menus by compiling the source code. Either click on the command window (it has the title 'untitled'), or click the compile button in the map manager source code window, or just wait.
 
-#### 2. Load a folder of Tiff stacks
 
-Single channel Tiff stacks can be opened directly into the Stack Browser. If you have multi-channel stacks or stacks acquired using propietary software such as **Zeiss Zen**, **Scan Image**, or **Prairie View** then please see the [Fiji Plugins](fiji-plugins) page to easily convert these formats before import.
+#### 2. Load a folder of Tiff stacks into the stack browser
+
+A folder of single color channel Tiff stacks can be opened directly into the Map Manager - Stack Browser. If you have multiple color channel stacks or stacks acquired using propietary software such as **Zeiss Zen**, **Vidreo Scan Image**, **Bruker Prairie View**, **Nikon**, or **Olympus** (coming soon) then please see the [Fiji Plugins](fiji-plugins) page to convert these formats into Map Manager .tif files before import.
 
 - Open the Map Manager [Stack Browser][2] by selecting the main menu 'MapManager &rarr; Stack Browser'.
 
