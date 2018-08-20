@@ -36,7 +36,9 @@ Please note, parameters controlling the grid of candidate background positions i
 
 As new spines are created, they will have spine and backbone ROIs, they will not have background ROIs until intensity analysis is explicitly run.
 
-For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button in the 'Intensity' tab of the annotation (left) control bar. Open the annotation control bar with keyboard '['.
+For a **single spine**, intensity analysis is run with the 'Analyze' button in the point info panel. Open the point info panel in a stack window with keyboard 'i'.
+
+For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button in the 'Intensity' tab of the annotation (left) control bar. Open the annotation control bar in a stack window with keyboard '['.
 
 <IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
 
@@ -81,42 +83,42 @@ Please note, 'u' is for user statistic. User statistics are derived by performin
 
 ##### Spine ROI
 ```
-sSum		:	spine sum
-sMean		:	spine mean
-sSD			:	spine standard deviation
-sN			:	# pixels in spine roi
+sSum        :	spine sum
+sMean       :	spine mean
+sSD         :	spine standard deviation
+sN          :	# pixels in spine roi
 ```
 
 ##### Spine Background ROI
 ```
-sbSum		:	spine background sum
-sbMean		:	spine background mean
-sbSD		:	spine background standard deviation
-sbN			:	# pixels in spine background roi
+sbSum       :	spine background sum
+sbMean      :	spine background mean
+sbSD        :	spine background standard deviation
+sbN         :	# pixels in spine background roi
 ```
 
 ##### Backbone/Dendrite ROI
 ```
-dSum		:	dendrite sum
-dMean		:	dendrite mean
-dSD		:	dendrite standard deviation
-dN		:	# pixels in dendrite roi
+dSum        :	dendrite sum
+dMean       :	dendrite mean
+dSD         :	dendrite standard deviation
+dN          :	# pixels in dendrite roi
 ```
 
 ##### Backbone/Dendrite Background ROI
 ```
-dbSum		:	dendrite background sum
-dbMean		:	dendrite background mean
-dbSD		:	dendrite background standard deviation
-dbN		:	# pixels in dendrite background roi
+dbSum       :	dendrite background sum
+dbMean      :	dendrite background mean
+dbSD        :	dendrite background standard deviation
+dbN         :	# pixels in dendrite background roi
 ```
 
 ##### Background subtracted ROIs
 ```
-ubssSum		:	background subtracted spine sum
-ubssMean	:	background subtracted spine mean
-ubsdSum		:	background subtracted dendrite sum
-ubsdMean	:	background subtracted dendrite mean
+ubssSum     :	background subtracted spine sum
+ubssMean    :	background subtracted spine mean
+ubsdSum     :	background subtracted dendrite sum
+ubsdMean    :	background subtracted dendrite mean
 ```
 
 ##### Cross channel stats
