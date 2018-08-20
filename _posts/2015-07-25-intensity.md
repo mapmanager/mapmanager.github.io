@@ -34,6 +34,8 @@ Please note, parameters controlling the grid of candidate background positions i
 
 ### Running Intensity Analysis
 
+As new spines are created, they will have spine and backbone ROIs, they will not have background ROIs until intensity analysis is explicitly run.
+
 For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button in the 'Intensity' tab of the annotation (left) control bar. Open the annotation control bar with keyboard '['.
 
 <IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
