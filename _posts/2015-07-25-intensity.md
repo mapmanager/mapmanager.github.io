@@ -66,13 +66,13 @@ Don't forget, each spine is unique. This is the whole point. Once intensity anal
 
  - **Width (um).** Width of spine ROI centered on the spine head and perpendicular to the spine line.
 
+ - **+/- Slices.** The number of slices to extend the spine ROI above/below the image plane. This is also used to extend the segment ROI.
+
  - **Head (um).** Distance to extend the spine ROI beyond its spine head.
 
- - **Tailail (um).** Distance to extend the spine ROI beyond it connection point with the segment.
+ - **Tail (um).** Distance to extend the spine ROI beyond it connection point with the segment.
 
- - **+/- Slices.** The number of slices to extend the spine head above/below the image plane.
-
- - **Scale Radius (um).** Set the radius of the segment tracing.
+ - **Scale Radius (um).** Set the radius of the segment tracing. This will expand/contract the segment ROI and the spine ROI will be adjusted. 
  
 ### Intensity Analysis Output
 

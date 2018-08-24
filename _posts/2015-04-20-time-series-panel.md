@@ -144,6 +144,8 @@ See [reports][17].
 
 Interface for advanced and internal debugging. In general there is no need to use this.
 
+ - **Edit Date/Time**. Turn on to set the date and time columns for a map. Date format is yyyymmdd, time format is hh:mm:ss where hh is a 24hr clock. This is useful if your original stacks did not have date/time or it was somehow incorrect.
+ 
 <div class="print-page-break"></div>
 
 
