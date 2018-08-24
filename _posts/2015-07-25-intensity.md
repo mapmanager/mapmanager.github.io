@@ -167,9 +167,7 @@ There are two ways to browse errors and warning:
  - Examine the 'Errors' column in a stacks [point list panel][5]
 
 
-The user is in charge of fixing spine intensity errors.
-
-If you have lots of spines, spines with intensity analysis errors can be marked as 'int bad' by selecting the spine and seleting 'int bad'. If the spine is connected to other spines in a time-series (map) then right-click a spine in the map plot and select 'int-bad'. 
+The user is in charge of fixing spine intensity errors. This can be done by moving the spine and its connection point until the analysis no longer has an error. If a spine cannot be fixed by moving it, individual spines can be marked as 'Int Bad' by a right-click on a spine and seleting 'Int Bad'. If the spine is connected to other spines, all spines in the run can be set to 'Int Bad'. In a time-series (map) plot, right-click a spine and select 'Set Int Bad'. 
 
 In general, be very careful of spines that are close to each other. As spine density increases, the spine ROI of a spine will start to overlap with the spine ROI of its neighbors. There are two ways to check for nearby spines. These are slightly different measurements, the first is examining closeness of the spine head as a 3D annotation, the second is examining closeness by looking at the connection point along a segment.
 
