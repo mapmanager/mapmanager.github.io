@@ -205,7 +205,7 @@ Only for spine annotations. Controls the parameters of spine intensity analysis.
  
 ### Object Properties
 
-<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="275">
 
 Use this table to set how annotations and lines are displayed. Right-click on 'marker' or 'color' to set. Double-click on 'size' to set. Note, 'size' is in arbitrary Igor centric units, generally between 1 and 10.
 
