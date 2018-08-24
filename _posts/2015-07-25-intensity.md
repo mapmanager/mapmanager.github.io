@@ -8,7 +8,7 @@ tags:
 - Analysis
 ---
 
-Activate the display of intensity analysis ROIs by turning on the 'Intensity Analysis' check-box in the [options panel][options].
+Activate the display of intensity analysis ROIs by turning on the 'Activate' check-box in the intensity-analysis section of the [options panel][options].
 
 ### Algorithms
 
@@ -18,60 +18,61 @@ All intensity analysis is performed by calculating statistics (Sum, Mean, standa
 
 #### Spine ROI
 
-A polygon surrounding a spine. Starts as a rectangle and then overlapping regions of the backbone/dendrite ROI is subtracted. Any remaining disjoint regions (on other side of backbone/dendrite) are then removed. The spine ROI is centered in the same image plane as the spine head. Three parameters specify spine ROI: width, extend head, and extend tail.
+A polygon surrounding a spine. Starts as a rectangle and then overlapping regions of the segment ROI are subtracted. Any remaining disjoint regions (on other side of segment) are then removed. The spine ROI is centered in the same image plane as the spine head (e.g. the annotation). Three parameters specify spine ROI: width, extend head, and extend tail. 
 
-#### Backbone/Dendrite ROI
+#### Segment ROI
 
-A polygon centered on the spine connection point and extending a fixed distance (um) up and down the backbone/dendrite line. The backbone/dendrite ROI is centered in the same image plane as the spine connection point. The distance to extend up and down the backbone/dendrite line is set with '+/- Segment (um)'
+A polygon centered on the spine connection point to the segment tracing and extending a fixed distance (um) up and down the backbone segment tracing. The segment ROI is centered in the same image plane as the spine connection point to the segment tracing. This can be different from the image plane of the spine head.
 
 #### Background ROI
 
-Both the spine roi and the backbone/dendrite roi get their own background ROIs. The spine background ROI is the same size/shape as the spine ROI. Likewise, the backbone/dendrite background ROI is the same size/shape as the backbone/dendrite ROI. The position of these background ROIs is the position that gives the minimal intensity from a number of candidate positions (a 3x3 grid emanating from the spine head). All background ROIs (both spine and backbone/dendrite) are centered in the same image plane as the spine head.
+Both the spine ROI and the segment ROI get their own background ROIs. The spine background ROI is the same size/shape as the spine ROI. Likewise, the segment background ROI is the same size/shape as the segment ROI. The position of these background ROIs is the position that gives the minimal intensity from a number of candidate positions (a 3x3 grid emanating from the spine head). All background ROIs (both spine and segment) are centered in the same image plane as the spine head.
 
-Please note, parameters controlling the grid of candidate background positions is not exposed to the user.
 
 <div class="print-page-break"></div>
 
 ### Running Intensity Analysis
 
-As new spines are created, they will have spine and backbone ROIs, they will not have background ROIs until intensity analysis is explicitly run.
+As new spines are created, they will have spine and backbone ROIs but will not have background ROIs until intensity analysis is explicitly run.
 
 For a **single spine**, intensity analysis is run with the 'Analyze' button in the point info panel. Open the point info panel in a stack window with keyboard 'i'.
 
 For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button in the 'Intensity' tab of the annotation (left) control bar. Open the annotation control bar in a stack window with keyboard '['.
 
-<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="450">
+<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-analysis-tab.png" WIDTH="300">
 
-For a **map**, intensity analysis is run from the main [map manager panel][3] using the 'Intensity' tab.
+For a **time-series (map)**, intensity analysis is run from the [time-series][3] panel using the 'Intensity' tab.
+
+<div class="print-page-break"></div>
+
+### Global Parameters
+
+<IMG class="img-float-right" SRC="images/mm3/options/options-intensity-analysis.png" WIDTH="300">
+
+
+Global intensity analysis parameters are set in the [options panel][options] - Intensity Anlysis. These parameters are used for every spine in a map.
 
 <div class="print-page-break"></div>
 
-### Parameters
 
-<IMG class="img-float-right" SRC="images/mm3/intensity/intensity-parameters.png" WIDTH="300">
-
-
-Global intensity analysis parameters are set in the [options panel][options]. These parameters are used for every spine in a map.
-
-Once intensity analysis has been run, the parameters of individual spines can be set using the 'Object Info' panel in a stack. Open the Object Info window in a stack with keyboard 'i'.
-
-<div class="print-page-break"></div>
+### Parameters for each spine
 
 <IMG class="img-float-right" SRC="images/mm3/intensity/obj-info.png" WIDTH="300">
 
- - **Width (um).** Width of spine ROI centered on the spine line.
- - **Extend head (um).** Distance to extend the spine ROI beyond its spine head.
- - **Extend tail (um).** Distance to extend the spine ROI beyond it connection point with the backbone/dendrite..
- - **+/- Slices.** The statistics (Sum, Mean, SD, N) of each spine, backbone, and background ROI is calculated after expanding the ROI up and down in Z-dimension.
- - **+/- Segment (um).** The distance (um) to extend the backbone/dendrite ROI up and down the backbone/dendrite line.
+Don't forget, each spine is unique. This is the whole point. Once intensity analysis has been run for a stack or time-series (map), the parameters of individual spines can be set using the 'Object Info' panel in a stack. Open the Object Info window for a selected spine in a stack with keyboard 'i'.
 
- - **Background - Both Sides.** Only available as a global options.
- - **Background Rows.** Only available as a global options.
- - **Background Row Mult.** Only available as a global options.
- - **Background Columns.** Only available as a global options.
- - **Background Column Mult.** Only available as a global options.
 
- - **Scale Radius (um).** Only available for individual spines using the Object Info Panel. When intensity analysis is run (for a map), each spine is assigned a radius (um) following the radius of the segment it is attached to. Once intensity analysis has been run, this radius can be set for individual spines in the Object Info panel.
+ - **Int Bad**. Tag a spine as intensity bad. Spines tagged as 'Int Bad', will not be included in the intensity analysis but will still be included in the spine dynamic analysis. An individual spine can also be marked as 'int bad' in any [stack][stack] window by selecting a spine, right-clicking and selecting 'int bad'.
+
+ - **Width (um).** Width of spine ROI centered on the spine head and perpendicular to the spine line.
+
+ - **Head (um).** Distance to extend the spine ROI beyond its spine head.
+
+ - **Tailail (um).** Distance to extend the spine ROI beyond it connection point with the segment.
+
+ - **+/- Slices.** The number of slices to extend the spine head above/below the image plane.
+
+ - **Scale Radius (um).** Set the radius of the segment tracing.
  
 ### Intensity Analysis Output
 
@@ -156,18 +157,21 @@ Clicking on the spine backgrond ROI will enable an edit mode where the user can 
 
 <div class="print-page-break"></div>
 
-### Errors and Warnings
+### Intensity Analysis Errors and Warnings
 
-When the intensity analysis has a problem analyzing a spine, errors and warnings will be set for that spine. Most errors are due to an ROI going off the image or in problems with drawing a valid backbone ROI (near the end of a segment).
+When the intensity analysis has a problem analyzing a spine, errors and warnings will be set for that spine. Most errors are due to an ROI going off the image or when there are problems drawing a valid backbone ROI near the end of a segment.
 
 There are two ways to browse errors and warning:
 
  - Use the 'Errors & Warnings' button in the [search panel][4].
  - Examine the 'Errors' column in a stacks [point list panel][5]
 
-Be careful of spines that are very close to each other. As spine density increases, the spine ROI of a spine will start to overlap with the spine ROI of its neighbors.
 
-There are two ways to check for nearby (high density spines). These are slightly different measurements, the first is examining closeness of the spine head as a 3D point, the second is examining closeness by looking at the connection point along a segment.
+The user is in charge of fixing spine intensity errors.
+
+If you have lots of spines, spines with intensity analysis errors can be marked as 'int bad' by selecting the spine and seleting 'int bad'. If the spine is connected to other spines in a time-series (map) then right-click a spine in the map plot and select 'int-bad'. 
+
+In general, be very careful of spines that are close to each other. As spine density increases, the spine ROI of a spine will start to overlap with the spine ROI of its neighbors. There are two ways to check for nearby spines. These are slightly different measurements, the first is examining closeness of the spine head as a 3D annotation, the second is examining closeness by looking at the connection point along a segment.
 
  - Use the 'Closeness' button in the [search panel][4] too find **spine heads** that are close to other **spine heads**.
  - Use the 'nnDist' column in the [point list panel][5] to find spines that are connected to a segment close to other spines connection points.
@@ -235,3 +239,4 @@ A spines intensity analysis becomes dirty when:
 [3]: time-series-panel
 [4]: search-panel
 [5]: point-list
+[stack]: stack
