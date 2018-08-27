@@ -34,7 +34,9 @@ A folder of single color channel Tiff stacks can be opened directly into the Map
 #### 3. Display a stack
 
  - Double-click on a stack in the stack list to display the stack in a [stack][1] window.
-
+ - Right-click a stack in the stack list and select 'Display Stack'.
+ - Select a stack and hit keyboard 'd' for display.
+ 
 #### 4. Add 3D annotations
 
 Map Manager has two types of annotations: **spines** and **other**. A global option needs to be set to work with one or the other
@@ -53,7 +55,7 @@ To create **spines**, a line segment has to be traced and then spines are attach
 - In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
 - Enable segment editing with the ‘Segments’ checkbox.
 - Create a new (empty) line segment with the + button.
-- Shift+click to make a series of 3D control point annotations along a dendritic segment. Make sure the X/Y position is near the center of the segment and the Z image plane is the brightest plane.
+- Shift+click to make a series of 3D control point annotations along a dendritic segment. Make sure the X/Y position is near the center of the segment and the Z image plane is the brightest plane. If any of your control points are in complete darkenss, the Fiji Plugin Simple-Neurite-Tracer will not be able to fit a line between these points.
 - Continue making control points along the dendritic segment.
 - Fit the line segment in Fiji with a right-click on the new line segment (in the top left list of segment) and select ‘Make From Control Points - FIJI’. If this does not work, check your Fiji path in [hard drive paths](hdd-paths).
 
@@ -61,13 +63,14 @@ To create **spines**, a line segment has to be traced and then spines are attach
 
 - In a [stack][1] window, open the annotation toolbar with keyboard <kbd>[</kbd>.
 - Add a new 3D annotation with shift+click.
+- Spine annotations can only be created when there is a parent segment selected. If you have traced a segment (See Adding Line Segments) then you can select the parent segment for a spine by selecting it in the segment list of the annotation (left) control bar or by clicking on the backbone tracing of the segment. Selected segments (like all other selection) will appear as 'yellow'.
 
 #### 5. Editing annotations
 
 - Select an existing annotation with a single-click. Selected annotations appear yellow.
-- Delete an annotation by first selecting the annotation and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>.
-- Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Notes can then be searched using the [search][6] panel.
-- Each annotation can have a 'user type'. Set the 'user type' with a right-click and select 'user type'. User types can then be searched using the [search][6] panel.
+- Delete an annotation by first selecting the annotation and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>. Annotations can also be deleted with a right-click and selecting 'Delete'.
+- Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Alternatively, use the annotation control bar (keyboard '[') and enter a note in the note field. Annotation notes can be searched using the [search][6] panel.
+- Each annotation can have a 'user type'. Set the 'user type' with a right-click and select 'user type' 1 through 5. User types can be used to identify subsets of annotations. Each annotations can only have one user type, if you need more flexibility you can encode multiple user types into a new user type. User types can  be searched using the [search][6] panel.
 - See [stack annotations][12] for more information.
 
 #### 5.1 Marking annotations bad
@@ -100,9 +103,9 @@ Different types of searches are performed with buttons:
 - **Bad** : Generate a list of all annotations marked as 'bad'.  
 - **Close** : Generate a list of annotations that have other annotations within a 3D distance.
 
-If you zoom the stack window (ctrl+mouse wheel or keyboard <kbd>+</kbd>) you can snap to different points while maintaining the zoom using the search panel 'Snap' checkbox.
+<strike>If you zoom the stack window (ctrl+mouse wheel or keyboard <kbd>+</kbd>) you can snap to different points while maintaining the zoom using the search panel 'Snap' checkbox.</strike>
 
-The search results are a static output report. Once a search is performed, if annotations in the stack window are modified (added, deleted, moved, etc.) the search results will not be automatically updated. If the annotations are modified in the stack window, simply regnerate the search results by perform the search again.
+Note, the search results are a static output report. Once a search is performed, if annotations in the stack window are modified (added, deleted, moved, etc.) the search results will not be automatically updated. If the annotations are modified in the stack window, simply regnerate the search results by perform the search again.
 
 <div class="print-page-break"></div>
 

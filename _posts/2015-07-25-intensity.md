@@ -35,7 +35,7 @@ Both the spine ROI and the segment ROI get their own background ROIs. The spine 
 
 As new spines are created, they will have spine and backbone ROIs but will not have background ROIs until intensity analysis is explicitly run.
 
-For a **single spine**, intensity analysis is run with the 'Analyze' button in the point info panel. Open the point info panel in a stack window with keyboard 'i'.
+For a **single spine**, intensity analysis is run with a right-click on the spine and selecting 'Analyze Intensity' or using the 'Analyze' button in the point info panel. Open the point info panel in a stack window with keyboard 'i'. The 'point info' panel also allows parameters (spine width, etension, etc) to be set on a per-spine basis.
 
 For a **stack**, intensity analysis is run from a stack window using the 'Analyze Intensity' button in the 'Intensity' tab of the annotation (left) control bar. Open the annotation control bar in a stack window with keyboard '['.
 
@@ -50,7 +50,7 @@ For a **time-series (map)**, intensity analysis is run from the [time-series][3]
 <IMG class="img-float-right" SRC="images/mm3/options/options-intensity-analysis.png" WIDTH="300">
 
 
-Global intensity analysis parameters are set in the [options panel][options] - Intensity Anlysis. These parameters are used for every spine in a map.
+Global intensity analysis parameters are set in the [options panel][options] - Intensity Analysis. These parameters are used for every spine in a map.
 
 <div class="print-page-break"></div>
 
@@ -167,7 +167,7 @@ There are two ways to browse errors and warning:
  - Examine the 'Errors' column in a stacks [point list panel][5]
 
 
-The user is in charge of fixing spine intensity errors. This can be done by moving the spine and its connection point until the analysis no longer has an error. If a spine cannot be fixed by moving it, individual spines can be marked as 'Int Bad' by a right-click on a spine and seleting 'Int Bad'. If the spine is connected to other spines, all spines in the run can be set to 'Int Bad'. In a time-series (map) plot, right-click a spine and select 'Set Int Bad'. 
+The user is in charge of fixing spine intensity errors. This can be done by moving the spine head and its connection point, modifying the parent segment tracing, or specifying the ROI parameters. If a spine cannot be fixed, it can be marked as 'Intensity Bad' by a right-click on a spine and selecting 'Intensity Bad'. If the spine is connected to other spines, all spines in the run can be set to 'Intensity Bad'. In a time-series (map) plot, right-click a spine and select 'Set Int Bad'. 
 
 In general, be very careful of spines that are close to each other. As spine density increases, the spine ROI of a spine will start to overlap with the spine ROI of its neighbors. There are two ways to check for nearby spines. These are slightly different measurements, the first is examining closeness of the spine head as a 3D annotation, the second is examining closeness by looking at the connection point along a segment.
 
