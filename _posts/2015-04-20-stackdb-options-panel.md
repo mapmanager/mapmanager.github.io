@@ -223,42 +223,43 @@ Use this table to set how annotations and lines are displayed. Right-click on 'm
 | Annotation Selection	| 	|
 |8	|pntSel			| When an annotation is selected
 |9	|runSel			| When a run of annotations is selected
-|10	|maskSel		| When a mask is selected
-|11	|flashSel		| On selection annotations are flashed, see 'Miscellaneous - Flash Ticks' to control the speed.
+|10	|searchSel			| To overlay markers showing annotations in the last search. Turn this on in the [buttons][buttons] window.
+|11	|maskSel		| When a mask is selected
+|12	|flashSel		| On selection, annotations are flashed. See 'Options - Miscellaneous - Flash Ticks (au)' to control the speed.
 | Other	|	|
-|12	|globalPivot	| 
-|13	|lineSel		| Not sure any more, go figure out the brain
-|14	|line			| Segment tracing backbone line
-|15	|radius			| Segment tracing radius line
-|16	|plotLine		| Line connecting corresponding annotations in map plots
+|13	|globalPivot	| 
+|14	|lineSel		| Not sure any more, go figure out the brain
+|15	|line			| Segment tracing backbone line
+|16	|radius			| Segment tracing radius line
+|17	|plotLine		| Line connecting corresponding annotations in map plots
 | Spine Intensity	|	|
-|17	|sROI			| Spine intensity ROI
-|18	|dROI			| Segment intensity ROI
-|19	|sbROI			| Spine background ROI
-|20	|dbROI			| Segment background ROI
+|18	|sROI			| Spine intensity ROI
+|19	|dROI			| Segment intensity ROI
+|20	|sbROI			| Spine background ROI
+|21	|dbROI			| Segment background ROI
 | Annotation dynamics	|	|
-|21	|Bad			| Bad annotations
-|22	|Add			| Added annotations
-|23	|Subtract		| Subtracted annotations
-|24	|Persistent		| Persistent annotations
-|25	|Transient		| Transient annotations
+|22	|Bad			| Bad annotations
+|23	|Add			| Added annotations
+|24	|Subtract		| Subtracted annotations
+|25	|Persistent		| Persistent annotations
+|26	|Transient		| Transient annotations
 | User 1/2/3	|	|
-|26	|User 1_1		| Not used
-|27	|User 1_2		| Not used
-|28	|User 1_3		| Not used
-|29	|User 1_4		| Not used
-|30	|User 1_5		| Not used
+|27	|User 1_1		| Not used
+|28	|User 1_2		| Not used
+|29	|User 1_3		| Not used
+|30	|User 1_4		| Not used
+|31	|User 1_5		| Not used
 | User Type	|	|
-|31	|User Type 0	| User type 0
-|32	|User Type 1	| User type 1
-|33	|User Type 2	| User type 2
-|34	|User Type 3	| User type 3
-|35	|User Type 4	| User type 4
-|36	|User Type 5	| User type 5
-|37	|User Type 6	| User type 6
-|38	|User Type 7	| User type 7
-|39	|User Type 8	| User type 8
-|40	|User Type 9	| User type 9
+|32	|User Type 0	| User type 0
+|33	|User Type 1	| User type 1
+|34	|User Type 2	| User type 2
+|35	|User Type 3	| User type 3
+|36	|User Type 4	| User type 4
+|37	|User Type 5	| User type 5
+|38	|User Type 6	| User type 6
+|39	|User Type 7	| User type 7
+|40	|User Type 8	| User type 8
+|41	|User Type 9	| User type 9
  
 
 ### Load Stacks From Special Folder
