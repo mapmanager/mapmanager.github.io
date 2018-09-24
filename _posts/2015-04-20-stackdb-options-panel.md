@@ -40,11 +40,10 @@ The options panel is opened from the main menu 'MapManager - Options'.
 
 Options to control the behavior of Map Manager when it first starts.
 
- - **Show Stack Browser**. Show the [stack browser][6] at startup.
+ - **Show Stack Browser**. Show the [stack browser][6] panel at startup.
  - **Show Time Series**. Show the [time-series][5] panel at startup.
- - **Hide Code**. Hide code at startup.
- - **Hide Menus**. (experimental) Hide extraneous menus at startup.
- - **Canvas Plugin**. Load the canvas plugin at startup. The canvas plugin is software to organize imaging sessions and is described in [canvas][canvas].
+ - **Hide Code**. Hide code windows at startup.
+ - **Hide Menus**. Hide extraneous Igor menus at startup.
 
 ### Stack Display
 
@@ -76,7 +75,7 @@ Options that control the display of annotations, tracings, and annotation tags i
  
  - **User Type**. Display annotation tags with an annotations user type.
  
- - **Stack centric annotation index**. Display annotation tags with the stack centric annotation index. Annotations are given an index within a stack in the order they are created. Deleting an annotation will result in all later annotations to have their annotation index decremented.
+ - **Stack Centric Annotation Index**. Display annotation tags with the stack centric annotation index. Annotations are given an index within a stack in the order they are created. Deleting an annotation will result in all later annotations to have their annotation index decremented.
  
  - **Map Run Index**. Display annotation tags with their map centric 'run' index.
  
@@ -88,7 +87,10 @@ Options that control the display of annotations, tracings, and annotation tags i
  
  - **Default Zoom Width/Height (um)**. The amount to zoom in on annotations in [stack][stack] and [run plots][run-plot]. This is used when an annotation is right-clicked and 'plot point/spine' or 'plot run' is selected.
 
-
+ - **Zoom (+/-)**. The fractional amount of the image to zoom at each step. Larger numbers will zoom more, smaller numbers will zoom less. Used when zooming an image with keyboard +/- or with ctrl + mouse-wheel.
+ 
+ - **Pan (% of view)**. The percent of the view to step when panning with keyboard arrow-kets. Larger numbers will pan more, smaller will pan less.
+ 
 <IMG class="img-float-right" SRC="images/mm3/options/options-stack-candy.png" WIDTH="150">
 
  - **Default Stack Candy**. Default window candy for each stack. These can be cycled in a stack window using keyboard shift+c.
@@ -98,15 +100,12 @@ Options that control the display of annotations, tracings, and annotation tags i
     - **Scale + Label**.
     - **Scale + Label + Axis**.
  
+ - **RGB Channel Order**. For multi-color images using RGB button in [buttons][buttons]. 
 
- - **Unload stack image data on window close**. If off (default), the stack image data will not be unloaded when a stack window is closed. If on, the stack image data will be unloaded.
- 
  - **Click and Drag Image**. If one, mouse click+drag will pan the stack image. If off, mouse click+drag will make an Igor selection.
  
  - **Keyboard edits 'User Type'**. If on, keyboard 0..9 will set the user type of a selected annotation. If off (default), keyboard 1-5 will set the color channel to display.
  
- - **RGB Channel Order**. For multi-color images using RGB button in [buttons][buttons]. 
-
  - **Always Show Object Info**. When checked, the object info panel will always be shown when opening a stack window. Within a stack window, the object info panel can always be toggled with keyboard 'i'.
 
  - **Always Show Annotation and Contrast Bars**. The annotation bar is toggled with keyboard '[' and the contrast bar with keyboard 'c'.
@@ -178,8 +177,9 @@ Only for spine annotations. Controls the parameters of spine intensity analysis.
      - **Rows and Row Spacing (um)**. Number of rows to consider and their spacing.
      - **Columns and Column Spacing (um)**. Number of columns to consider and their spacing.
 
- - **Debug**. Advanced use only.
 
+ - **Debug**. Advanced use only.
+ 
  - **Debug On Error**. Advanced use only.
 
   
@@ -192,8 +192,12 @@ Only for spine annotations. Controls the parameters of spine intensity analysis.
 
  - **Box Filter Line and Radius (points)**. On import, the backbone line fit is box filtered. This reduces jitter in z-image planes for segments running parallel to the image plane.
 
+<div class="print-page-break"></div>
+
 
 ### Miscellaneous
+
+<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="350">
 
  - **Load annotations on 'Load Generic'**. Try and load annotations from the 'stackdb' folder.
  
@@ -201,11 +205,13 @@ Only for spine annotations. Controls the parameters of spine intensity analysis.
  
  - **Flash Ticks**. A number that controls the speed that a point is flashed when selected. Smaller numbers are faster. Point flashing is used to make it easier to see where there is a point selection. See 'Object Properties - flashSel' to control the size, marker, and color of the point that is flashed.
 
+ - **Canvas Plugin**. Load the canvas plugin at startup. The canvas plugin is software to organize imaging sessions and is described in [canvas][canvas].
+
  - **ScanImage and Canvas In Stack Browser**. Show ScanImage and Canvas interface in stack browser.
- 
+
 ### Object Properties
 
-<IMG class="img-float-right" SRC="images/mm3/options/options-misc.png" WIDTH="275">
+<IMG class="img-float-right" SRC="images/mm3/options/options-object-properties.png" WIDTH="250">
 
 Use this table to set how annotations and lines are displayed. Right-click on 'marker' or 'color' to set. Double-click on 'size' to set. Note, 'size' is in arbitrary Igor centric units, generally between 1 and 10.
 
@@ -264,7 +270,7 @@ Use this table to set how annotations and lines are displayed. Right-click on 'm
 
 ### Load Stacks From Special Folder
 
-<IMG class="img-float-right" SRC="images/mm3/options/options-special-folder.png" WIDTH="300">
+<IMG class="img-float-right" SRC="images/mm3/options/options-special-folder.png" WIDTH="275">
 
 This is extremely experimental and only used by developers. If running into problems, turn off all these checkboxes. Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the **channels8** option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin [bConvertTo8Bit_v5_.py][7] to convert entire directories of tiff stacks to 8-bit.
 

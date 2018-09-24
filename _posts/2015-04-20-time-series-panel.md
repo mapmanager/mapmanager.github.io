@@ -9,11 +9,11 @@ tags:
 ---
 
 
-The time-series panel provides an interface to load, save and browse Map Manager time-series (maps).
+The time-series panel provides an interface to create, edit, open, and save Map Manager time-series (maps).
 
 Open the time-series panel using the menu 'MapManager &rarr; Time Series'
 
-Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right.
+Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right. Double-click a map to display a [map plot][map-plot], likewise, double-click a stack to display a [stack][stack] window.
 
 <IMG class="img-float-center" SRC="images/mm3/time-series/ts-big.png" WIDTH="700">
 
@@ -23,7 +23,7 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
  - **Open Map**. Open/Load a map from the hard-drive.
  - **Save Map**. Save selected map to hard-drive.
- - **Close Map**. Right click a map and select 'Close Map'.
+ - **Close Map**. Right-click a map and select 'Close Map'.
  
 <p class="important"><B>Opening Maps.</B> When opening a map, select the maps '.ipf' file. If a map is named 'mymap', load 'mymap.ipf'.
 </p>
@@ -63,7 +63,7 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 #### Right-click on a map name.
 
  - **Find Points**. Open [find points panel][15].
- - **Density Report**. Generate a density report for the map. See [reports][17].
+ - **Segment Report**. Generate a segment report for the map. See [reports][17].
  - **Dynamics Report**. Generate a dynamics report for the map. See [reports][17].
  - **Survival Report**. Generate a survival report for the map. See [reports][17].
  - **Export Map**. <span style="color:red">DO NOT USE</span> Exports a map to text files. Files are saved in the 'export/' folder.
@@ -167,5 +167,7 @@ Interface for advanced and internal debugging. In general there is no need to us
 [16]: map-pool
 [17]: reports
 [18]: intensity
+[stack]: stack
+[map-plot]: map-plot
 
 <div class="print-page-break"></div>
