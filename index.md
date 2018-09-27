@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "Map Manager Documentation"
+title: "Map Manager"
 ---
 
 <BR>
 
 <p style="font-size:20px">
-Map Manager is software to annotate and analyze 3D image time-series
+Map Manager is software to annotate and analyze image volume time-series
 </p>
 
 <BR>
@@ -18,16 +18,20 @@ Map Manager is software to annotate and analyze 3D image time-series
 ### Features
 
 
-- Track 3D annotations in time-series images including dendritic spines, axonal boutons, cell bodies, and vascular branch points.
+- Track 3D annotations in time-series images including dendritic spines and cell bodies.
 - Semi-automatically identifies corresponding annotations between time-points.
 - Automatically aligns images between time-points.
-- Designed to work with any 3D/2D image volume including in vivo, ex vivo, and fixed tissue.
+- Designed to work with any 3D image volume including in vivo, ex vivo, and fixed tissue.
 
 ### Analysis
  - Track the dynamics of 3D annotations including persistence, addition, subtraction, and transient.
  - Trajectory analysis to track the motility of annotations.
- - ROI based neuronal spine intensity analysis.
-  
+ - Neuronal spine intensity analysis.
+
+### Gallery
+
+ - Please see the [gallery][gallery] for screenshots and movies of Map Manager in action.
+ 
 ### Getting started
 
 - [Annotating a stack][3].
@@ -43,4 +47,4 @@ Map Manager is software to annotate and analyze 3D image time-series
 [3]: annotating-a-stack
 [4]: making-a-map
 [5]: getting-started
-[6]: gallery
+[gallery]: gallery

@@ -9,11 +9,11 @@ tags:
 ---
 
 
-The time-series panel provides an interface to load, save and browse Map Manager time-series (maps).
+The time-series panel provides an interface to create, edit, open, and save Map Manager time-series (maps).
 
 Open the time-series panel using the menu 'MapManager &rarr; Time Series'
 
-Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right.
+Loaded maps are listed on the left and when a map is selected, its time-points (stacks) are listed on the right. Double-click a map to display a [map plot][map-plot], likewise, double-click a stack to display a [stack][stack] window.
 
 <IMG class="img-float-center" SRC="images/mm3/time-series/ts-big.png" WIDTH="700">
 
@@ -23,7 +23,7 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
  - **Open Map**. Open/Load a map from the hard-drive.
  - **Save Map**. Save selected map to hard-drive.
- - **Close Map**. Right click a map and select 'Close Map'.
+ - **Close Map**. Right-click a map and select 'Close Map'.
  
 <p class="important"><B>Opening Maps.</B> When opening a map, select the maps '.ipf' file. If a map is named 'mymap', load 'mymap.ipf'.
 </p>
@@ -63,7 +63,7 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 #### Right-click on a map name.
 
  - **Find Points**. Open [find points panel][15].
- - **Density Report**. Generate a density report for the map. See [reports][17].
+ - **Segment Report**. Generate a segment report for the map. See [reports][17].
  - **Dynamics Report**. Generate a dynamics report for the map. See [reports][17].
  - **Survival Report**. Generate a survival report for the map. See [reports][17].
  - **Export Map**. <span style="color:red">DO NOT USE</span> Exports a map to text files. Files are saved in the 'export/' folder.
@@ -83,8 +83,8 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
  - **Plot Run +- n**.
  - **Zero Session**. Set the selected stack to the zero session. Zero sessions are used when plotting a map with X-Axis set to 'Zero Session', 'Zero Days', and 'Zero Hours'. The zero session will have an Asterix (\*) before its session index in the list of sessions.
  - **Find Points**. Open [find points panel][15].
- - **Edit Table**. Edit annotations in a stack as a text table. This is useful to copy and paste annotations for further analysis.
- - **Unload Stack**. Unload the raw image data for a stack. Unloading a stack does not unload the stack annotations.
+ - **Edit Table**. This will display the contents of the stack list in a text table. This is useful to copy/paste information for each stack in a time-series into another program.
+ - **Unload Stack**. Unload the raw image data for a time-point. This can also be done by selecting the time-point and hitting keyboard <kbd>u</kbd>. This is useful to conserve memory by unloading the raw image data for a given time-point. Time-points that have their raw image data loaded are denoted with an 'X' in the 'D' column.
 
 <IMG class="img-float-right" SRC="images/mm3/time-series/ts-right-click-header.png" WIDTH="140">
 
@@ -144,6 +144,8 @@ See [reports][17].
 
 Interface for advanced and internal debugging. In general there is no need to use this.
 
+ - **Edit Date/Time**. Turn on to set the date and time columns for a map. Date format is yyyymmdd, time format is hh:mm:ss where hh is a 24hr clock. This is useful if your original stacks did not have date/time or it was somehow incorrect.
+ 
 <div class="print-page-break"></div>
 
 
@@ -165,5 +167,7 @@ Interface for advanced and internal debugging. In general there is no need to us
 [16]: map-pool
 [17]: reports
 [18]: intensity
+[stack]: stack
+[map-plot]: map-plot
 
 <div class="print-page-break"></div>

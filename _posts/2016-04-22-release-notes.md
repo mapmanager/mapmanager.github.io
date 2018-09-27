@@ -8,12 +8,24 @@ tags:
 - faq
 ---
 
+### 201808 Finalizing new version
+
+ - Buttons panel for stack and map plots (ctrl+1 to open) is now functioning and hopefully useful
+ - New Stack Legend panel to control stack label (upper left of stack window, global options), annotation tags (global). Also can append and modify a scale bar, image label to count slices/time, and a movie bar.
+ - Editing annotations in a stack window and annotation bar (keyboard '[') is now synchronized with the point list panel
+    - notes
+    - user type
+    - bad (point list no longer shows 'not bad' as 0
+ - right click annotation to 'analyze intensity'
+ - Standardized opening stacks in the stack browser. All should have same behavior: double-click, right-click - display stack, keyboard 'd'.
+ - Now show a please wait dialog while opening stack. It will be positioned inside the window that was used to open stack including stack browser, time-series, and map plots
+ 
 ### 20180330
 
 To Do:
 
 - Allow tracing to be reversed (Julia).
-- Provide button to recalculate segment length and spine poisiotn (Zeng-You).
+- Provide button to recalculate segment length and spine position (Zeng-You).
 
 Working on new version, seeded to
 
@@ -39,7 +51,7 @@ Working on new version, seeded to
    - [stack](stack) documentation now inclused 'global contrast' and 'buttons'. Open both from the main MapManager menu.
    - Added [map database](map-database) documentation.
  - Added Fiji plugin /tracing/bMergeChannelsv1_.py to open stack annotations and segments in ROI manager, 3D view, and Simple Neurite Tracer.
- - Added floating panel (inside stack window) to give feedback when moving and manually connecting an annotation.
+ - Added floating panel (inside stack window) to give feedback when editing annotations including: moving, manually connecting, setting good/bad.
  - Map manager documentation is now at http://mapmanager.github.io
  
 ### 20171030
