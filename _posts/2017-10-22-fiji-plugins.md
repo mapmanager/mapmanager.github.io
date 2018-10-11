@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Converting raw data into map manager Tif stacks"
+title: "Converting raw data into Map Manager Tiff stacks"
 category: post
 date: 2017-10-22 00:00:01
 order: 1
@@ -8,39 +8,58 @@ tags:
 - Fiji
 ---
 
-## Importing 3D Tif stacks into map manager
+The Map Manager - [Stack Browser][stack-browser] will only import single channel Tiff (.tif) stacks and will **not** import proprietary image formats. Thus, all raw data must be converted using the provided <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins.
 
-Map Manager uses <A HREF="http://fiji.sc/" target="_blank">Fiji</A> plugins to convert raw image stacks from a number of proprietary vendors into a format that can be imported into the Map Manager - [Stack Browser][stack-browser]. Please see the <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</A> Github repository for the most recent version of each of these plugins.
+Great care has been taken to extract the **voxel size**, **date**, and **time**. This is critical as all annotations and analysis use um scale (not pixels) and [time-series][time-series] use the acquisition date and time. After using these plugins, if the **voxel size**, **date**, or **time** is not correct, please email Robert Cudmore and we can make them work for you.
 
-Great care was taken to extract the voxel size, date, and time. This is critical for rapid workflows to always score annotations at um scale and to make time-series in the correct order. After using these plugins, if the voxel size, date, or time is not correct, please contact Robert Cudmore directly and we can make them work for you.
+<p class="important"><B>Important:</B> When stacks are imported into the Map Manager - Stack Browser, please verify the <B>voxel size</B>, <B>date</B>, and <B>time</B> are correct. If any of these are not correct, contact Robert Cudmore and we can make it work.
+</p>
 
-We are assuming you know how to use Fiji and if you do not, this is beyond the scope of this tutorial. Basically, save a plugin to your hard-drive and drag and drop it into Fiji. Make sure the name of your file ends with '_.py'.
+### Rules of Map Manager import
 
-#### Zeis lsm/czi, Nikon nd2, ScanImage
+ - Map Manager **will** import 3D .tif files that have been converted using the provided Fiji plugins.
+ - Map Manager will **not** import 3D .tif files that have interleaved color channels (e.g. raw ScanImage files).
+ - Map Manager will **not** import 3D .tif files saved as individual .tif files (e.g. raw Prairie View files).
+
+### Running the Fiji plugins
+
+ - **Either**, save a plugin to your hard-drive and drag and drop it into Fiji. Once the plugin is open in the Fiji code editor, use 'ctrl+r' to run.
+ - **Or**, place a copy of the plugin in the 'Fiji.app/plugins' folder, restart Fiji, and the plugin will be available from the Fiji menu 'Plugins'.
+
+
+### Scope specific conversion
+
+#### Zeis (lsm/czi) and Nikon (nd2) files
 
  - Use [bFolder2MapManager][bFolder2MapManager].
+ - **Important for Nikon/nd2 import**. Nikon nd2 files do not have date or time in the header. This is an egregious emmision and we are working with Nikon to fix this.
 
- 
-#### Bruker - Prairie View
+
+
+#### Bruker - Prairie View files
 
  - Use [bPrairie2tif][bPrairieToTif]
 
- 1. **Map Manager will not** import 3D .tif files that have interleaved color channels (as is the case with Vidreo - ScanImage).
- 2. **Map Manager will not** import 3D .tif files saved as individual .tif files (as is the case with Bruker - Prairie View).
+#### Olympus
 
-Note, Nikon nd2 files do not have date or time in the header???
-Note, Olympus coming soon
+ - Coming soon.
+ 
+#### ScanImage 3/4
 
-<p class="important"><B>Important:</B> When stacks are first imported into the stack browser, please verify the voxel size, date, and time are set correctly. If these are not set correctly, contact Robert Cudmore and we can make it work.
-</p>
+ - Use [bFolder2MapManager][bFolder2MapManager].
+ - **Important for ScanImage import**. ScanImage 3/4 does **not** save the x/y voxel size in its raw .tif images as the x/y voxel size depends on how the scope is configured. You need to set the 'magic_scan_image_scale' variable in the Fiji plugin to correspond to the x/y voxel size when scanning at 1x magnification with images at 1024x1024 pixels. If this is not set properly, ScanImage Tiff imports into Map Manager will not have the correct x/y scale.
+ 
+### Fiji plugin Github repository
 
-## Fitting dendritic segments
+Please see the <A HREF="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</A> Github repository for the most recent version of each of these plugins.
+
+### Fitting dendritic segments
 
 This is done entirely within Map Manager and only requires an installed Fiji program to be specified in [hard drive paths][2].
 
 The Map Manager code to fit dendritic segments is a modified version of the <A HREF="https://imagej.net/Simple_Neurite_Tracer" target="_blank">Simple Neurite Tracer</A> Fiji plugin.
 
-## Exporting stack annotations to Fiji
+### Exporting stack annotations to Fiji
 
 A Fiji plugin (bMergeChannels) is provided to open all annotations and segments in a stack into Fiji, displaying them in the Fiji ROI manager, 3D viewer, and in Simple Neurite Tracer.
 
@@ -59,5 +78,6 @@ A Fiji plugin (bMergeChannels) is provided to open all annotations and segments 
 [stack-browser]: stack-browser
 [bFolder2MapManager]: https://github.com/cudmore/bob-fiji-plugins/blob/master/bFolder2MapManager.v0.0_.py
 [bPrairieToTif]: https://github.com/cudmore/bob-fiji-plugins/blob/master/bFolder2MapManager.v0.0_.py
+[time-series]: time-series-panel
 
 

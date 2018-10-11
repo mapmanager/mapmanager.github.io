@@ -9,48 +9,39 @@ tags:
 ---
 
 
-#### Install Igor Pro
+<p class="important"><B>Important:</B> As of Oct, 2018, Map Manager is compatible with Igor 6/7. It is <B>not</B> compatible with igor 8.
+</p>
+
+### 1) Install Igor Pro
 
 - Map Manager runs in <A HREF="https://www.igorpro.net" target="_blank">Igor Pro</A> 6 or 7 on both Windows and Mac OSX.
-- Please <A HREF="https://www.wavemetrics.com/order/order1.php?type=Academic" target="_blank">purchase Igor Pro</A>
-- Or download a fully function but time limited <A HREF="https://www.wavemetrics.com/support/demos.htm" target="_blank">demo</A>.
+- Please <A HREF="https://www.wavemetrics.com/products/igorpro" target="_blank">purchase Igor Pro 6/7</A>.
+- Or download a fully function but time limited <A HREF="https://www.wavemetrics.com/downloads/current" target="_blank">demo</A>.
 
-<!--
-<p class="important"><B>Important.</B> Map Manager will only work with Igor Pro 6. Please make sure you have Igor Pro 6 or <A HREF="https://www.wavemetrics.com/order/order_igordownloads6.htm">download a trial version of Igor Pro 6.3</A>.
+### 2)  Install Map Manager
+
+ - There is no formal installation of Map Manager.
+
+### 3) Run Map Manager
+
+ - Run Map Manager in Igor Pro by double-clicking `'MapManager_<date>.ipf'`. Where `<date>` is the date that your version of Map Manager was created.
+ - Once the `'MapManager_<date>.ipf'` file is opened in Igor Pro, click in the Igor Pro 'command window' to activate the main MapManager menu. The Igor Pro 'command window' should be in the lower left of your screen and has the window title 'Untitled'. Alternatively, click on the 'compile' button in the `'MapManager_<date>'` window that has the file/code you just opened.
+ 
+### 3)  Annotating Stacks and/or Time-Series
+
+ - **Single time-point stacks**. Open the [Stack Browser][6] with the main menu 'MapManager &rarr; Stack Browser'. See [Annotating a stack][10] for more information.
+ - **Time-series stacks**. Open the [Stack Browser][6] with the main menu 'MapManager &rarr; Stack Browser' and import your stacks into the [time series][5] panel with the main menu 'MapManager &rarr; Time Series'. See [Making A Map][11] for more information.
+
+<IMG class="img-float-right" SRC="images/mm3/quit-igor.png" WIDTH="425">
+
+### 4)  Quiting Map Manager
+
+ - To quit Map Manager, you need to quit Igor Pro. Quit Igor Pro by selecting the main menu 'Igor Pro&rarr;Quit Igor Pro'.
+ - When you quit Igor Pro, you will always be prompted with a dialog asking 'Do you want to save changes to experiment 'Untitled' before quitting'. and you will <b>always answer no.</B>.
+ - All Map Manager annotations are saved using the 'Save' buttons from within the Map Manager interface in the [stack][stack] or [time-series][time-series] windows.
+
+<p class="important"><B>Important:</B> When you quit Igor Pro you will always be asked 'Do you want to save changes to the ...' and you <b>always anwser no </B>,
 </p>
--->
-
-#### Install Map Manager
-
- - Once Igor Pro is installed, there is no formal installation of Map Manager.
- - The source code will be in a folder named `'MapManager_<date>'` where `<date>` is the date the Map Manager was created. The folder will be something like `'MapManager_20180311'`.
- - The source code folder can be placed anywhere on your hard-drive.
- 
-#### Run Map Manager
-
- - Open Map Manager by double-clicking `'MapManager_<date>.ipf'` from within the source code folder. You can make a desktop shortcut to `'MapManager_<date>.ipf'` to make running Map Manager easier.
- - Once in Igor Pro, click in the command window to activate the main Map Manager menu. The command window is in the lower left of your screen and has the window title 'Untitled'.
- 
-#### Create Annotations
-
- - To score a **single time-point** stack, open the [Stack Browser][6] with the main menu 'MapManager&rarr;Stack Browser'. See [Annotating a stack][10] for more information.
- - To score a **time-series**, open the [time series][5] panel with the main menu 'MapManager&rarr;Time Series'. See [Making A Map][11] for more information.
-
-<IMG class="img-float-right" SRC="images/mm3/quit-igor.png" WIDTH="400">
-
-#### Quit Map Manager
-
- - Quit Igor Pro by selecting the main menu 'Igor Pro&rarr;Quit Igor Pro'.
- - When you quit Igor Pro, you will always be prompted with the following dialog.
- - Always answer **No**. All Map Manager analysis is saved using the 'Save' buttons from within the Map Manager interface.
- 
-<!--
-#### Map Manager Options
-
- - Global options are set in the [Options Panel][9].
- - There is one set of options that will be reloaded the next time Map Manager is run.
- - Save the current options with the 'Save' button in the [Options][9] panel.
--->
 
 <div class="print-page-break"></div>
 
@@ -64,3 +55,5 @@ tags:
 [9]: stackdb-options-panel
 [10]: annotating-a-stack
 [11]: making-a-map
+[stack]: stack
+[time-series]: time-series-panel
