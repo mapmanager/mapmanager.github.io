@@ -9,7 +9,7 @@ tags:
 ---
 
 
-<p class="important"><B>Important:</B> As of Oct, 2018, Map Manager is compatible with Igor 6/7. It is <B>not</B> compatible with igor 8.
+<p class="important"><B>Important:</B> As of Oct, 2018, Map Manager is compatible with Igor Pro 6 or Igor Pro 7. Map Manager is <B>NOT</B> compatible with Igor Pro 8.
 </p>
 
 ### 1) Install Igor Pro
@@ -32,16 +32,16 @@ tags:
  - **Single time-point stacks**. Open the [Stack Browser][6] with the main menu 'MapManager &rarr; Stack Browser'. See [Annotating a stack][10] for more information.
  - **Time-series stacks**. Open the [Stack Browser][6] with the main menu 'MapManager &rarr; Stack Browser' and import your stacks into the [time series][5] panel with the main menu 'MapManager &rarr; Time Series'. See [Making A Map][11] for more information.
 
+<figure class="img-float-right">
 <IMG class="img-float-right" SRC="images/mm3/quit-igor.png" WIDTH="425">
+<figcaption>Always answer 'No'.</figcaption>
+</figure>
 
 ### 4)  Quiting Map Manager
 
  - To quit Map Manager, you need to quit Igor Pro. Quit Igor Pro by selecting the main menu 'Igor Pro&rarr;Quit Igor Pro'.
- - When you quit Igor Pro, you will always be prompted with a dialog asking 'Do you want to save changes to experiment 'Untitled' before quitting'. and you will <b>always answer no.</B>.
+ - When you quit Igor Pro, you will always be prompted with a dialog asking 'Do you want to save changes to experiment 'Untitled' before quitting' and you will <b>always answer no.</B>.
  - All Map Manager annotations are saved using the 'Save' buttons from within the Map Manager interface in the [stack][stack] or [time-series][time-series] windows.
-
-<p class="important"><B>Important:</B> When you quit Igor Pro you will always be asked 'Do you want to save changes to the ...' and you <b>always anwser no </B>,
-</p>
 
 <div class="print-page-break"></div>
 
