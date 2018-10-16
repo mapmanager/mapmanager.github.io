@@ -8,7 +8,8 @@ tags:
 - Imaging core
 ---
 
-<IMG class="img-float-left" SRC="images/mm3/stack-browser.png" WIDTH="850">
+<IMG class="img-float-left" SRC="images/mm3/stack-browser2.png" WIDTH="750">
+<!-- <IMG class="img-float-left" SRC="images/mm3/stack-browser.png" WIDTH="850"> -->
 
 <div class="print-page-break"></div>
 
@@ -31,16 +32,6 @@ To display a [stack][3]:
 
 Load a folder of single channel Tiff files from hard-drive. If these Tiff files have been converted with one of the [Map Manager Fiji plugins][10], the voxel size, date, and time should be correctly set.
 
-#### ScanImage Import - Load ScanImage Folder
-
-The **Load ScanImage Folder** loads a folder of ScanImage Tiff stacks.
-
-<p class="important"><B>Important.</B> When importing ScanImage Tiff files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
-
-#### Canvas - Load Canvas
-
-The **Load Canvas** load an entire canvas of an imaging session. The canvas includes both video snap-shots and the location of two-photon imaging stacks. Please see the <A HREF="http://blog.cudmore.io/canvas">canvas</A> documentation for more information.
-
 #### Drag and drop
 
 A simple way to load a single stack is to drag and drop a Tiff file onto the Igor program icon. Stacks opened with drag-and-drop will appear in a special folder named 'DragAndDrop'.
@@ -57,7 +48,7 @@ Select a folder on the left and the stacks in that folder will be shown on the r
 
 #### Unload a [stack][3]:
 
-Once a stack is opened and displayed in a [stack][stack] window, it will remain loaded until it is explicity unloaded with keyboard <kbd>u</kbd> or right-click 'Unload Stack'. 
+Once a stack is loaded and displayed in a [stack][stack] window, it will remain loaded, even after the stack window is closed. Loaded stacks are indicated in the stack browser with an 'X' in the first column. To unload a stack, select it in the Stack Browser and use keyboard <kbd>u</kbd> or right-click and select 'Unload Stack'.
 
 
 ### Right-click a folder for a context menu
@@ -123,12 +114,27 @@ This menu will toggle the columns that are displayed in the stack list. These se
 
 <div class="print-page-break"></div>
 
+### ScanImage and Canvas Interface
+
+Activate the ScanImage and canvas interface in 'Options - Miscellaneous - ScanImage and Canvas In Stack Browser'.
+
+#### ScanImage Import - Load ScanImage Folder
+
+The **Load ScanImage Folder** loads a folder of ScanImage Tiff stacks.
+
+<p class="important"><B>Important.</B> When importing ScanImage Tiff files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
+
+#### Canvas - Load Canvas
+
+The **Load Canvas** load an entire canvas of an imaging session. The canvas includes both video snap-shots and the location of two-photon imaging stacks. Please see the <A HREF="http://blog.cudmore.io/canvas">canvas</A> documentation for more information.
+
 ### What is next?
 
 Once a folder of tif stacks is loaded
 
  - Start scoring single timepoint stacks following [annotating a stack][8]
  - Put the stacks into a time-series map following [making a map][9]
+
 
 
 [1]: stack-browser

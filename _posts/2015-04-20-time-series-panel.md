@@ -17,7 +17,7 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
 <IMG class="img-float-center" SRC="images/mm3/time-series/ts-big.png" WIDTH="700">
 
-<IMG class="img-float-right" SRC="images/mm3/time-series/ts-small.png" WIDTH="225">
+<IMG class="img-float-right" SRC="images/mm3/time-series/ts-small.png" WIDTH="200">
 
 #### Opening, saving, and closing maps
 
@@ -53,12 +53,12 @@ Loaded maps are listed on the left and when a map is selected, its time-points (
 
 #### Miscellaneous
 
- - **Unload Stacks**. Unload all stacks in the selected map. Ctrl+click to unload all stacks in all open maps. Unloading a stack will unload the RAW IMAGE DATA. It DOES NOT unload the stack annotations or the map.
+ - **Unload Stacks**. Unload all stacks in the selected map. Ctrl+click to unload all stacks in all open maps. Unloading a stack will unload the raw image data, it does not unload the annotations or the map.
  - **Close Windows**. Close all windows associated with the selected map.
 
 ### Right-click for context menus
 
-<IMG class="img-float-right" SRC="images/mm3/time-series/time-series-right-click-map.png" WIDTH="140">
+<IMG class="img-float-right" SRC="images/mm3/time-series/time-series-right-click-map.png" WIDTH="130">
 
 #### Right-click on a map name.
 
