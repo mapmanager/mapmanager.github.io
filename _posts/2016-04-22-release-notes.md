@@ -8,6 +8,17 @@ tags:
 - faq
 ---
 
+### 201810
+
+To Do:
+
+- Map plot is losing x-axis days when switching segments.
+- Scale radius (annotation info) does not work
+- Add search to find criss-crossing spines
+- Add search to find spines with greater than specified amount of displacement
+- Make default install of fiji (not fiji path) in same folder as MapManager source code
+- Simplify default annotation by making user selection just be one popup (no radio buttons)
+
 ### 201808 Finalizing new version
 
  - Buttons panel for stack and map plots (ctrl+1 to open) is now functioning and hopefully useful
