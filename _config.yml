@@ -2,7 +2,7 @@
 title: 'Map Manager'
 subtitle: ''
 description: 'Software to annotate image volume time-series'
-url: 'https://mapmanager.github.io'
+url: 'https://mapmanager.net'
 
 social:
   name: Robert Cudmore
@@ -23,7 +23,7 @@ navigation: 2
 
 # URL to source code, used in _includes/footer.html
 author: 'Robert Cudmore'
-codeurl: 'https://mapmanager.github.io'
+codeurl: 'https://mapmanager.net'
 myhomepage: 'http://robertcudmore.org'
 
 # Default categories (in order) to appear in the navigation
@@ -39,7 +39,7 @@ sections: [
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
 #baseurl: '/mapmanager'
-baseurl: ''
+baseurl: '/mapmanager-igor'
 
 # To provide a link to .pdf for each post
 #pdfurl: '/Vascular-Analysis/_siteprint'
