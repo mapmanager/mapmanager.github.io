@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Map Manager - Articles</title>
+    <description>Software to annotate image volume time-series</description>
+    <link>
+    https://mapmanager.github.io</link>
+    
+      
+      <item>
+        <title>Stack Legend</title>
+        
+          <description>&lt;style&gt;
+#videotable {
+    /* float: right; */
+    border: 0px solid #ddd;
+    padding: 5px;
+    /* font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif; */
+    /* border-collapse: collapse; */
+    /* width: 100%; */
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Thu, 16 Aug 2018 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/stack-legend</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/stack-legend</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Buttons</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-right&quot; src=&quot;images/mm3/mm3-buttons.png&quot; width=&quot;250&quot; /&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 16 Aug 2018 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/buttons</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/buttons</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Map Database</title>
+        
+          <description>&lt;p&gt;The map database provides an interface to display folders of maps from the hard-drive.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 28 Jan 2018 16:00:01 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/map-database</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/map-database</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Thanks</title>
+        
+          <description>&lt;p&gt;Thanks for the feedback.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sat, 27 Jan 2018 16:00:02 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/thanks</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/thanks</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Bug Reports</title>
+        
+          <description>&lt;head&gt;
+  &lt;style&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+</description>
+        
+        <pubDate>Sat, 27 Jan 2018 16:00:01 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/bug-reports</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/bug-reports</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Support</title>
+        
+          <description>&lt;head&gt;
+  &lt;style&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+</description>
+        
+        <pubDate>Wed, 17 Jan 2018 16:00:10 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/support</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/support</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Download</title>
+        
+          <description>&lt;head&gt;
+  &lt;style&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css&quot;&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+</description>
+        
+        <pubDate>Wed, 17 Jan 2018 16:00:01 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/download</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/download</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Matlab class library</title>
+        
+          <description>&lt;p&gt;&lt;a href=&quot;https://github.com/cudmore/MapManager-Matlab&quot; target=&quot;_blank&quot;&gt;Map Manager - Matlab&lt;/a&gt; is an easy to use Matlab class library that will open and plot Map Manager (Igor) files.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sat, 21 Oct 2017 17:00:01 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/map-manager-matlab</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/map-manager-matlab</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Converting raw data into Map Manager Tiff stacks</title>
+        
+          <description>&lt;p&gt;The Map Manager - &lt;a href=&quot;stack-browser&quot;&gt;Stack Browser&lt;/a&gt; will only import single channel Tiff (.tif) stacks and will &lt;strong&gt;not&lt;/strong&gt; import proprietary image formats. Thus, all raw data must be converted using the provided &lt;a href=&quot;http://fiji.sc/&quot; target=&quot;_blank&quot;&gt;Fiji&lt;/a&gt; plugins.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 21 Oct 2017 17:00:01 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/fiji-plugins</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/fiji-plugins</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Map Pool</title>
+        
+          <description>&lt;p&gt;A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 07 Aug 2017 03:10:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/Map-Pool</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/Map-Pool</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Algorithms</title>
+        
+          <description>&lt;p&gt;Map Manager uses a range of algorithms at different stages of the analysis&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 07 Jul 2016 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/Algorithms</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/Algorithms</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Point List</title>
+        
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Sun, 26 Jun 2016 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/point-list</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/point-list</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Release Notes</title>
+        
+          <description>&lt;h3 id=&quot;201810&quot;&gt;201810&lt;/h3&gt;
+</description>
+        
+        <pubDate>Thu, 21 Apr 2016 18:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/release-notes</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/release-notes</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Gallery</title>
+        
+          <description>&lt;style&gt;
+#videotable {
+    /*float: right;*/
+    border: 0px solid #ddd;
+    padding: 5px;
+    /* font-family: &quot;Trebuchet MS&quot;, Arial, Helvetica, sans-serif; */
+    /* border-collapse: collapse; */
+    /* width: 100%; */
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Sun, 15 Nov 2015 14:46:33 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/gallery</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/gallery</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Find Points</title>
+        
+          <description>&lt;p&gt;The find points panel is used to browse annotations between two timepoints, shows the best-guess for correspondence, and allows annotation correspondence to be edited between timepoints.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 02 Aug 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/find-points-panel</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/find-points-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Getting started</title>
+        
+          <description>&lt;p class=&quot;important&quot;&gt;&lt;b&gt;Important:&lt;/b&gt; As of Oct, 2018, Map Manager is compatible with Igor Pro 6 or Igor Pro 7. Map Manager is &lt;b&gt;NOT&lt;/b&gt; compatible with Igor Pro 8.
+&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/getting-started</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/getting-started</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>FAQ</title>
+        
+          <description>&lt;h3 id=&quot;1-limitations&quot;&gt;(1) Limitations&lt;/h3&gt;
+</description>
+        
+        <pubDate>Thu, 30 Jul 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/faq</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/faq</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Reports</title>
+        
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Sat, 25 Jul 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/reports</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/reports</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Intensity</title>
+        
+          <description>&lt;p&gt;Activate the display of intensity analysis ROIs by turning on the ‘Activate’ check-box in the intensity-analysis section of the &lt;a href=&quot;stackdb-options-panel&quot;&gt;options panel&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 25 Jul 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/intensity</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/intensity</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Hard Drive Paths</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/options/hard-drive-paths.png&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 22 Jul 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/hdd-paths</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/hdd-paths</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>File format</title>
+        
+          <description>&lt;style&gt;
+table{
+    padding: 5px;
+    border:1px solid #000000;
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Thu, 28 May 2015 15:01:06 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/File-format</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/File-format</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Time Series</title>
+        
+          <description>&lt;p&gt;The time-series panel provides an interface to create, edit, open, and save Map Manager time-series (maps).&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/time-series-panel</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/time-series-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Options</title>
+        
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/stackdb-options-panel</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/stackdb-options-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack plot</title>
+        
+          <description>&lt;p&gt;A stack plot shows a value/statistic for all 3D annotations in a single &lt;a href=&quot;stack&quot;&gt;stack&lt;/a&gt;. Each point is a value/statistic for one 3D annotation in the stack.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/stack-plot</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/stack-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack Annotations</title>
+        
+          <description>&lt;p&gt;3D Annotations are the core of Map Manager. They are easy to create, edit, and in a map to connect them between time-points. Annotations can be &lt;a href=&quot;search-panel&quot;&gt;searched&lt;/a&gt;, &lt;a href=&quot;map-plot&quot;&gt;plotted&lt;/a&gt;, and exported.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/stack-annotations</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/stack-annotations</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Search</title>
+        
+          <description>&lt;p&gt;The search panel is used to find annotations based on a criterion. Searches can be performed within a single stack or time-series, or across multiple stacks and time-series.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/search-panel</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/search-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Run plot</title>
+        
+          <description>&lt;p&gt;A run plot is a sequence of &lt;a href=&quot;stack&quot;&gt;stack&lt;/a&gt; windows, one for each session in a timeseries. The purpose of a run plot is to visualize the dynamics between annotations. The image below shows a run plot of spines. Spine # 201 is selected in each of three stack windows corresponding to timepoints.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/run-plot</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/run-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Plot panel</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-center&quot; src=&quot;images/mm3/mm3-plot-panel-big.png&quot; width=&quot;700&quot; /&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/plot-panel</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/plot-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Map plot</title>
+        
+          <description>&lt;style&gt;
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/map-plot</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/map-plot</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Making a map</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/time-series/time-series-panel.png&quot; width=&quot;650&quot; /&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/making-a-map</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/making-a-map</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Layout panel</title>
+        
+          <description>&lt;p&gt;The layout panel provides an interface to tweak Igor plots.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 20 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/layout-panel</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/layout-panel</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack Browser</title>
+        
+          <description>&lt;p&gt;&lt;img class=&quot;img-float-left&quot; src=&quot;images/mm3/stack-browser2.png&quot; width=&quot;750&quot; /&gt;
+&lt;!-- &lt;IMG class=&quot;img-float-left&quot; SRC=&quot;images/mm3/stack-browser.png&quot; WIDTH=&quot;850&quot;&gt; --&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 19 Apr 2015 15:46:33 -0700</pubDate>
+        <link>
+        https://mapmanager.github.io/stack-browser</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/stack-browser</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Annotating a stack</title>
+        
+          <description>&lt;p&gt;This is a workflow for annotating 3D annotations in a &lt;strong&gt;single time-point stack&lt;/strong&gt;. To annotate a &lt;strong&gt;time-series of stacks&lt;/strong&gt;, please see &lt;a href=&quot;making-a-map&quot;&gt;making a map&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 21 Feb 2015 14:46:33 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/annotating-a-stack</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/annotating-a-stack</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Stack</title>
+        
+          <description>&lt;style&gt;
+&lt;/style&gt;
+</description>
+        
+        <pubDate>Fri, 30 Jan 2015 14:46:33 -0800</pubDate>
+        <link>
+        https://mapmanager.github.io/stack</link>
+        <guid isPermaLink="true">https://mapmanager.github.io/stack</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

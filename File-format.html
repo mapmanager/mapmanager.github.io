@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : File format</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>File format | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="File format" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software to annotate image volume time-series" />
+<meta property="og:description" content="Software to annotate image volume time-series" />
+<link rel="canonical" href="https://mapmanager.github.io/File-format" />
+<meta property="og:url" content="https://mapmanager.github.io/File-format" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-05-28T15:01:06-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="File format" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2015-05-28T15:01:06-07:00","datePublished":"2015-05-28T15:01:06-07:00","description":"Software to annotate image volume time-series","headline":"File format","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/File-format"},"url":"https://mapmanager.github.io/File-format"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>File format
+        
+    </h3>
+</div>
+
+<style>
+table{
+    padding: 5px;
+    border:1px solid #000000;
+}
+
+th{
+    border:1px solid #000000;
+    background-color: #dddddd;
+    color: black;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
+<h3 id="reading-map-manager-files-in-other-programming-environments">Reading Map Manager files in other programming environments</h3>
+
+<p>Map Manager saves all <a href="stack">stack</a> and time-series <a href="time-series-panel">map</a> files as plain text files. In this way, annotations created in Map Manager can easily be opened in a wide range of other programming environments for additional visualization and analysis.</p>
+
+<h4 id="map-manager---matlab">Map Manager - Matlab</h4>
+
+<p>add description</p>
+
+<h4 id="pymapmanager">PyMapManager</h4>
+
+<p>We provide a Python package, <a href="https://github.com/cudmore/PyMapManager/">PyMapManager</a>, to do this. Please have a look at this package as a starting point for custom analysis and visualization using existing Map Manager files.</p>
+
+<ul>
+  <li><a href="https://github.com/cudmore/PyMapManager/">PyMapManager on GitHub</a></li>
+  <li>PyMapManager <a href="http://blog.cudmore.io/PyMapManager/">API documentation</a></li>
+  <li>IPython notebook <a href="https://github.com/cudmore/PyMapManager/tree/master/PyMapManager/examples">examples</a></li>
+</ul>
+
+<p>If you are on a Mac, python comes pre-installed and you are good to go. In general, <a href="https://www.continuum.io/what-is-anaconda">Anaconda</a> is a useful starting point as it pre-installes most Python packages you might need. Download Anaconda <a href="http://continuum.io/downloads">here</a>.</p>
+
+<h3 id="map-manager-file-format">Map Manager file format</h3>
+
+<p>For the intrepid data scientist (e.g. data analyst) we are providing the details of the Map Manager file format for both single time-points and maps.</p>
+
+<p><img class="img-float-right" src="images/mm3/file-format/stack-hard-drive.png" width="450" /></p>
+
+<h4 id="single-time-point-files">Single time-point files</h4>
+<ul>
+  <li>The original .tif file is never modified</li>
+  <li>Annotations are saved in a stackdb folder
+    <ul>
+      <li><strong>_db2.txt</strong> : Table of annotation values, one line per annotation</li>
+      <li><strong>_Int1.txt</strong> : Table of intensity analysis for channel 1, one line per annotation</li>
+      <li><strong>_Int2.txt</strong> :</li>
+      <li><strong>_Int3.txt</strong> :</li>
+      <li><strong>_l.txt</strong> : Table of line segment fits</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<p><img class="img-float-right" src="images/mm3/file-format/map-hard-drive.png" width="450" /></p>
+
+<h4 id="map-files">Map files</h4>
+
+<ul>
+  <li>Maps are saved in a folder whose name is the same as the map name</li>
+  <li>At the root of this folder are three map files
+    <ul>
+      <li><strong>mapname.txt</strong> : See <a href="#map_file">format</a> below</li>
+      <li><strong>_objMap.txt</strong> :</li>
+      <li><strong>_segMap.txt</strong> : Segment map (if there are segment)</li>
+    </ul>
+  </li>
+  <li>There are some folders
+    <ul>
+      <li><strong>line</strong> : Contains tabular data of line tracing, one file per timepoint</li>
+      <li><strong>raw</strong>: The original .tif files are never modified, these are direct copies.</li>
+      <li><strong>stackdb</strong> : Same format as for ‘Single time-point files’</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h3 id="hdf5">HDF5</h3>
+
+<p>We are working on saving Map Manager files in the HDF5 format. <a href="https://www.hdfgroup.org/HDF5/">HDF5</a> is an open source cross platform binary file format. It can be read from <a href="http://www.mathworks.com/help/matlab/hdf5-files.html">Matlab</a>, <a href="http://www.h5py.org">Python</a>, <a href="http://www.wavemetrics.com/products/igorpro/dataaccess/hdf5.htm">Igor Pro</a> and from a <a href="https://www.hdfgroup.org/products/hdf5_tools/# h5dist">command line</a>.</p>
+
+<p>Out of the box, Map Manager is not saving files in the HDF5 format. If you are interested in turning on this feature, please email Robert Cudmore.</p>
+
+<h3 id="each-mapnametxt-file-has-the-following-format">Each mapname.txt file has the following format</h3>
+
+<h4 id="map-file-format"><a id="map_file"></a>Map file format</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>index</th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hsType</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+      <td>mm3</td>
+    </tr>
+    <tr>
+      <td>hsStack</td>
+      <td>rr30a_s0</td>
+      <td>rr30a_s1</td>
+      <td>rr30a_s2</td>
+      <td>rr30a_s3</td>
+      <td>rr30a_s4</td>
+      <td>rr30a_s5</td>
+      <td>rr30a_s6</td>
+      <td>rr30a_s7</td>
+      <td>rr30a_s8</td>
+    </tr>
+    <tr>
+      <td>hsdb</td>
+      <td>rr30a_s0_db2</td>
+      <td>rr30a_s1_db2</td>
+      <td>rr30a_s2_db2</td>
+      <td>rr30a_s3_db2</td>
+      <td>rr30a_s4_db2</td>
+      <td>rr30a_s5_db2</td>
+      <td>rr30a_s6_db2</td>
+      <td>rr30a_s7_db2</td>
+      <td>rr30a_s8_db2</td>
+    </tr>
+    <tr>
+      <td>hsStackNV</td>
+      <td>rr30a_s0</td>
+      <td>rr30a_s1</td>
+      <td>rr30a_s2</td>
+      <td>rr30a_s3</td>
+      <td>rr30a_s4</td>
+      <td>rr30a_s5</td>
+      <td>rr30a_s6</td>
+      <td>rr30a_s7</td>
+      <td>rr30a_s8</td>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td>20141009</td>
+      <td>20141013</td>
+      <td>20141016</td>
+      <td>20141017</td>
+      <td>20141018</td>
+      <td>20141020</td>
+      <td>20141021</td>
+      <td>20141022</td>
+      <td>20141029</td>
+    </tr>
+    <tr>
+      <td>time</td>
+      <td>20:01:40</td>
+      <td>22:24:04</td>
+      <td>19:49:05</td>
+      <td>20:30:39</td>
+      <td>16:18:59</td>
+      <td>19:25:41</td>
+      <td>18:36:19</td>
+      <td>19:47:00</td>
+      <td>19:05:27</td>
+    </tr>
+    <tr>
+      <td>hsStackSeconds</td>
+      <td>3495729700</td>
+      <td>3496083844</td>
+      <td>3496333745</td>
+      <td>3496422639</td>
+      <td>3496493939</td>
+      <td>3496677941</td>
+      <td>3496761379</td>
+      <td>3496852020</td>
+      <td>3497454327</td>
+    </tr>
+    <tr>
+      <td>fiducPnt</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>numChannels</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>defaultChannel</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>px</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+    </tr>
+    <tr>
+      <td>py</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+      <td>1024</td>
+    </tr>
+    <tr>
+      <td>pz</td>
+      <td>70</td>
+      <td>65</td>
+      <td>70</td>
+      <td>70</td>
+      <td>70</td>
+      <td>80</td>
+      <td>70</td>
+      <td>80</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>dx</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <td>dy</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <td>dz</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>stackdbVersion</td>
+      <td>20151224</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>numSeg</td>
+      <td>5</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>numObj</td>
+      <td>2467</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>numSpine</td>
+      <td>1227</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>importedStackName</td>
+      <td>RR30a_S0</td>
+      <td>RR30a_S1</td>
+      <td>RR30a_S2</td>
+      <td>RR30a_S3</td>
+      <td>RR30a_S4</td>
+      <td>RR30a_S5</td>
+      <td>RR30a_S6</td>
+      <td>RR30a_S7</td>
+      <td>RR30a_S8</td>
+    </tr>
+    <tr>
+      <td>condStr</td>
+      <td>a1</td>
+      <td>a2</td>
+      <td>e</td>
+      <td>b1</td>
+      <td>b2</td>
+      <td>b</td>
+      <td>c1</td>
+      <td>c2</td>
+      <td>c3</td>
+    </tr>
+    <tr>
+      <td>zeroSession</td>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>sessions</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>datetime</td>
+      <td>3495729700</td>
+      <td>3496083844</td>
+      <td>3496333745</td>
+      <td>3496422639</td>
+      <td>3496493939</td>
+      <td>3496677941</td>
+      <td>3496761379</td>
+      <td>3496852020</td>
+      <td>3497454327</td>
+    </tr>
+    <tr>
+      <td>days</td>
+      <td>0</td>
+      <td>4.0989</td>
+      <td>6.9913</td>
+      <td>8.0201</td>
+      <td>8.8454</td>
+      <td>10.975</td>
+      <td>11.941</td>
+      <td>12.99</td>
+      <td>19.961</td>
+    </tr>
+    <tr>
+      <td>hours</td>
+      <td>0</td>
+      <td>98.373</td>
+      <td>167.79</td>
+      <td>192.48</td>
+      <td>212.29</td>
+      <td>263.4</td>
+      <td>286.58</td>
+      <td>311.76</td>
+      <td>479.06</td>
+    </tr>
+    <tr>
+      <td>zsessions</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>zdays</td>
+      <td>0</td>
+      <td>4.0989</td>
+      <td>6.9913</td>
+      <td>8.0201</td>
+      <td>8.8454</td>
+      <td>10.975</td>
+      <td>11.941</td>
+      <td>12.99</td>
+      <td>19.961</td>
+    </tr>
+    <tr>
+      <td>zhours</td>
+      <td>0</td>
+      <td>98.373</td>
+      <td>167.79</td>
+      <td>192.48</td>
+      <td>212.29</td>
+      <td>263.4</td>
+      <td>286.58</td>
+      <td>311.76</td>
+      <td>479.06</td>
+    </tr>
+    <tr>
+      <td>mapCond</td>
+      <td>mc1</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div class="post-tags">
+  
+  
+  
+  
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-05-28-File-format.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

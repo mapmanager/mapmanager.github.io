@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Release Notes</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Release Notes | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Release Notes" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="201810" />
+<meta property="og:description" content="201810" />
+<link rel="canonical" href="https://mapmanager.github.io/release-notes" />
+<meta property="og:url" content="https://mapmanager.github.io/release-notes" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-04-21T18:46:33-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Release Notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2016-04-21T18:46:33-07:00","datePublished":"2016-04-21T18:46:33-07:00","description":"201810","headline":"Release Notes","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/release-notes"},"url":"https://mapmanager.github.io/release-notes"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Release Notes
+        
+    </h3>
+</div>
+
+<h3 id="201810">201810</h3>
+
+<p>To Do:</p>
+
+<ul>
+  <li>Map plot is losing x-axis days when switching segments.</li>
+  <li>Scale radius (annotation info) does not work</li>
+  <li>Add search to find criss-crossing spines</li>
+  <li>Add search to find spines with greater than specified amount of displacement</li>
+  <li>Make default install of fiji (not fiji path) in same folder as MapManager source code</li>
+  <li>Simplify default annotation by making user selection just be one popup (no radio buttons)</li>
+</ul>
+
+<h3 id="201808-finalizing-new-version">201808 Finalizing new version</h3>
+
+<ul>
+  <li>Buttons panel for stack and map plots (ctrl+1 to open) is now functioning and hopefully useful</li>
+  <li>New Stack Legend panel to control stack label (upper left of stack window, global options), annotation tags (global). Also can append and modify a scale bar, image label to count slices/time, and a movie bar.</li>
+  <li>Editing annotations in a stack window and annotation bar (keyboard ‘[’) is now synchronized with the point list panel
+    <ul>
+      <li>notes</li>
+      <li>user type</li>
+      <li>bad (point list no longer shows ‘not bad’ as 0</li>
+    </ul>
+  </li>
+  <li>right click annotation to ‘analyze intensity’</li>
+  <li>Standardized opening stacks in the stack browser. All should have same behavior: double-click, right-click - display stack, keyboard ‘d’.</li>
+  <li>Now show a please wait dialog while opening stack. It will be positioned inside the window that was used to open stack including stack browser, time-series, and map plots</li>
+</ul>
+
+<h3 id="20180330">20180330</h3>
+
+<p>To Do:</p>
+
+<ul>
+  <li>Allow tracing to be reversed (Julia).</li>
+  <li>Provide button to recalculate segment length and spine position (Zeng-You).</li>
+</ul>
+
+<p>Working on new version, seeded to</p>
+
+<ul>
+  <li>SeungEon (Worley). MapManager 20180328. To browse stacks and time-series acquired on Prairie Scope. Also exclusively using Canvas on prairie scope (motor controller, video controller, loading prairie view files).</li>
+  <li>
+    <p>Yevgeniya (Bergles). MapManager_20180316. To annotate filopodia density in single time-point immuno and to track filopodia dynamics in time-series</p>
+  </li>
+  <li>Now works in Igor 7 (Yevgeniya and SeungEon are using Igor 7)</li>
+  <li>Fiji tracing plugin will work with spaces in folder paths</li>
+  <li>Added mean/sd/se/n of filament/spine length to segment report (Yevgeniya)</li>
+  <li>Can now edit user type, bad, and note in search results</li>
+  <li>Added include/exclude ‘bad’ annotations option to all searches</li>
+  <li>Cleaned up Point List interface</li>
+  <li>Marquee to mask now has invert option (useful to make disjoint selections)</li>
+  <li>Columns can be turned on/off with right-click (in column header) in windows with a list including the Stack Browser, Time-series, Point List, Find Points, and Search.</li>
+  <li>Added ‘Average’ to sliding Z-Projection options. Allows time series to be frame averaged.</li>
+  <li>Removed edit box from all output report tables. These are to be copied and pasted to other programs, not edited within Igor.</li>
+</ul>
+
+<h3 id="201801">201801</h3>
+
+<ul>
+  <li>Fixed map ‘subtraction’ search. Previously was not returning ‘transient’ objects as subtraction</li>
+  <li>All windows should now have a main menu help that brings user to web page for help for that window.</li>
+  <li>Revamped documentation with lots of changes including
+    <ul>
+      <li><a href="stack">stack</a> documentation now inclused ‘global contrast’ and ‘buttons’. Open both from the main MapManager menu.</li>
+      <li>Added <a href="map-database">map database</a> documentation.</li>
+    </ul>
+  </li>
+  <li>Added Fiji plugin /tracing/bMergeChannelsv1_.py to open stack annotations and segments in ROI manager, 3D view, and Simple Neurite Tracer.</li>
+  <li>Added floating panel (inside stack window) to give feedback when editing annotations including: moving, manually connecting, setting good/bad.</li>
+  <li>Map manager documentation is now at http://mapmanager.github.io</li>
+</ul>
+
+<h3 id="20171030">20171030</h3>
+
+<p>Working on new version and have seeded it to the following people</p>
+
+<ul>
+  <li>Daisuke (Cirelli &amp; Tononi, Wisc-Madison), 20171030</li>
+  <li>Richard (Huganir), 20171029</li>
+  <li>Zeng You (Linden), 20170818</li>
+  <li>Amit (Bergles), 20170817 (plus one earlier version from feb?)</li>
+</ul>
+
+<h4 id="new-features">New Features</h4>
+<ul>
+  <li>Each annotation can be tagged with 1 of 10 ‘user type’.
+    <ul>
+      <li>right-click on annotation in stack window</li>
+      <li>right-click on annotation in map to set run</li>
+      <li>search for user type</li>
+      <li>dynamics and survival report now break down dynamics based on user type</li>
+      <li>masks are automatically created and available in trajectory analysis</li>
+    </ul>
+  </li>
+  <li>Survival report</li>
+  <li>Birth/death plot. Right-click on intensity plots</li>
+  <li>Map plot now has ‘transform’ to transform y-data to: Raw, %, Abs, Diff, etc</li>
+  <li>Buttons window to expose all the features of stack and map plots</li>
+  <li>Options panel noew has ‘default scoring’ for: spines, cell bodies, prairie line scan</li>
+  <li>Trajectory analysis
+    <ul>
+      <li>Uses concept of stack pivot (rather than segment pivot)</li>
+      <li>2d/3d distance is distance an annotation moves between timepoints</li>
+      <li>Cum 2d/3d distance</li>
+      <li>Masks are automatically created: added, subtracted, always present, user type, etc. etc.</li>
+      <li>Plot with mask allows plotting subsets of annotations: added, subtracted, user type, etc</li>
+      <li>Overlay mask over existing plot and get stats for each mask</li>
+    </ul>
+  </li>
+  <li>New Fiji plugin to fit tracings (written in Jython) will work with all versions of FIji and does not require user to explicitly install a plugin</li>
+  <li>New Fiji plugins to convert raw data to .tif for import
+    <ul>
+      <li>Zeiss LSM/CZI</li>
+      <li>Prairie View</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/cudmore/MapManager-Matlab">Matlab</a> code to open, plot, and add new analysis to Map Manager files
+    <ul>
+      <li>see: https://github.com/cudmore/MapManager-Matlab</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="improvements">Improvements</h4>
+<ul>
+  <li>When adding stacks to a map from Stack Browser, no longer need to open channels.</li>
+  <li>Map DB now searches 2x deep, will handle a folder with condition folders (that then have the maps)</li>
+  <li>Simplified interface to stack browser and time series. All column options are now in a right-click menu</li>
+  <li>Standardized voxel size in stack browser and time series, they are now: vx, vy, vz</li>
+  <li>Large rewrite of online help including recipes, stack, etc</li>
+</ul>
+
+<h4 id="bug-fixes">Bug fixes</h4>
+<ul>
+  <li>No longer allowed to delete an annotation while in ‘move’ or ‘manual connect’. This was causing unexpected results.</li>
+  <li>Intensity analysis channel 2, utssdtds was incorrect. See code comment ‘20171005 intensity bug in utssdtds’</li>
+  <li>fixed errors when initially opening search panel</li>
+  <li>fixed search for added</li>
+</ul>
+
+<h4 id="20170123-distributed-mapmanager-to-zeng-you-and-julia-linden-richard-huganir">20170123, Distributed MapManager to Zeng-You and Julia (Linden), Richard (Huganir)</h4>
+
+<p>This is a major release with new features, improvements, and bug fixes. A full list of these will follow.</p>
+
+<h4 id="20161012-distributed-mapmanager-to-julia-linden">20161012, Distributed MapManager to Julia (Linden)</h4>
+
+<h4 id="20160722-distributed-mapmanager-to-allen-linden">20160722. Distributed MapManager to Allen (Linden)</h4>
+
+<h4 id="20160630-distributed-mapmanager-to-mengnan-huganir">20160630. Distributed MapManager to Mengnan (Huganir)</h4>
+
+<h4 id="20160422-update-file-version-20151224">20160422 Update (file version 20151224)</h4>
+
+<p>This is a major release with new features, improvements, and bug fixes. The file format has not changed but the options have. Please remake your options!</p>
+
+<h4 id="new-features-1">New Features</h4>
+
+<ul>
+  <li>No more limitation on length of file names when importing into stack browser</li>
+  <li>Plot run +/- now has option to set ‘row’ of run</li>
+  <li>Added ‘Div’ option to plot panel.</li>
+  <li>Added option to normalize all spines to a constant value</li>
+  <li>Segment density report now has segment position information {zMin, zMax, zMean, zMedian, xyAngle, tort}</li>
+  <li>Main map manager panel now remembers its position</li>
+  <li>Main map plot now remembers its position</li>
+  <li>Conrol click on ‘close all windows’ will now close tables</li>
+  <li>Jumping spines
+Jumping spines are specified just like other persistent spines. select spines in both time-points and hit keyboard ‘p’. When you make jumping spines, the source and destination spines are required to be subtraction and addition respectively.</li>
+  <li>Added jumping to map search</li>
+</ul>
+
+<h4 id="improvements-1">Improvements</h4>
+
+<ul>
+  <li>Fast left/right mouse click should no longer be a problem.</li>
+  <li>User clicks during long operations like opening a run should no longer be a problem.</li>
+  <li>Updated coloring of spines in map plot. If there is no previous segment, spines are no longer marked as added (green). If there is no next segment, spines are no longer marked as subtracted (red). Same rules for transient (blue).</li>
+  <li>Map Plot. Snapping a marquee rectangle and right-click to make a selection now prints the mean/sd/se/n for both x and y axis.</li>
+  <li>Map Plot. Snapping a marquee rectangle and right-click to make a selection now works for +/- from mask.</li>
+  <li>Stats button in map plot will now report grand mean of all spine masks in plot (previously was only per segment).</li>
+  <li>All spine dynamics now plot following colors and size specified in table in options panel.</li>
+  <li>The size of masks in map plots now follow ‘pntSel’ in main map manager options panel.</li>
+  <li>Revamped example user file. tried to make it clear that this can be empty and that values specified will over-ride setting in main options panel.</li>
+  <li>Added ‘dynamics’ menu to right-click in map plot.</li>
+  <li>Added ‘Edit Line’ menu to right-click in main stack window ‘Line Segments’.</li>
+</ul>
+
+<h4 id="bug-fixes-1">Bug Fixes</h4>
+
+<ul>
+  <li>Fixed export to text. If there is an error during export. ‘Clear User’ then ‘Analyze User Map’ and try export again.</li>
+  <li>Replotting a run while existing run is linked will continue to correctly link</li>
+  <li>Linked windows +/- zoom now works when some windows have left control bar and some do not</li>
+</ul>
+
+<h3 id="20160126">20160126</h3>
+
+<h4 id="new-features-2">New Features</h4>
+<ul>
+  <li>Opening a stack will now display a floating dialog while stack is loading (it is yellow)</li>
+  <li>Exposed interface to set defaults for intensity background candidates.</li>
+  <li>We can now set # rows, # cols, row mult, col mult, and a boolean to include other side of dendrite. When you include candidates on the other side of the dendrite, you are doubling the # of candidated. Due to this increased analysis, spine/second is dropping down to ~8 spines/second</li>
+  <li>Added ‘segment ends’ search to return spines close to the end of each segment</li>
+</ul>
+
+<h4 id="new-interface">New Interface</h4>
+<ul>
+  <li>Added ‘debug on error’ checkbox to the Intensity Tab. This turns ‘debug on error’ (global igor option) on/off to run intensity analysis for a map or a stack. You want to run intensity analysis with this OFF</li>
+  <li>added ‘export map’ to right-click of map list in main map manager panel</li>
+  <li>revamped search panel with two tabs: map and manual</li>
+  <li>reworked obj info window interface
+      - removed ‘analyze run’
+      - on ‘analyze’ we will now open ch1/ch2 if neccessary</li>
+  <li>control click on ‘Unload Stacks’ in main mapmanager panel to unload ALL stack across ALL open maps</li>
+  <li>added (density report, dynamics report) right-click to map in main map manager panel</li>
+  <li>added (scale, date/time) checkboxes to main map manager panel. This hides columns so you can see LONG ‘original names’</li>
+</ul>
+
+<h4 id="general-improvements">General Improvements</h4>
+<ul>
+  <li>Fixed user interface for clicking to set a manual position for intensity background
+      - clicking off the image does nothing
+      - if click results in roi going off image, we revert to last good background roi
+      - removed help text from main window and now display in igor command window</li>
+  <li>Rewrote ‘clear’ intensity analysis to be much faster.</li>
+  <li>Moved default plot window to left (was off screen to right for richard)</li>
+  <li>Rewrote ‘dynamics report’ to include 3d segment length and density. Previously lengths were calculated from 2d projections, now they are true 3d lengths. New columns are: {totalLen3d, goodLen3d, totalDen3d, goodDen3d}</li>
+</ul>
+
+<h4 id="bug-fixes-2">Bug Fixes</h4>
+<ul>
+  <li>setting the segment pivot point will be correctly saved. Previous versions (not all of them) were not doing this correctly.</li>
+  <li>Fixed bug where the backbone roi was ‘looping around’ to previous backbone segment. This was happening for spines at the beginning of a segment (not at the end). Now, spines at both the beginning and end of a segment get the correct backbone ROI.</li>
+  <li>fixed plot panel (ch1, ch2, dyn) checkboxes, they now generate full stat lists including ‘u’ stats</li>
+  <li>[BUG] stat lists are using tp=0 to generate stats, if they are missing ‘u’, you will not get ‘u’ in stat list</li>
+  <li>fixed bug where right-click below segment list (in left control panel of stack window) would sometime give an error</li>
+</ul>
+
+<h4 id="known-bugs">Known Bugs</h4>
+<ul>
+  <li>‘Export map’ has a bug if size of int analysis is different between stacks in a map. This happens if int analysis fails half way through and user ‘u’ stats are added to some but not other stacks. Solution is to clear and then re analyze intensity for the offending stacks. Be careful, when you clear, you lose your manual setting (individual spine background position, spine width, etc).</li>
+</ul>
+
+<h3 id="20160119-update-sent-to-users-on-20160115--20160118">20160119 Update (sent to users on 20160115 / 20160118)</h3>
+
+<p>This is the first MapManager version of intensity analysis</p>
+
+<h4 id="new-features-3">New Features</h4>
+<ul>
+  <li>Complete rewrite of intensity analysis</li>
+  <li>Depending on the size of your stacks, intensity analysis should do ~15 spines/sec for large stacks and ~50 spines/sec for smaller stack. Loading stacks is the rate limiting factor.</li>
+  <li>Spine roi is drawn using the longest spine length in each run</li>
+  <li>Added intensity bad. Can be set for each spine. Spines marked ‘intensity bad’ can be toggled in all plots.</li>
+  <li>Each spine has errors and warnings if intensity analysis had problems. Search for ‘errors and warnings’ to decide what to do with the errors. Most of the time you will set ‘Intensity Bad’</li>
+  <li>Intensity Analysis Errors occur when
+    <ul>
+      <li>spine roi is off image</li>
+      <li>backbone roi had to be shortened (near end of dendrite)</li>
+      <li>background roi not found because all candidates are off image</li>
+    </ul>
+  </li>
+  <li>Intensity analysis should be run with ‘Procedure - Debug On Error’ off</li>
+  <li>Added ‘Save Map As…’ to save an entire map under a new name. Use Map Manager Panel - Utility - Save Map As…</li>
+</ul>
+
+<h4 id="new-interface-1">New Interface</h4>
+<ul>
+  <li>Search - Errors &amp; warnings</li>
+  <li>Search - V Spines. Will search spines that have spine head above/below the backbone line connection point</li>
+  <li>Search - ROI Bounds. Will search for spines that have background spine ROI near edge of image.</li>
+</ul>
+
+<h4 id="known-bugs-1">Known bugs</h4>
+<ul>
+  <li>[FIXED] Spine density in a map is using 2D projection of line</li>
+  <li>[checked and seems to work] RIght-click menu items with ‘tab’ might not work on windows. For example ‘Reset Zoom   [enter]’</li>
+  <li>[FIXED] changing a spine (e.g. ‘move’) does not set intensity dirty for other spines in run</li>
+  <li>[FIXED] editing spine dynamics (add/subtract/persist) needs to mark all effected spines as ‘intensity dirty’</li>
+  <li>After int analysis, if no background is found (error #99) it is not possible to have user set manual background</li>
+</ul>
+
+<h3 id="20150731-sent-first-version-of-map-manager-to-richard-and-yong">20150731 Sent first version of Map Manager to Richard and Yong</h3>
+
+<ul>
+  <li>This is a COMPLETE rewrite of original bSpine program that was used in Zhang et al, 2015.</li>
+  <li>Did not hear back</li>
+</ul>
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#faq">faq</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2016-04-22-release-notes.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>
