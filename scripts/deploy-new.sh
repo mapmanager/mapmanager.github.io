@@ -26,11 +26,12 @@ fi
 
 # Step 3: Create worktree for gh-pages
 echo "🌳 Creating worktree for $BRANCH..."
-if ! git worktree add "$DEPLOY_DIR" $BRANCH; then
-    echo "⚠️  Worktree already exists, removing and recreating..."
+# Remove any existing worktree first
+if git worktree list | grep -q "$DEPLOY_DIR"; then
+    echo "⚠️  Removing existing worktree..."
     git worktree remove "$DEPLOY_DIR" --force 2>/dev/null || true
-    git worktree add "$DEPLOY_DIR" $BRANCH
 fi
+git worktree add "$DEPLOY_DIR" $BRANCH
 
 # Step 4: Build Jekyll site
 echo "🔨 Building Jekyll site..."
@@ -57,7 +58,7 @@ fi
 
 # Push to origin
 echo "🚀 Pushing to origin/$BRANCH..."
-git push origin $BRANCH
+git push origin HEAD:$BRANCH
 
 # Step 7: Clean up
 echo "🧹 Cleaning up..."
