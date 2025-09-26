@@ -2,11 +2,11 @@
 # Simple Jekyll deploy script
 set -e
 
-echo "Building Jekyll site..."
-bundle exec jekyll build
-
 echo "Switching to gh-pages branch..."
 git checkout gh-pages
+
+echo "Building Jekyll site..."
+bundle exec jekyll build
 
 echo "Copying built site..."
 cp -r _site/* .
