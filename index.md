@@ -15,7 +15,7 @@ Map Manager is software to annotate and analyze image volume time-series
 ### News
 
  - #### We are seeding Map Manager to beta testers, go to the [download](download) page to request a copy.
- - #### We have a poster at SFN 2018 in San Diego, Sunday PM poster session, Program number 254.17. You can download a copy of the poster [here][sfn2018_poster].
+
  
 <IMG class="img-float-right" SRC="/images/imagingcore/figure-1.png" width="500">
 
