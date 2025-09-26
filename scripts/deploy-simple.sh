@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# Simple Jekyll deploy script (no worktree, no Docker)
+# Simple Jekyll deploy script
 set -e
-
-echo "Installing dependencies..."
-bundle install
 
 echo "Building Jekyll site..."
 bundle exec jekyll build
