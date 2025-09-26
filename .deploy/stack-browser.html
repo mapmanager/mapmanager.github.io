@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Stack Browser</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Stack Browser | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Stack Browser" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software to annotate image volume time-series" />
+<meta property="og:description" content="Software to annotate image volume time-series" />
+<link rel="canonical" href="https://mapmanager.github.io/stack-browser" />
+<meta property="og:url" content="https://mapmanager.github.io/stack-browser" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-04-19T15:46:33-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Stack Browser" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2015-04-19T15:46:33-07:00","datePublished":"2015-04-19T15:46:33-07:00","description":"Software to annotate image volume time-series","headline":"Stack Browser","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/stack-browser"},"url":"https://mapmanager.github.io/stack-browser"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Stack Browser
+        
+    </h3>
+</div>
+
+<p><img class="img-float-left" src="images/mm3/stack-browser2.png" width="750" />
+<!-- <IMG class="img-float-left" SRC="images/mm3/stack-browser.png" WIDTH="850"> --></p>
+
+<div class="print-page-break"></div>
+
+<p>The stack browser is the main starting point for using Map Manager. The stack browser provides an interface to load and browse folders of Tiff <a href="stack">stacks</a>.</p>
+
+<p>Open the stack browser from the main menu ‘MapManager → Stack Browser’.</p>
+
+<p>The list on the left is a list of loaded folders. Select a folder (on the left) and the list on the right will show the individual stacks within that folder. The stack list can be sorted by clicking on the column headers. The columns to display in the stack list can be set with a right-click on the column headers.</p>
+
+<p>To display a <a href="stack">stack</a>:</p>
+
+<ul>
+  <li>Double-click a stack</li>
+  <li>Right-click the stack and select ‘Display Stack’</li>
+  <li>Select the stack and use keyboard <kbd>d</kbd> for ‘D’isplay.</li>
+</ul>
+
+<h3 id="loading-stacks">Loading stacks</h3>
+
+<h4 id="load-tiff-folder">Load Tiff Folder</h4>
+
+<p>Load a folder of single channel Tiff files from hard-drive. If these Tiff files have been converted with one of the <a href="fiji-plugins">Map Manager Fiji plugins</a>, the voxel size, date, and time should be correctly set.</p>
+
+<h4 id="drag-and-drop">Drag and drop</h4>
+
+<p>A simple way to load a single stack is to drag and drop a Tiff file onto the Igor program icon. Stacks opened with drag-and-drop will appear in a special folder named ‘DragAndDrop’.</p>
+
+<h3 id="displaying-stacks">Displaying stacks</h3>
+
+<p>Select a folder on the left and the stacks in that folder will be shown on the right. The order of stacks can be sorted by selecting columns in the stack list. To sort by date, select ‘Date’ in the columns header. <b>This ordering is critical when batch importing a list of stacks into a Map Manager <a href="time-series-panel">time-series</a></b>.</p>
+
+<h4 id="display-a-stack">Display a <a href="stack">stack</a>:</h4>
+
+<ul>
+  <li>Double-click a stack</li>
+  <li>Right-click the stack and select ‘Display Stack’</li>
+  <li>Select the stack and use keyboard <kbd>d</kbd> for ‘D’isplay.</li>
+</ul>
+
+<h4 id="unload-a-stack">Unload a <a href="stack">stack</a>:</h4>
+
+<p>Once a stack is loaded and displayed in a <a href="stack">stack</a> window, it will remain loaded, even after the stack window is closed. Loaded stacks are indicated in the stack browser with an ‘X’ in the first column. To unload a stack, select it in the Stack Browser and use keyboard <kbd>u</kbd> or right-click and select ‘Unload Stack’.</p>
+
+<h3 id="right-click-a-folder-for-a-context-menu">Right-click a folder for a context menu</h3>
+
+<p>Right-click a folder in the list on the left for a context menu that allows actions to be performed on all stacks in the folder.</p>
+
+<p><img class="img-float-right" src="images/mm3/stack-browser/stack-browser-right-click-folder.png" width="200" /></p>
+
+<ul>
+  <li>
+    <p><strong>Unload Folder</strong>. Unload the folder and all its stacks.</p>
+  </li>
+  <li>
+    <p><strong>Save Annotations (all stacks)</strong>. Save the annotations for all ‘dirty’ stacks in a folder. Dirty stacks are stacks that have been changed or modified since they were loaded. Dirty stacks are noted in the stack list with a <font color="red"><strong>red</strong></font> background in the ‘D’ column.</p>
+  </li>
+  <li>
+    <p><strong>Stack Report (all stacks)</strong>. Generate a stack <a href="reports">report</a> for all stacks.</p>
+  </li>
+  <li>
+    <p><strong>Segment Report (all stacks)</strong>. Generate a segment <a href="reports">report</a> for all stacks.</p>
+  </li>
+  <li>
+    <p><strong>Annotation Table (all stacks)</strong>. Generate a table with all annotations for all stacks. This can be copied and pasted into other programs for analysis.</p>
+  </li>
+  <li>
+    <p><strong>Unload all stacks</strong>. Unload the raw image data for all stacks in the list.</p>
+  </li>
+  <li>
+    <p><strong>View Stack List</strong>. Display the list of stacks as a table. This is useful to copy/paste to another program for analysis.</p>
+  </li>
+  <li>
+    <p><strong>Show Folder On Disk</strong>. Open the hard-drive folder the folder was originally loaded from. This opens a Finder window on OSX and an Explorer window on Microsoft Windows.</p>
+  </li>
+  <li>
+    <p><strong>Refresh List</strong>. To refresh the list of folders and the selected folder’s list of stacks. This is generally not needed but can be useful to ensure stacks that have had their annotations edited (e.g. ‘dirty’ stacks) are show in red in their ‘D’ column.</p>
+  </li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h3 id="right-click-a-stack-for-a-context-menu">Right-click a stack for a context menu</h3>
+
+<p><img class="img-float-right" src="images/mm3/stack-browser/sb-right-click-stack.png" width="200" /></p>
+
+<p>Right-click a stack to open a context menu. These menu items can also be performed using the indicated keyboard shortcuts.</p>
+
+<ul>
+  <li>
+    <p><strong>Display Stack</strong>. Open a <a href="stack">stack</a> window. Same as double-click.</p>
+  </li>
+  <li>
+    <p><strong>Save Annotations</strong>. Save stack annotations.</p>
+  </li>
+  <li>
+    <p><strong>Unload Stack</strong>. Unload the raw data for a stack. <font color="red"><strong>Important</strong></font>, this unloads the raw data to conserve memory, it <strong>DOES NOT</strong> unload the stack annotations.</p>
+  </li>
+  <li>
+    <p><strong>Edit Stack Condition</strong>. Edit the stack condition for the selected stack. The stack condition can also be edited with keyboard <kbd>c</kbd>. Stack conditions can be displayed in the stack list by right-clicking on the column headers and selecting ‘Condition’.</p>
+  </li>
+  <li>
+    <p><strong>Stack Info</strong>. Open a stack info panel to view acquisition parameters for a stack. Use keyboard <kbd>shift</kbd>+<kbd>i</kbd> (that is ‘i’ as in Info) to views all acquisition parameters for a stack. Most acquisition parameters are read from the meta-data of the original stack.</p>
+  </li>
+  <li>
+    <p><strong>Stack Report</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Segment Report</strong>. Generate a segment report for all segments in a stack. See <a href="reports">reports</a>.</p>
+  </li>
+  <li>
+    <p><strong>Annotation Table</strong>. Open a text table with all annotations in the stack. This can be copied and pasted into other programs for analysis.</p>
+  </li>
+  <li>
+    <p><strong>Experimental - Segment Length Plot</strong>. Make both 2D and 3D plots of segment length as a function of the Z-Smoothing parameter.</p>
+  </li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h3 id="right-click-headers-in-the-stack-list-for-a-context-menu">Right-click headers in the stack list for a context menu</h3>
+
+<p><img class="img-float-right" src="images/mm3/stack-browser/sb-right-click-header.png" width="145" /></p>
+
+<p>This menu will toggle the columns that are displayed in the stack list. These setting are saved with the main Map Manager Options using the main menu ‘MapManager - Save Options…’.</p>
+
+<div class="print-page-break"></div>
+
+<h3 id="scanimage-and-canvas-interface">ScanImage and Canvas Interface</h3>
+
+<p>Activate the ScanImage and canvas interface in ‘Options - Miscellaneous - ScanImage and Canvas In Stack Browser’.</p>
+
+<h4 id="scanimage-import---load-scanimage-folder">ScanImage Import - Load ScanImage Folder</h4>
+
+<p>The <strong>Load ScanImage Folder</strong> loads a folder of ScanImage Tiff stacks.</p>
+
+<p class="important"><b>Important.</b> When importing ScanImage Tiff files, the scale is not set by ScanImage. You need to calculate your x/y voxel size (in um per voxel) when you scan at 1x magnification with 1024 by 1024 pixels. You then set this value in '2p um/pixel (1024@1x)'. Map Manager will use this value to calculate each stacks x/y scale for arbitrary ScanImage zoom settings.</p>
+
+<h4 id="canvas---load-canvas">Canvas - Load Canvas</h4>
+
+<p>The <strong>Load Canvas</strong> load an entire canvas of an imaging session. The canvas includes both video snap-shots and the location of two-photon imaging stacks. Please see the <a href="http://blog.cudmore.io/canvas">canvas</a> documentation for more information.</p>
+
+<h3 id="what-is-next">What is next?</h3>
+
+<p>Once a folder of tif stacks is loaded</p>
+
+<ul>
+  <li>Start scoring single timepoint stacks following <a href="annotating-a-stack">annotating a stack</a></li>
+  <li>Put the stacks into a time-series map following <a href="making-a-map">making a map</a></li>
+</ul>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Imaging core">Imaging core</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-19-stack-browser.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

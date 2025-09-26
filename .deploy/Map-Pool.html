@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Map Pool</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Map Pool | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Map Pool" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’." />
+<meta property="og:description" content="A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’." />
+<link rel="canonical" href="https://mapmanager.github.io/Map-Pool" />
+<meta property="og:url" content="https://mapmanager.github.io/Map-Pool" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-07T03:10:33-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Map Pool" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2017-08-07T03:10:33-07:00","datePublished":"2017-08-07T03:10:33-07:00","description":"A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’.","headline":"Map Pool","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/Map-Pool"},"url":"https://mapmanager.github.io/Map-Pool"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Map Pool
+        
+    </h3>
+</div>
+
+<p>A map pool will plot multiple maps in the same plot and generate pooled statistics across these maps. The maps that go into a pool are specified by their ‘map condition’. In a normal map plot, the X-axis is often session or days. In a pooled plot, the X-axis is defined by each sessions ‘session condition’.</p>
+
+<p>A powerful additional feature is that individual spine values can be grouped (by their average) across multiple sessions in a map.</p>
+
+<h3 id="recipe-to-create-a-map-pool">Recipe to create a map pool</h3>
+
+<ol>
+  <li>Specify ‘map conditions’ and ‘session conditions’ by turning on the ‘Edit Conditions’ checkbox 
+ in main time-series window.</li>
+  <li>Open the <strong>pool plot panel</strong> from the main time-series window, ‘Pool’ button.</li>
+  <li>In the <strong>pool plot panel</strong>, specify a list of ‘map conditions’ and ‘session conditions’. Make sure the lists use ‘;’ as a separator.</li>
+  <li>In the <strong>pool plot panel</strong>, select a Y and X statistic to go into the pool.</li>
+  <li>In the <strong>pool plot panel</strong>, press ‘Make Group Pool’ to open a <strong>database window</strong>
+ and a <strong>group plot window</strong> window.</li>
+</ol>
+
+<p><strong>Note:</strong> The wildcard * character can be used when specifying ‘session conditions’. For example, if a few session are control sessions and they are labelled ‘c1’, ‘c2’, ‘c3’, creating a pool using c*; will average all CONNECTED spines across sessions c1/c2/c3 into a single group named c*.</p>
+
+<p><img class="img-float-left" src="images/mm3/mappool/time-series.png" width="600" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="pool-plot-panel">Pool Plot Panel</h3>
+
+<ul>
+  <li>
+    <p>The maps and sessions that go into a pool are defined by the specified ‘map conditions’ and ‘session conditions’.
+ If these map and session conditions are kept the same, a number of group plots with different x/y stats can be created (with ‘make group pool’) and they will all share the same <strong>Pool Database Window</strong>.</p>
+  </li>
+  <li>
+    <p>Each of these group plots can be returned to by selecting a plot in the ‘Pool ID’ popup and pressing the ‘Plot’ button.</p>
+  </li>
+  <li>
+    <p><strong>Note:</strong> Grouped plots visualize the Y-stat versus ‘session conditions’ groups. The X-stat is used later to make <strong>Grouped Session Plot(s)</strong>.</p>
+  </li>
+</ul>
+
+<p><img class="img-float-left" src="images/mm3/mappool/pool-plot-panel.png" width="300" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="pool-database-window">Pool Database Window</h3>
+
+<ul>
+  <li>Selecting a ‘Cond’, ‘Map’, or ‘Seg’ in the <strong>database window</strong> will select the corresponding object in all opened <strong>Group Plot Window</strong> and <strong>Grouped Session Plot</strong> windows.</li>
+  <li>Individual conditions, maps, and segments can be turned on and off using the checkboxes. When this is done, the object is removed from the group plot window and does not contribute to statistics generated by the ‘stat table’ button.</li>
+  <li>Each map condition gets a color.  The color is shown by coloring the text for the condition in the <strong>pool database window</strong> and coloring the markers in the <strong>group plot window</strong></li>
+</ul>
+
+<p><img class="img-float-left" src="images/mm3/mappool/pool-db-panel.png" width="300" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="group-plot-window">Group Plot Window.</h3>
+
+<ul>
+  <li>The x-axis is the session conditions that went into the pool, we call these <strong>groups</strong>.</li>
+  <li>The y-axis is the Y-stat that went into the pool.</li>
+  <li>The marker colors indicate different map conditions.</li>
+  <li><strong>Important:</strong> If the group plot was made using the wildcard * for session conditions (something like c*;), the individual markers in this plot are the AVERAGE of all connected spines within this session group.</li>
+  <li>Transform the Y-axis with ‘Transform’ popup. Transformations like % are normalized to the session condition group specified in the ‘Norm’ popup.</li>
+  <li>Make <strong>grouped session plot(s)</strong> using the ‘Session Plot’ button. This is where the original X-stat is finally used.</li>
+  <li>The ‘Stat Table’ button will generate a <strong>Grouped Plot Stat Table</strong>. The stats will always be derived from what is currently displayed in the plot. If the Y-Axis has been transformed to %, the stat table will contain mean/sd/se/n for %.</li>
+  <li>The ‘Edit Plot Values’ button wil generate a table with all the raw values currently displayed in the group plot window.</li>
+</ul>
+
+<p><img class="img-float-left" src="images/mm3/mappool/pool-plot.png" width="500" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="grouped-session-plot">Grouped Session Plot</h3>
+
+<ul>
+  <li>Create a <strong>grouped session plot</strong> using the ‘session plot’ button in the <strong>group plot window</strong>.</li>
+  <li>Selecting an object in the <strong>grouped session plot</strong> will select the corresponding object in the <strong>group plot window</strong> and vice versa.</li>
+  <li>Keyboard ‘e’ will open a table of values displayed in the <strong>grouped session plot</strong>.</li>
+</ul>
+
+<p>For example, this is a Grouped Session Plot of: <code class="language-plaintext highlighter-rouge">Y: b* % a*</code> versus <code class="language-plaintext highlighter-rouge">X: b* Raw</code>. As always, the marker colors are indicating the map conditions.</p>
+
+<p><img class="img-float-left" src="images/mm3/mappool/group-pool-session.png" width="300" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="grouped-plot-stat-table">Grouped Plot Stat Table</h3>
+
+<p>The grouped plot stat table shows statistics (mean/sd/se/n) for the values currently displayed in the <strong>Group Plot Window</strong>. The stats are fairly thourough and are broken  into three blocks, the first block is mean/sd/se/n for <strong>map condition</strong>, the second block is for <strong>session condition</strong>, and the third is per <strong>segment</strong>.</p>
+
+<p><img class="img-float-left" src="images/mm3/mappool/group-plot-stats.png" width="800" /></p>
+<div class="print-page-break"></div>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2017-08-08-Map-Pool.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

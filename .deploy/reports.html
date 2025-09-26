@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Reports</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Reports | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Reports" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software to annotate image volume time-series" />
+<meta property="og:description" content="Software to annotate image volume time-series" />
+<link rel="canonical" href="https://mapmanager.github.io/reports" />
+<meta property="og:url" content="https://mapmanager.github.io/reports" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-07-25T15:46:33-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Reports" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2015-07-25T15:46:33-07:00","datePublished":"2015-07-25T15:46:33-07:00","description":"Software to annotate image volume time-series","headline":"Reports","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/reports"},"url":"https://mapmanager.github.io/reports"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Reports
+        
+    </h3>
+</div>
+
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
+<p>All reports will open a table of text that can be copy/pasted into another program for further analysis.</p>
+
+<p>There are three types of reports: <a href="#stackreports">stack reports</a>, <a href="#segmentreports">segment reports</a>, and <a href="#mapreports">map reports</a>.</p>
+
+<p><a name="stackreports"></a></p>
+
+<h3 id="stack-reports">Stack Reports</h3>
+
+<p>Stack reports display the raw data for all lines and/or all annotations in a stack. Stack reports can be generated directly from each <a href="stack">stack</a> window.</p>
+
+<p class="tip"><b>Tip.</b> Use keyboard '[' in any stack window to open and close the left control bar.</p>
+
+<h4 id="line-segments">Line Segments</h4>
+
+<p>Right-click a segment and select:</p>
+
+<ul>
+  <li><strong>Edit Line Database ‘e’</strong>. To display a summary of each segment.</li>
+  <li><strong>Edit Line ‘l’</strong>. To display the entire line (all 3D points).</li>
+</ul>
+
+<h4 id="points-annotations">Points (Annotations)</h4>
+
+<p>Right-click a point/annotation and select:</p>
+
+<ul>
+  <li><strong>Edit Stack DB Table ‘e’</strong>. To display all annotations as a table.</li>
+  <li><strong>Edit Intensity Table ‘i’</strong>. To display intensity analysis for all annotations as a table. There will be a number of tables generated, one for each color channel.</li>
+</ul>
+
+<p><img class="img-float-left" src="images/mm3/stack-example-5.png" width="600" /></p>
+
+<div class="print-page-break"></div>
+
+<p><a name="segmentreports"></a></p>
+
+<h3 id="segment-reports">Segment Reports</h3>
+
+<h4 id="segment-report">Segment Report</h4>
+
+<p>A segment report display statistics for each segment in a stack. It displays the length of the segment, the number and density of spines, the x/y/z position of the segment, and the number of each user type. A segment report can be generated for individual <a href="stack">stacks</a> or a map.</p>
+
+<p>To generate a segment report for each segment in a stack</p>
+
+<ul>
+  <li>In a <a href="stack">stack window</a>, use the ‘Segment report’ button in the ‘Reports’ tab or keyboard ‘o’ for <strong>o</strong>utput report.</li>
+  <li>In the <a href="stack-browser">Stack Browser</a>, right click a stack in the list of stacks and select ‘Segment Report’ or keyboard ‘o’ for <strong>o</strong>utput report</li>
+  <li>In the <a href="stack-browser">Stack Browser</a>, right click a folder in the list of folders (on the left) and select ‘Segment Report (All Stacks)’.</li>
+</ul>
+
+<p>To generate a segment report for all segments in a map</p>
+
+<ul>
+  <li>Right-click a map in the time-series panel and select ‘Segment Report’.</li>
+  <li>In the time-series panel, use the ‘Report’ tab and button ‘Segment Report - All Map’.</li>
+</ul>
+
+<p><img class="img-float-right" src="images/mm3/reports/segment-report-options.png" width="350" /></p>
+
+<p>Segment reports have some simple options.</p>
+
+<ul>
+  <li><strong>Include X/Y/Z Statistics</strong>. Include the mean/sd/se/n for each segment tracings.</li>
+  <li><strong>Include Spine/Filament Length</strong>. Include the mean/sd/se/n across all spines/filaments in each segment.</li>
+  <li><strong>Smooth Z (0 for none)</strong>. Smooth the Z values of each segment tracing and report this in ‘totalLen3d’ column. This is useful to reduce erroneous segment length if a segment traverses a single image plane but its Z values are actually jumping up/down by a single image plane.</li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<p>The columns in a segment report are as follows</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">numSpines</td>
+      <td style="text-align: left">Total number of spines = goodSpines + badSpines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodSpines</td>
+      <td style="text-align: left">Number of good spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">badSpines</td>
+      <td style="text-align: left">Number of bad spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen</td>
+      <td style="text-align: left">2D Segment length (um), ignoring z.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen</td>
+      <td style="text-align: left">2D Segment length (um) from most distal good spines, ignoring z.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalDen</td>
+      <td style="text-align: left">2D Total density of all spines = numSpines / totalLen.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodDen</td>
+      <td style="text-align: left">2D Density of good spines = goodSpines / goodLen.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen3d</td>
+      <td style="text-align: left">3D Segment length (um), including smoothed z.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen3d</td>
+      <td style="text-align: left">3D Segment length (um) from most distal good spines, including smoothed z.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalDen3d</td>
+      <td style="text-align: left">3D Total density of all spines = numSpines / totalLen3d.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodDen3d</td>
+      <td style="text-align: left">3D Density of good spines = goodSpines / goodLen3d.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMax</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMean</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zMedian</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">zAngle</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xyAngle</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tort</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMax</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMean</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">xMedian</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMax</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMean</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">yMedian</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nUnknown</td>
+      <td style="text-align: left">Number of spines with userType ‘Unknown’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nMushroom</td>
+      <td style="text-align: left">Number of spines with userType ‘Mushroom’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nFilapodia</td>
+      <td style="text-align: left">Number of spines with userType ‘Filapodia’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nLong</td>
+      <td style="text-align: left">Number of spines with userType ‘Long’</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nStubby</td>
+      <td style="text-align: left">Number of spines with userType ‘Stubby’</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a name="mapreports"></a></p>
+
+<h3 id="map-reports">Map Reports</h3>
+
+<p>There are two types of map reports, <strong>Dynamics</strong> and <strong>Survival</strong>. Each report begins with a header that gives information about each session in the report</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Idx</td>
+      <td style="text-align: left">Session Index</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Map</td>
+      <td style="text-align: left">Name of the map</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">sessCond</td>
+      <td style="text-align: left">Session Condition</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">mapSegment</td>
+      <td style="text-align: left">Map specific segment index (different from stackSegment)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Stack</td>
+      <td style="text-align: left">Name of the stack (used internally)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">originalFile</td>
+      <td style="text-align: left">Original file name of the stack</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">stackSegment</td>
+      <td style="text-align: left">Stack specific segment index (different from mapSegment)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">date</td>
+      <td style="text-align: left">The date the stack was acquired</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">time</td>
+      <td style="text-align: left">The time the stack was acquired</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">seconds</td>
+      <td style="text-align: left">The seconds the stack was acquired (from 12:00 AM on Jan 1, 1904)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="dynamics-report">Dynamics Report</h4>
+
+<p>A dynamics report is used for a <a href="map-plot">map</a>. For each session in a map, it will calculate the length of each segment (um), the number of added and subtracted spines, the density of added and subtracted spines, etc. etc.</p>
+
+<p>To generate a dynamics report</p>
+
+<ul>
+  <li>In the time-series panel, right-click a map and select ‘Dynamics Report’.</li>
+  <li>In the time-series panel, use the ‘Dynamics Report’ button in the ‘Reports’ tab.</li>
+  <li>In any <a href="map-plot">map plot</a>, right-click and select ‘Dynamics Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</li>
+</ul>
+
+<p><img class="img-float-right" src="images/mm3/reports/dynamics-report-options.png" width="250" /></p>
+
+<p>Dynamic report options</p>
+
+<div class="print-page-break"></div>
+
+<p>Each dynamics report is broken into different sections.</p>
+
+<h5 id="information-about-the-segment-tracing">Information about the segment tracing</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">totalLen2d</td>
+      <td style="text-align: left">Total 2D length of tracing (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen2d</td>
+      <td style="text-align: left">2D length of tracing between most distal ‘good’ objects (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">smoothPoints</td>
+      <td style="text-align: left">Boxcar smoothing for tracing z (0 means no smoothing)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">totalLen3d</td>
+      <td style="text-align: left">The smoothed total 3D length of tracing (um)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">goodLen3d</td>
+      <td style="text-align: left">The smoothed 3D length of tracing between most distal ‘good’ object (um)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-all-object-ignoring-user-type">Information about all object (ignoring user type)</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">density</td>
+      <td style="text-align: left">density = nTotal / goodLen3d</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nTotal</td>
+      <td style="text-align: left">Total number of spines (is same as nGood + nBad)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nGood</td>
+      <td style="text-align: left">Total number of good spines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nBad</td>
+      <td style="text-align: left">Total number of bad spines</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nAdd</td>
+      <td style="text-align: left">Number of added spines.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub</td>
+      <td style="text-align: left">Number of subtracted spines (at the current session)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub2</td>
+      <td style="text-align: left">Number of subtracted spines (from the previous session)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pAdd</td>
+      <td style="text-align: left">Percent added = nAdd / nGood from previous session * 100</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub</td>
+      <td style="text-align: left">Percent subtracted = nSub / nGood from previous session * 100</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub2</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dAdd</td>
+      <td style="text-align: left">Density added = nAdd / goodLen3d from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub</td>
+      <td style="text-align: left">Density subtracted = nSub / goodLen3d from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub2</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-0">Information about user type 0</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">density_ut0</td>
+      <td style="text-align: left">Density of user type 0 = nTotal_ut0 / googLen3d</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nTotal_ut0</td>
+      <td style="text-align: left">Total number of user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nGood_ut0</td>
+      <td style="text-align: left">Total number of good user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nBad_ut0</td>
+      <td style="text-align: left">Total number of bad user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nAdd_ut0</td>
+      <td style="text-align: left">Number of added user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub_ut0</td>
+      <td style="text-align: left">Number of subtracted user type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nSub2_ut0</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pAdd_ut0</td>
+      <td style="text-align: left">Percent of added user type 0 = nAdd_ut0 / nGood_ut0 from previous session *100</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub_ut0</td>
+      <td style="text-align: left">Percent of subtracted user type 0 = nSub_ut2 / nGood_ut0 from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pSub2_ut0</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dAdd_ut0</td>
+      <td style="text-align: left">Density of added user type 0 = nAdd_ut0 / goodLen3d from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub_ut0</td>
+      <td style="text-align: left">Density of subtracted user type 0 = nSub_ut0 / goodLen3d from previous session</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dSub2_ut0</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-1-2-3--5">Information about user type 1, 2, 3, … 5</h5>
+
+<p>Other sections will be appended to the report to give information about ‘user type 1’, ‘user type 2’, ‘user type 3’, …, ‘user type 5’</p>
+
+<h4 id="survival-report">Survival Report</h4>
+
+<p>A survival report calculates the number of objects remaining from an initial ‘seed’ session. Like a <strong>Dynamics</strong> report, it breaks down objects into different sections including all objects, followed by user type 0, followed by user type 1, etc. etc.</p>
+
+<p>To generate a survival report</p>
+
+<ul>
+  <li>In the time-series panel, right-click a map and select ‘Survival Report’.</li>
+  <li>In the time-series panel, use the ‘Survival Report’ button in the ‘Reports’ tab.</li>
+  <li>In any <a href="map-plot">map plot</a>, right-click and select ‘Survival Report’. If the map plot is displaying ‘All Segment’, a table for each segment will be opened. Otherwise, one table for the current ‘Map Segment ID’ will be opened.</li>
+</ul>
+
+<p><img class="img-float-right" src="images/mm3/reports/survival-report-options.png" width="250" /></p>
+
+<p>Survival report options</p>
+
+<div class="print-page-break"></div>
+
+<h5 id="information-about-all-object-ignoring-user-type-1">Information about all object (ignoring user type)</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">surv_all_s0</td>
+      <td style="text-align: left">For each session, the number of surviving objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psurv_all_s0</td>
+      <td style="text-align: left">For each session, the fraction of surviving objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><strong>Note:</strong> This can continue with different seed sessions, for example, surv_all_s2 would give the number of surviving objects relative to seed session 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-0-1">Information about user type 0</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">surv_type0_s0</td>
+      <td style="text-align: left">For each session, the number of surviving <strong>user type 0</strong> objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psurv_type0_s0</td>
+      <td style="text-align: left">For each session, the fraction of surviving <strong>user type 0</strong> objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"><strong>Note:</strong> This can continue with different seed sessions, for example, surv_type0_s2 would give the number of surviving <strong>user type 0</strong> objects relative to seed session 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-1">Information about user type 1</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">surv_type1_s0</td>
+      <td style="text-align: left">For each session, the number of surviving <strong>user type 1</strong> objects relative to seed session 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">psurv_type1_s0</td>
+      <td style="text-align: left">For each session, the fraction of surviving <strong>user type 1</strong> objects relative to seed session 0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="information-about-user-type-2-3-4-5">Information about user type 2, 3, 4, 5</h5>
+
+<p>Other sections will be appended to the report to give information about ‘user type 2’, ‘user type 3’, ‘user type 4’ and ‘user type 5’</p>
+
+<!--
+
+### Details on Calculations
+
+#### Stack
+Each segment within a stack has a number of spines and a total traced dendritic length. From this we can calculate spine density.
+
+- Number of spines
+- Dendrite length
+- Spine density : number of spines / dendrite length
+
+#### Map
+From one session to the next, the number of added and subtracted spines are counted. From this, the percent and density changes are calculated.
+
+- Number Added 
+- Number Subtracted
+- % Added : # added / (number of spines in pervious session) * 100
+- % Subtracted :
+- Turn-over-ratio : A measure of total dynamics (both addition and subtraction)
+- Density Added : 
+- Density Subtracted : 
+
+#### Map Lifetime
+Observed 
+
+- observed sessions
+- observed seconds
+- observed days
+- observed hours
+
+Lifetime
+
+- sessions
+- seconds
+- days
+- hours
+
+Age
+
+- sessions
+- seconds
+- days
+- hours
+
+#### Svoboda style persistent and transient
+
+Threshold time can be specified as: sessions, seconds, days, or hours.
+
+- New Persistent : New spine that persists for > threshold time
+- New Transient :
+- Lost Persistent :
+- Lost Transient :
+- Always Present : Spines present in all sessions
+
+-->
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-07-25-reports.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

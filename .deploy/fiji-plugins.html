@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Converting raw data into Map Manager Tiff stacks</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Converting raw data into Map Manager Tiff stacks | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Converting raw data into Map Manager Tiff stacks" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Map Manager - Stack Browser will only import single channel Tiff (.tif) stacks and will not import proprietary image formats. Thus, all raw data must be converted using the provided Fiji plugins." />
+<meta property="og:description" content="The Map Manager - Stack Browser will only import single channel Tiff (.tif) stacks and will not import proprietary image formats. Thus, all raw data must be converted using the provided Fiji plugins." />
+<link rel="canonical" href="https://mapmanager.github.io/fiji-plugins" />
+<meta property="og:url" content="https://mapmanager.github.io/fiji-plugins" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-21T17:00:01-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Converting raw data into Map Manager Tiff stacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2017-10-21T17:00:01-07:00","datePublished":"2017-10-21T17:00:01-07:00","description":"The Map Manager - Stack Browser will only import single channel Tiff (.tif) stacks and will not import proprietary image formats. Thus, all raw data must be converted using the provided Fiji plugins.","headline":"Converting raw data into Map Manager Tiff stacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/fiji-plugins"},"url":"https://mapmanager.github.io/fiji-plugins"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Converting raw data into Map Manager Tiff stacks
+        
+    </h3>
+</div>
+
+<p>The Map Manager - <a href="stack-browser">Stack Browser</a> will only import single channel Tiff (.tif) stacks and will <strong>not</strong> import proprietary image formats. Thus, all raw data must be converted using the provided <a href="http://fiji.sc/" target="_blank">Fiji</a> plugins.</p>
+
+<p>Great care has been taken to extract the <strong>voxel size</strong>, <strong>date</strong>, and <strong>time</strong>. This is critical as all annotations and analysis use um scale (not pixels) and <a href="time-series-panel">time-series</a> use the acquisition date and time. After using these plugins, if the <strong>voxel size</strong>, <strong>date</strong>, or <strong>time</strong> is not correct, please email Robert Cudmore and we can make them work for you.</p>
+
+<p class="important"><b>Important:</b> When stacks are imported into the Map Manager - Stack Browser, please verify the <b>voxel size</b>, <b>date</b>, and <b>time</b> are correct. If any of these are not correct, contact Robert Cudmore and we can make it work.
+</p>
+
+<h3 id="rules-of-map-manager-import">Rules of Map Manager import</h3>
+
+<ul>
+  <li>Map Manager <strong>will</strong> import 3D .tif files that have been converted using the provided Fiji plugins.</li>
+  <li>Map Manager will <strong>not</strong> import 3D .tif files that have interleaved color channels (e.g. raw ScanImage files).</li>
+  <li>Map Manager will <strong>not</strong> import 3D .tif files saved as individual .tif files (e.g. raw Prairie View files).</li>
+</ul>
+
+<h3 id="running-the-fiji-plugins">Running the Fiji plugins</h3>
+
+<ul>
+  <li><strong>Either</strong>, save a plugin to your hard-drive and drag and drop it into Fiji. Once the plugin is open in the Fiji code editor, use ‘ctrl+r’ to run.</li>
+  <li><strong>Or</strong>, place a copy of the plugin in the ‘Fiji.app/plugins’ folder, restart Fiji, and the plugin will be available from the Fiji menu ‘Plugins’.</li>
+</ul>
+
+<h3 id="scope-specific-conversion">Scope specific conversion</h3>
+
+<h4 id="zeis-lsmczi-and-nikon-nd2-files">Zeis (lsm/czi) and Nikon (nd2) files</h4>
+
+<ul>
+  <li>Use <a href="https://github.com/cudmore/bob-fiji-plugins/blob/master/bFolder2MapManager.v0.0_.py">bFolder2MapManager</a>.</li>
+  <li><strong>Important for Nikon/nd2 import</strong>. Nikon nd2 files do not have date or time in the header. This is an egregious emmision and we are working with Nikon to fix this.</li>
+</ul>
+
+<h4 id="bruker---prairie-view-files">Bruker - Prairie View files</h4>
+
+<ul>
+  <li>Use <a href="https://github.com/cudmore/bob-fiji-plugins/blob/master/bFolder2MapManager.v0.0_.py">bPrairie2tif</a></li>
+</ul>
+
+<h4 id="olympus">Olympus</h4>
+
+<ul>
+  <li>Coming soon.</li>
+</ul>
+
+<h4 id="scanimage-34">ScanImage 3/4</h4>
+
+<ul>
+  <li>Use <a href="https://github.com/cudmore/bob-fiji-plugins/blob/master/bFolder2MapManager.v0.0_.py">bFolder2MapManager</a>.</li>
+  <li><strong>Important for ScanImage import</strong>. ScanImage 3/4 does <strong>not</strong> save the x/y voxel size in its raw .tif images as the x/y voxel size depends on how the scope is configured. You need to set the ‘magic_scan_image_scale’ variable in the Fiji plugin to correspond to the x/y voxel size when scanning at 1x magnification with images at 1024x1024 pixels. If this is not set properly, ScanImage Tiff imports into Map Manager will not have the correct x/y scale.</li>
+</ul>
+
+<h3 id="fiji-plugin-github-repository">Fiji plugin Github repository</h3>
+
+<p>Please see the <a href="https://github.com/cudmore/bob-fiji-plugins" target="_blank">Fiji Plugins</a> Github repository for the most recent version of each of these plugins.</p>
+
+<h3 id="fitting-dendritic-segments">Fitting dendritic segments</h3>
+
+<p>This is done entirely within Map Manager and only requires an installed Fiji program to be specified in <a href="hdd-paths">hard drive paths</a>.</p>
+
+<p>The Map Manager code to fit dendritic segments is a modified version of the <a href="https://imagej.net/Simple_Neurite_Tracer" target="_blank">Simple Neurite Tracer</a> Fiji plugin.</p>
+
+<h3 id="exporting-stack-annotations-to-fiji">Exporting stack annotations to Fiji</h3>
+
+<p>A Fiji plugin (bMergeChannels) is provided to open all annotations and segments in a stack into Fiji, displaying them in the Fiji ROI manager, 3D viewer, and in Simple Neurite Tracer.</p>
+
+<ul>
+  <li>From a stack window, select the main menu ‘MapManager - Experimental - Export To Fiji’. This will generate a number of text files in a folder named ‘MapManagerExport’ on the desktop.</li>
+  <li>Open Fiji and drag and drop the ‘bMergeChannelsv1_.py’ plugin onto the Fiji window. The plugin is in the main map manager source code in the ‘Tracing’ folder.</li>
+  <li>In Fiji, run the plugin and select the .txt file corresponding to the stack that was just exported. The plugin will display the stack, all annotations in the ROI manager, and display a 3D view of the stack with line segments and annotations included.</li>
+  <li>The tracing can also be opened in <a href="https://imagej.net/Simple_Neurite_Tracer">Simple Neurite Tracer</a>. In Fiji, with the stack window frontmost, select ‘Plugins - Segmentation - Simple Neurite Tracer’. In Simple Neurite Tracer, load the .swc file (in the MapManagerExport folder) corresponding to the stack that was just exported.</li>
+</ul>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Fiji">Fiji</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2017-10-22-fiji-plugins.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

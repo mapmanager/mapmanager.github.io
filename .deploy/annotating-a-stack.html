@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Annotating a stack</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Annotating a stack | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Annotating a stack" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is a workflow for annotating 3D annotations in a single time-point stack. To annotate a time-series of stacks, please see making a map." />
+<meta property="og:description" content="This is a workflow for annotating 3D annotations in a single time-point stack. To annotate a time-series of stacks, please see making a map." />
+<link rel="canonical" href="https://mapmanager.github.io/annotating-a-stack" />
+<meta property="og:url" content="https://mapmanager.github.io/annotating-a-stack" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-02-21T14:46:33-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Annotating a stack" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2015-02-21T14:46:33-08:00","datePublished":"2015-02-21T14:46:33-08:00","description":"This is a workflow for annotating 3D annotations in a single time-point stack. To annotate a time-series of stacks, please see making a map.","headline":"Annotating a stack","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/annotating-a-stack"},"url":"https://mapmanager.github.io/annotating-a-stack"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Annotating a stack
+        
+    </h3>
+</div>
+
+<p>This is a workflow for annotating 3D annotations in a <strong>single time-point stack</strong>. To annotate a <strong>time-series of stacks</strong>, please see <a href="making-a-map">making a map</a>.</p>
+
+<p class="important">
+Please use Igor Pro Version 6/7. Do not use Igor Pro version 8. Fully functional demo versions of Igor Pro 6/7 can be downloaded from <a href="https://www.wavemetrics.com/">Wavemetrics</a>
+</p>
+
+<h4 id="1-run-map-manager">1. Run Map Manager</h4>
+
+<ul>
+  <li>Run Map Manager in Igor Pro by double-clicking on the provided MapManager .ipf file. This is normally a file that looks like ‘MapManager_yyyymmdd.ipf’ where yyyymmdd specifies the release date of your particular Map Manager version.</li>
+  <li>In Igor Pro, activate the Map Manager menus by compiling the source code. Either click on the command window (it has the title ‘untitled’), or click the compile button in the map manager source code window, or just wait.</li>
+</ul>
+
+<h4 id="2-load-a-folder-of-tiff-stacks-into-the-stack-browser">2. Load a folder of Tiff stacks into the stack browser</h4>
+
+<p>A folder of single color channel Tiff stacks can be opened directly into the Map Manager - Stack Browser. If you have multiple color channel stacks or stacks acquired using propietary software such as <strong>Zeiss Zen</strong>, <strong>Vidreo Scan Image</strong>, <strong>Bruker Prairie View</strong>, <strong>Nikon</strong>, or <strong>Olympus</strong> (coming soon) then please see the <a href="fiji-plugins">Fiji Plugins</a> page to convert these formats into Map Manager .tif files before import.</p>
+
+<ul>
+  <li>
+    <p>Open the Map Manager <a href="stack-browser">Stack Browser</a> by selecting the main menu ‘MapManager → Stack Browser’.</p>
+  </li>
+  <li>
+    <p>In the Map Manager <a href="stack-browser">Stack Browser</a>, load a folder of .tiff files using the ‘Load Tiff Folder’ button.</p>
+  </li>
+</ul>
+
+<h4 id="3-display-a-stack">3. Display a stack</h4>
+
+<ul>
+  <li>Double-click on a stack in the stack list to display the stack in a <a href="stack">stack</a> window.</li>
+  <li>Right-click a stack in the stack list and select ‘Display Stack’.</li>
+  <li>Select a stack and hit keyboard ‘d’ for display.</li>
+</ul>
+
+<h4 id="4-add-3d-annotations">4. Add 3D annotations</h4>
+
+<p>Map Manager has two types of annotations: <strong>spines</strong> and <strong>other</strong>. A global option needs to be set to work with one or the other</p>
+
+<ul>
+  <li>Open the global options panel with ‘MapManager - Options’.</li>
+  <li>For spines, select ‘spines’ in the ‘Default scoring’ popup.</li>
+  <li>For other, select ‘Cell Bodies’ in the ‘Default scoring’ popup.</li>
+</ul>
+
+<p class="important">Before a stack can be annotated, the voxel size (in um) needs to be set. If you use the <a href="fiji-plugins">Fiji plugins</a> this should already be taken care of. If not, display the stack and use keyboard shift+p to set the voxel size</p>
+
+<h4 id="41-adding-line-segments-for-spine-annotations">4.1 Adding line segments (for spine annotations)</h4>
+
+<p>To create <strong>spines</strong>, a line segment has to be traced and then spines are attached to this segment. Fitting segments is done in Fiji and you need to set the path to Fiji in the <a href="hdd-paths">hard drive paths</a> panel. See <a href="stack-annotations">stack annotations</a> for detailed instructions on creating line segments.</p>
+
+<ul>
+  <li>In a <a href="stack">stack</a> window, open the annotation toolbar with keyboard <kbd>[</kbd>.</li>
+  <li>Enable segment editing with the ‘Segments’ checkbox.</li>
+  <li>Create a new (empty) line segment with the + button.</li>
+  <li>Shift+click to make a series of 3D control point annotations along a dendritic segment. Make sure the X/Y position is near the center of the segment and the Z image plane is the brightest plane. If any of your control points are in complete darkenss, the Fiji Plugin Simple-Neurite-Tracer will not be able to fit a line between these points.</li>
+  <li>Continue making control points along the dendritic segment.</li>
+  <li>Fit the line segment in Fiji with a right-click on the new line segment (in the top left list of segment) and select ‘Make From Control Points - FIJI’. If this does not work, check your Fiji path in <a href="hdd-paths">hard drive paths</a>.</li>
+</ul>
+
+<h4 id="42-adding-annotations-spines-andor-other">4.2 Adding annotations (spines and/or other)</h4>
+
+<ul>
+  <li>In a <a href="stack">stack</a> window, open the annotation toolbar with keyboard <kbd>[</kbd>.</li>
+  <li>Add a new 3D annotation with shift+click.</li>
+  <li>Spine annotations can only be created when there is a parent segment selected. If you have traced a segment (See Adding Line Segments) then you can select the parent segment for a spine by selecting it in the segment list of the annotation (left) control bar or by clicking on the backbone tracing of the segment. Selected segments (like all other selection) will appear as ‘yellow’.</li>
+</ul>
+
+<h4 id="5-editing-annotations">5. Editing annotations</h4>
+
+<ul>
+  <li>Select an existing annotation with a single-click. Selected annotations appear yellow.</li>
+  <li>Delete an annotation by first selecting the annotation and hitting keyboard <kbd>delete</kbd> or <kbd>backspace</kbd>. Annotations can also be deleted with a right-click and selecting ‘Delete’.</li>
+  <li>Each annotation can have a textual note, select the annotation and press keyboard <kbd>n</kbd> to enter a note. Alternatively, use the annotation control bar (keyboard ‘[’) and enter a note in the note field. Annotation notes can be searched using the <a href="search-panel">search</a> panel.</li>
+  <li>Each annotation can have a ‘user type’. Set the ‘user type’ with a right-click and select ‘user type’ 1 through 5. User types can be used to identify subsets of annotations. Each annotations can only have one user type, if you need more flexibility you can encode multiple user types into a new user type. User types can  be searched using the <a href="search-panel">search</a> panel.</li>
+  <li>See <a href="stack-annotations">stack annotations</a> for more information.</li>
+</ul>
+
+<h4 id="51-marking-annotations-bad">5.1 Marking annotations bad</h4>
+
+<ul>
+  <li>Select an annotation with a single mouse click (selected annotations are yellow).</li>
+  <li>Right-click and select ‘bad’</li>
+</ul>
+
+<p>Be very liberal in your scoring, mark anything you think might be a valid annotation. Annotations marked ‘bad’ remain in the database but are <strong>not</strong> included in output <a href="reports">reports</a> and can be toggled on/off in plots. As your datasets grow, marking questionable annotations as ‘bad’ allows you to return to a given stack and see you already decided <strong>not</strong> to include a putative annotation in your analysis.</p>
+
+<h4 id="6-saving-and-loading-annotations">6. Saving and loading annotations</h4>
+
+<ul>
+  <li>Save stack annotations using the ‘Save Stack’ button.</li>
+  <li>The next time a folder of Tiff files is loaded, the annotations for each stack will automatically be opened.</li>
+</ul>
+
+<h4 id="7-generating-reports">7. Generating reports</h4>
+
+<p>Map Manager provides tabular reports for annotation density. See <a href="reports">reports</a>.</p>
+
+<h4 id="8-searching-annotations">8. Searching annotations</h4>
+
+<p>Open the <a href="search-panel">Search</a> panel from the main menu ‘MapManager → Search’.</p>
+
+<p>The search panel will search all annotations in a stack and return a list of annotations. Once generated, clicking on an annotation in the search results will display the annotation in a <a href="stack">stack</a> window.</p>
+
+<p>Different types of searches are performed with buttons:</p>
+
+<ul>
+  <li><strong>All</strong> : Generate a list of all annotations in a stack.</li>
+  <li><strong>Notes</strong> : Use ‘*’ to generate a list of all annotations with notes. Enter ‘mynote*’ to generate a list of annotations that have notes beginning with ‘mynote’.</li>
+  <li><strong>Bad</strong> : Generate a list of all annotations marked as ‘bad’.</li>
+  <li><strong>Close</strong> : Generate a list of annotations that have other annotations within a 3D distance.</li>
+</ul>
+
+<strike>If you zoom the stack window (ctrl+mouse wheel or keyboard <kbd>+</kbd>) you can snap to different points while maintaining the zoom using the search panel 'Snap' checkbox.</strike>
+
+<p>Note, the search results are a static output report. Once a search is performed, if annotations in the stack window are modified (added, deleted, moved, etc.) the search results will not be automatically updated. If the annotations are modified in the stack window, simply regnerate the search results by perform the search again.</p>
+
+<div class="print-page-break"></div>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Imaging core">Imaging core</a>,
+  
+    <a href="/tags/#Workflow">Workflow</a>,
+  
+    <a href="/tags/#Getting Started">Getting Started</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-18-annotating-a-stack.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

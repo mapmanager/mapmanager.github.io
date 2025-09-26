@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Options</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Options | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Options" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software to annotate image volume time-series" />
+<meta property="og:description" content="Software to annotate image volume time-series" />
+<link rel="canonical" href="https://mapmanager.github.io/stackdb-options-panel" />
+<meta property="og:url" content="https://mapmanager.github.io/stackdb-options-panel" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-04-20T15:46:33-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Options" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2015-04-20T15:46:33-07:00","datePublished":"2015-04-20T15:46:33-07:00","description":"Software to annotate image volume time-series","headline":"Options","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/stackdb-options-panel"},"url":"https://mapmanager.github.io/stackdb-options-panel"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Options
+        
+    </h3>
+</div>
+
+<style>
+table{
+    border-collapse: collapse;
+    border:1px solid #000000;
+    margin-left:50px
+}
+
+th{
+    border:1px solid #000000;
+    padding: 5px;
+}
+
+td{
+    border:1px solid #000000;
+    padding: 5px;
+}
+</style>
+
+<p>The Map Manager Options panel provides global options to control the behavior of Map Manager. Global options can be saved using the <strong>Save Options</strong> button or the menu ‘MapManager - Save Options…’. Values shown in <font color="red"><strong>red</strong></font> will effect analysis and those in <font color="black"><strong>black</strong></font> will only effect program behavior.</p>
+
+<p>The options panel is opened from the main menu ‘MapManager - Options’.</p>
+
+<p><img class="img-float-left" src="images/mm3/options/options.png" width="800" /></p>
+<div class="print-page-break"></div>
+
+<h3 id="at-startup">At Startup</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-at-startup.png" width="350" /></p>
+
+<p>Options to control the behavior of Map Manager when it first starts.</p>
+
+<ul>
+  <li><strong>Show Stack Browser</strong>. Show the <a href="stack-browser">stack browser</a> panel at startup.</li>
+  <li><strong>Show Time Series</strong>. Show the <a href="time-series-panel">time-series</a> panel at startup.</li>
+  <li><strong>Hide Code</strong>. Hide code windows at startup.</li>
+  <li><strong>Hide Menus</strong>. Hide extraneous Igor menus at startup.</li>
+</ul>
+
+<h3 id="stack-display">Stack Display</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-stack-display.png" width="350" /></p>
+
+<p>Options that control the display of annotations, tracings, and annotation tags in <a href="stack">stack</a> windows. Changes will be applied the next time a stack window is opened. Already opened stack windows can be updated on-the-fly by pressing keyboard ‘r’ (in the stack window).</p>
+
+<ul>
+  <li>
+    <p><strong>Annotations</strong>. Show/hide annotations.</p>
+  </li>
+  <li>
+    <p><strong>Spine Line</strong>. Only for spine annotations. Toggle the line connecting the spine head to the parent segment radius.</p>
+  </li>
+  <li>
+    <p><strong>Mask +/- slices</strong>. Turn annotation masking on/off. If off, annotations will be shown in all image planes. If on, annotations will only be shown in +/- slices (image planes) of the image plane corresponding to each annotations Z position. This is also used to mask segment backbone and radii.</p>
+  </li>
+  <li>
+    <p><strong>User Type Color</strong>. Display annotations using their user type color. User type colors 0..9 are specified in the ‘Object Properties - User Type 0..9’ (see below).</p>
+  </li>
+  <li>
+    <p><strong>Segment Color (Spines)</strong>. Only for spine annotations. Display all spine annotations using the segment color specified in the <a href="stack">stack</a> window - annotation bar - segments.</p>
+  </li>
+  <li>
+    <p><strong>Segment Backbone and Radii</strong>. Only for spine annotations. Toggle the segment backbone  and radius line tracing.</p>
+  </li>
+  <li>
+    <p><strong>Backbone/Radii Mask</strong>. Only for spine annotations. Toggle the masking of the segment backbone and radius to only display around the image plane it is in. If off, segment backbone and radius lines will be shown in all image planes. If on, masking is done by using value specified in the annotations ‘Mask +/- slices’.</p>
+  </li>
+  <li>
+    <p><strong>Tags</strong>. Toggle annotation tags on/off.</p>
+  </li>
+  <li>
+    <p><strong>Font Size</strong>. The font size of annotation tags.</p>
+  </li>
+  <li>
+    <p><strong>Z</strong>. Display annotation tags with an annotations Z image plane.</p>
+  </li>
+  <li>
+    <p><strong>User Type</strong>. Display annotation tags with an annotations user type.</p>
+  </li>
+  <li>
+    <p><strong>Stack Centric Annotation Index</strong>. Display annotation tags with the stack centric annotation index. Annotations are given an index within a stack in the order they are created. Deleting an annotation will result in all later annotations to have their annotation index decremented.</p>
+  </li>
+  <li>
+    <p><strong>Map Run Index</strong>. Display annotation tags with their map centric ‘run’ index.</p>
+  </li>
+  <li>
+    <p><strong>Scale Bar (um), Width (au) and Text</strong>. Displayed in the bottom right of all stack windows. Specify the length (um), the width (au) and wether to include the units (in um). Displaying the scale bar in an individual stack window can be controlled by cycling through stack window candy options with keyboard shift+c.</p>
+  </li>
+  <li>
+    <p><strong>Left/Right arrows will scroll through line (otherwise pan)</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Window With 1/2 (pixels)</strong>. Default stack window size. Each stack window has two sizes that can be cycled using keyboard ‘]’.</p>
+  </li>
+  <li>
+    <p><strong>Default Zoom Width/Height (um)</strong>. The amount to zoom in on annotations in <a href="stack">stack</a> and <a href="run-plot">run plots</a>. This is used when an annotation is right-clicked and ‘plot point/spine’ or ‘plot run’ is selected.</p>
+  </li>
+  <li>
+    <p><strong>Zoom (+/-)</strong>. The fractional amount of the image to zoom at each step. Larger numbers will zoom more, smaller numbers will zoom less. Used when zooming an image with keyboard +/- or with ctrl + mouse-wheel.</p>
+  </li>
+  <li>
+    <p><strong>Pan (% of view)</strong>. The percent of the view to step when panning with keyboard arrow-kets. Larger numbers will pan more, smaller will pan less.</p>
+  </li>
+</ul>
+
+<p><img class="img-float-right" src="images/mm3/options/options-stack-candy.png" width="150" /></p>
+
+<ul>
+  <li><strong>Default Stack Candy</strong>. Default window candy for each stack. These can be cycled in a stack window using keyboard shift+c.
+    <ul>
+      <li><strong>All</strong>.</li>
+      <li><strong>None</strong>.</li>
+      <li><strong>Scale</strong>.</li>
+      <li><strong>Scale + Label</strong>.</li>
+      <li><strong>Scale + Label + Axis</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>RGB Channel Order</strong>. For multi-color images using RGB button in <a href="buttons">buttons</a>.</p>
+  </li>
+  <li>
+    <p><strong>Click and Drag Image</strong>. If one, mouse click+drag will pan the stack image. If off, mouse click+drag will make an Igor selection.</p>
+  </li>
+  <li>
+    <p><strong>Keyboard edits ‘User Type’</strong>. If on, keyboard 0..9 will set the user type of a selected annotation. If off (default), keyboard 1-5 will set the color channel to display.</p>
+  </li>
+  <li>
+    <p><strong>Always Show Object Info</strong>. When checked, the object info panel will always be shown when opening a stack window. Within a stack window, the object info panel can always be toggled with keyboard ‘i’.</p>
+  </li>
+  <li><strong>Always Show Annotation and Contrast Bars</strong>. The annotation bar is toggled with keyboard ‘[’ and the contrast bar with keyboard ‘c’.</li>
+</ul>
+
+<h3 id="editing-annotations">Editing Annotations</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-annotations.png" width="350" /></p>
+
+<p>Options that control the editing of annotations.</p>
+
+<ul>
+  <li>
+    <p><strong>Warn On New</strong>. Show a warning dialog when creating new annotations.</p>
+  </li>
+  <li>
+    <p><strong>Warn On Delete</strong>. Show a warning dialog when deleting annotations.</p>
+  </li>
+  <li>
+    <p><strong>New Annotation On Mouse Click (no shift)</strong>. If off (default), new annotations are created with shift + left-mouse click. If on then new annotations are created with a single left-mouse click.</p>
+  </li>
+  <li>
+    <p><strong>Allow New Annotations When Viewing Sliding Z-Projection</strong>.  If off (default), new annotations are not allowed when viewing a sliding z-projection. If on, new annotations are allowed while viwing a sliding z-projection. Sliding z-projections can be activated using the <a href="buttons">buttons</a> panel.</p>
+  </li>
+  <li>
+    <p><strong>Search Segment Points When Connecting Spines</strong>. The number of candidate points to search for brightest path from a spine head to the segment backbone.See <a href="algorithms">algorithms</a>.</p>
+  </li>
+  <li>
+    <p><strong>New Objects</strong>. The default object to make on shift+click.</p>
+  </li>
+  <li>
+    <p><strong>Default plot object</strong>. The object to plot in <a href="map-plot">map</a> (time-series) plots.</p>
+  </li>
+</ul>
+
+<h3 id="object-map">Object Map</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-object-map.png" width="350" /></p>
+
+<ul>
+  <li>
+    <p><strong>Connect annotations within this distance (um)</strong>. When auto connecting annotations in a time-series (map) and generating a Guess in Find points.</p>
+  </li>
+  <li>
+    <p><strong>Connect spines within this distance (um)</strong>. When auto connecting spines in a time-series (map) and generating a Guess in Find points. This is the distance from the segment pivot points along a dendritic segment (um). You can see this distance (pDist) in the Point Info panel of a <a href="stack">stack</a>.</p>
+  </li>
+  <li>
+    <p><strong>Run Window Width (pixels)</strong>. The width of each window in a run plot.</p>
+  </li>
+  <li>
+    <p><strong>Fixed posiiton for each run window</strong>. When checked, each timepoint in a run plot will be in a fixed screen position determined by its timepoint. When off, the first time-point in a run will always start in the upper left of the screen.</p>
+  </li>
+  <li>
+    <p><strong>Lock segment selection in run plot</strong>. For spine annotations only. When plotting a run from a spine, lock (isolate) the stack window interface so edits can only be made to the given parent segment. This can be turned off in a stack window by a right-click on the segment and selecting ‘unisolate segment’.</p>
+  </li>
+  <li>
+    <p><strong>Shift + left/right to go to prev/next timepoint</strong>. When off (default), shift + left/right arrow keys go to the previous/next annotation. For spine annotations, this is the previous/next spine along a given segment. When on (experimental) shift + left/right arrow keys will go to the previous/next timepoint while maintaining the same stack window.</p>
+  </li>
+  <li>
+    <p><strong>Auto plot object map on load</strong>. Automatically plot a <a href="map-plot">map plot</a> when a time-series (map) is loaded.</p>
+  </li>
+  <li>
+    <p><strong>Check map before save</strong>. Check the time-series (map) for errors before saving.</p>
+  </li>
+  <li>
+    <p><strong>Allow Jumping Objects</strong>. Advanced. Do not use.</p>
+  </li>
+</ul>
+
+<!-- <IMG class="img-float-left" SRC="images/mm3/mm3-options-bottom.png" WIDTH="300"> -->
+
+<h3 id="intensity-analysis">Intensity Analysis</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-intensity-analysis.png" width="350" /></p>
+
+<p>Only for spine annotations. Controls the parameters of spine intensity analysis. See  <a href="intensity">intensity analysis</a> for a complete decription.</p>
+
+<ul>
+  <li>
+    <p><strong>Activate</strong>. When on, spine selections in a <a href="stack">stack</a> window will show spine and segment ROIs. Note, background ROIs are not show until a spine is analyzed.</p>
+  </li>
+  <li>
+    <p><strong>+/- Slices</strong>. The number of image slices to analyze. For the spine ROI, this is the Z position of the spine head (annotation). For the segment ROI, this is the Z position of the spine connection point (to the segment tracing), for the combined (spine/segment) background ROI, this is the Z position of the spine head.</p>
+  </li>
+  <li>
+    <p><strong>Spine Width (um)</strong>. The default width of the spine ROI.</p>
+  </li>
+  <li>
+    <p><strong>Extend Head and Tail (um)</strong>. Distance to extend a spine ROI beyond the spine head and tail. For the spine head, this extends beyond the position of the spine (head) annotation, for the tail it extends beyond the connection point of the segment tracing radius.</p>
+  </li>
+  <li>
+    <p><strong>Extend Segment (um)</strong>. Distance along the segment to extend the segment ROI. Note, this can cause problems as it does not take into account the spine length. Longer spines with the same segment extension will have lower values for any ratio taken beween the spine ROI and the segment ROI.</p>
+  </li>
+  <li><strong>Background Candidates</strong>
+    <ul>
+      <li><strong>Both Sides</strong>. Consider background ROI candidates on both side of the parent segment.</li>
+      <li><strong>Rows and Row Spacing (um)</strong>. Number of rows to consider and their spacing.</li>
+      <li><strong>Columns and Column Spacing (um)</strong>. Number of columns to consider and their spacing.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Debug</strong>. Advanced use only.</p>
+  </li>
+  <li><strong>Debug On Error</strong>. Advanced use only.</li>
+</ul>
+
+<h3 id="importing-segments-from-fiji">Importing Segments From FIJI</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-fiji-import.png" width="350" /></p>
+
+<ul>
+  <li>
+    <p><strong>Default Segment Radius (um)</strong>. The default segment radius of all imported segment tracings. We have found it is more reliable to specify this as a parameter rather than trying to fit the radius based on image intensity.</p>
+  </li>
+  <li>
+    <p><strong>Box Filter Line and Radius (points)</strong>. On import, the backbone line fit is box filtered. This reduces jitter in z-image planes for segments running parallel to the image plane.</p>
+  </li>
+</ul>
+
+<div class="print-page-break"></div>
+
+<h3 id="miscellaneous">Miscellaneous</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-misc.png" width="350" /></p>
+
+<ul>
+  <li>
+    <p><strong>Load annotations on ‘Load Generic’</strong>. Try and load annotations from the ‘stackdb’ folder.</p>
+  </li>
+  <li>
+    <p><strong>OSX Image Cursor</strong>. In rare cases, we were visually loosing the cursor on MacOS. This will specify a MacOS image cursor as it is moved over an image.</p>
+  </li>
+  <li>
+    <p><strong>Flash Ticks</strong>. A number that controls the speed that a point is flashed when selected. Smaller numbers are faster. Point flashing is used to make it easier to see where there is a point selection. See ‘Object Properties - flashSel’ to control the size, marker, and color of the point that is flashed.</p>
+  </li>
+  <li>
+    <p><strong>Canvas Plugin</strong>. Load the canvas plugin at startup. The canvas plugin is software to organize imaging sessions and is described in <a href="http://blog.cudmore.io/canvas/">canvas</a>.</p>
+  </li>
+  <li>
+    <p><strong>ScanImage and Canvas In Stack Browser</strong>. Show ScanImage and Canvas interface in stack browser.</p>
+  </li>
+</ul>
+
+<h3 id="object-properties">Object Properties</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-object-properties.png" width="250" /></p>
+
+<p>Use this table to set how annotations and lines are displayed. Right-click on ‘marker’ or ‘color’ to set. Double-click on ‘size’ to set. Note, ‘size’ is in arbitrary Igor centric units, generally between 1 and 10.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Idx</th>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Annotation Display</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Set the size, color and marker of annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">spineROI</td>
+      <td style="text-align: left">Spine marker in stack and map plot</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">boutonROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">controlPnt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">pivotPnt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">otherROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">lineROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">6</td>
+      <td style="text-align: left">rectROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">ovalROI</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Annotation Selection</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">8</td>
+      <td style="text-align: left">pntSel</td>
+      <td style="text-align: left">When an annotation is selected</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">9</td>
+      <td style="text-align: left">runSel</td>
+      <td style="text-align: left">When a run of annotations is selected</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">10</td>
+      <td style="text-align: left">searchSel</td>
+      <td style="text-align: left">To overlay markers showing annotations in the last search. Turn this on in the <a href="buttons">buttons</a> window.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">11</td>
+      <td style="text-align: left">maskSel</td>
+      <td style="text-align: left">When a mask is selected</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">12</td>
+      <td style="text-align: left">flashSel</td>
+      <td style="text-align: left">On selection, annotations are flashed. See ‘Options - Miscellaneous - Flash Ticks (au)’ to control the speed.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Other</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">13</td>
+      <td style="text-align: left">globalPivot</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">14</td>
+      <td style="text-align: left">lineSel</td>
+      <td style="text-align: left">Not sure any more, go figure out the brain</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">15</td>
+      <td style="text-align: left">line</td>
+      <td style="text-align: left">Segment tracing backbone line</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">16</td>
+      <td style="text-align: left">radius</td>
+      <td style="text-align: left">Segment tracing radius line</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">17</td>
+      <td style="text-align: left">plotLine</td>
+      <td style="text-align: left">Line connecting corresponding annotations in map plots</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Spine Intensity</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">18</td>
+      <td style="text-align: left">sROI</td>
+      <td style="text-align: left">Spine intensity ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">19</td>
+      <td style="text-align: left">dROI</td>
+      <td style="text-align: left">Segment intensity ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">sbROI</td>
+      <td style="text-align: left">Spine background ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">21</td>
+      <td style="text-align: left">dbROI</td>
+      <td style="text-align: left">Segment background ROI</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Annotation dynamics</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">22</td>
+      <td style="text-align: left">Bad</td>
+      <td style="text-align: left">Bad annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">23</td>
+      <td style="text-align: left">Add</td>
+      <td style="text-align: left">Added annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">24</td>
+      <td style="text-align: left">Subtract</td>
+      <td style="text-align: left">Subtracted annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">25</td>
+      <td style="text-align: left">Persistent</td>
+      <td style="text-align: left">Persistent annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">26</td>
+      <td style="text-align: left">Transient</td>
+      <td style="text-align: left">Transient annotations</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">User 1/2/3</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">27</td>
+      <td style="text-align: left">User 1_1</td>
+      <td style="text-align: left">Not used</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">28</td>
+      <td style="text-align: left">User 1_2</td>
+      <td style="text-align: left">Not used</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">29</td>
+      <td style="text-align: left">User 1_3</td>
+      <td style="text-align: left">Not used</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">30</td>
+      <td style="text-align: left">User 1_4</td>
+      <td style="text-align: left">Not used</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">31</td>
+      <td style="text-align: left">User 1_5</td>
+      <td style="text-align: left">Not used</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">User Type</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">32</td>
+      <td style="text-align: left">User Type 0</td>
+      <td style="text-align: left">User type 0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">33</td>
+      <td style="text-align: left">User Type 1</td>
+      <td style="text-align: left">User type 1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">34</td>
+      <td style="text-align: left">User Type 2</td>
+      <td style="text-align: left">User type 2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">35</td>
+      <td style="text-align: left">User Type 3</td>
+      <td style="text-align: left">User type 3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">36</td>
+      <td style="text-align: left">User Type 4</td>
+      <td style="text-align: left">User type 4</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">37</td>
+      <td style="text-align: left">User Type 5</td>
+      <td style="text-align: left">User type 5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">38</td>
+      <td style="text-align: left">User Type 6</td>
+      <td style="text-align: left">User type 6</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">39</td>
+      <td style="text-align: left">User Type 7</td>
+      <td style="text-align: left">User type 7</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">40</td>
+      <td style="text-align: left">User Type 8</td>
+      <td style="text-align: left">User type 8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">41</td>
+      <td style="text-align: left">User Type 9</td>
+      <td style="text-align: left">User type 9</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="load-stacks-from-special-folder">Load Stacks From Special Folder</h3>
+
+<p><img class="img-float-right" src="images/mm3/options/options-special-folder.png" width="275" /></p>
+
+<p>This is extremely experimental and only used by developers. If running into problems, turn off all these checkboxes. Each of the check boxes will redirect the loading of image stacks to different folders. In particular, the <strong>channels8</strong> option will load 8-bit versions which is useful to speed annotations of larger 16-bit images. See Fiji plugin <a href="https://github.com/cudmore/bob-fiji-plugins/blob/master/bConvertTo8Bit_v5_.py">bConvertTo8Bit_v5_.py</a> to convert entire directories of tiff stacks to 8-bit.</p>
+
+<ul>
+  <li><strong>folder_channels</strong></li>
+  <li><strong>folder_channels_channels8</strong></li>
+  <li><strong>folder_channels8</strong></li>
+  <li><strong>folder_userRaw</strong></li>
+  <li><strong>folder_out:folder_out_aligned</strong></li>
+  <li><strong>Raw Prairie</strong></li>
+  <li>**Trmps all ‘<folder>_out:'</folder></li>
+</ul>
+
+<div class="print-page-break"></div>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Interface">Interface</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2015-04-20-stackdb-options-panel.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>

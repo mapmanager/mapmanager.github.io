@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Map Manager : Algorithms</title>
+        <meta name="description" content="">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+
+	    <!-- added 20180407 -->
+	    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Algorithms | Map Manager</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Algorithms" />
+<meta name="author" content="Robert Cudmore" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Map Manager uses a range of algorithms at different stages of the analysis" />
+<meta property="og:description" content="Map Manager uses a range of algorithms at different stages of the analysis" />
+<link rel="canonical" href="https://mapmanager.github.io/Algorithms" />
+<meta property="og:url" content="https://mapmanager.github.io/Algorithms" />
+<meta property="og:site_name" content="Map Manager" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-07-07T15:46:33-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Algorithms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Robert Cudmore"},"dateModified":"2016-07-07T15:46:33-07:00","datePublished":"2016-07-07T15:46:33-07:00","description":"Map Manager uses a range of algorithms at different stages of the analysis","headline":"Algorithms","mainEntityOfPage":{"@type":"WebPage","@id":"https://mapmanager.github.io/Algorithms"},"url":"https://mapmanager.github.io/Algorithms"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <header>
+<style>
+.myul {
+  display: flex;
+  justify-content:space-between;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  min-width: 500px;
+  font-size: 1.3em;
+}
+</style>
+
+<!-- added 20171023 -->
+<!--  -->
+
+</header>
+
+<div class=no-print>
+
+<ul class="myul">
+	<li>
+		<a class=brand href="/">Map Manager</a>
+	    <small></small>
+	</li>
+
+	<li>
+	<A HREF="/gallery">Gallery</a>
+	</li>
+
+	<li>
+	<A HREF="/download">Download</a>
+	</li>
+
+	<li>
+	<A HREF="/support">Support</a>
+	</li>
+
+	<li>
+	<A HREF="https://github.com/mapmanager"><IMG SRC="images/github/GitHub-Mark-32px.png"></a>
+	</li>
+
+<!--
+	<li>
+	<A HREF="/contact">Contact</a>
+	</li>
+-->
+
+	<li>
+		<form action="/search2.html" method="get">
+			<input placeholder="Search..." type="text" id="search-box" name="query">
+		</form>
+	</li>
+</ul>
+
+</div> <!-- no-print -->
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span2>
+                        <ul class="nav nav-list">
+    <!-- <li><a href="/">Home</a></li> -->
+    
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Workflows</li>
+            
+            <li data-order="1"><a href="/getting-started">Getting started</a></li>
+        
+            
+            <li data-order="3"><a href="/making-a-map">Making a map</a></li>
+        
+            
+            <li data-order="2"><a href="/annotating-a-stack">Annotating a stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Imaging Core</li>
+            
+            <li data-order="2"><a href="/time-series-panel">Time Series</a></li>
+        
+            
+            <li data-order="4"><a href="/stack-annotations">Stack Annotations</a></li>
+        
+            
+            <li data-order="1"><a href="/stack-browser">Stack Browser</a></li>
+        
+            
+            <li data-order="3"><a href="/stack">Stack</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Interface Windows</li>
+            
+            <li data-order="20"><a href="/stack-legend">Stack Legend</a></li>
+        
+            
+            <li data-order="30"><a href="/buttons">Buttons</a></li>
+        
+            
+            <li data-order="7"><a href="/map-database">Map Database</a></li>
+        
+            
+            <li data-order="4"><a href="/point-list">Point List</a></li>
+        
+            
+            <li data-order="5"><a href="/find-points-panel">Find Points</a></li>
+        
+            
+            <li data-order="8"><a href="/hdd-paths">Hard Drive Paths</a></li>
+        
+            
+            <li data-order="7"><a href="/stackdb-options-panel">Options</a></li>
+        
+            
+            <li data-order="3"><a href="/search-panel">Search</a></li>
+        
+            
+            <li data-order="10"><a href="/plot-panel">Plot panel</a></li>
+        
+            
+            <li data-order="9"><a href="/layout-panel">Layout panel</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Plots</li>
+            
+            <li data-order="1"><a href="/stack-plot">Stack plot</a></li>
+        
+            
+            <li data-order="3"><a href="/run-plot">Run plot</a></li>
+        
+            
+            <li data-order="2"><a href="/map-plot">Map plot</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Analysis</li>
+            
+            <li data-order="4"><a href="/Map-Pool">Map Pool</a></li>
+        
+            
+            <li data-order="3"><a href="/Algorithms">Algorithms</a></li>
+        
+            
+            <li data-order="1"><a href="/reports">Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/intensity">Intensity</a></li>
+        
+    
+        
+        
+
+        
+            
+                <li class=nav-header>Blog Posts</li>
+            
+            <li data-order="7"><a href="/bug-reports">Bug Reports</a></li>
+        
+            
+            <li data-order="2"><a href="/map-manager-matlab">Matlab class library</a></li>
+        
+            
+            <li data-order="1"><a href="/fiji-plugins">Converting raw data into Map Manager Tiff stacks</a></li>
+        
+            
+            <li data-order="2"><a href="/release-notes">Release Notes</a></li>
+        
+            
+            <li data-order="2"><a href="/faq">FAQ</a></li>
+        
+            
+            <li data-order="6"><a href="/File-format">File format</a></li>
+        
+    
+
+
+<!-- List additional links. It is recommended to add a divider
+    e.g. <li class=divider></li> first to break up the content. -->
+</ul>
+
+<!--    <A HREF="search.html">Search...</A> -->
+
+                    </div>
+
+                    <div id=content class=span10>
+                        <!-- <div class="page-header"> -->
+<div>
+    <h3>Algorithms
+        
+    </h3>
+</div>
+
+<p>Map Manager uses a range of algorithms at different stages of the analysis</p>
+
+<h3 id="calculating-segment-length-and-distance-along-a-segment">Calculating segment length and distance along a segment</h3>
+
+<p>Each point in the 3D tracing of a segment is assigned a 3D distance from the start of the segment. For calculating the total segment length, used in <a href="reports">segment reports</a>, the Z values of the 3D line segment fit are first smoothed. For a segment running parallel to a single image plane, the actual Z-values of the fitted 3D line tend to jump up and down between adjacent imaging planes. This causes an accumulation of erronious length and the total length is thus an overestimate of the ‘real’ length. By smoothing the Z values of a segment (before segment length calculation) we reduce this additive error.</p>
+
+<p>The amount of Z-smoothing is specified in both segment and dynamics <a href="reports">reports</a>.</p>
+
+<h3 id="connecting-a-spine-to-its-dendritic-segment-tracing">Connecting a spine to its dendritic segment tracing</h3>
+
+<p>Spines are automatically connected to their respective dendritic segment tracing by finding the line with the brightest pixels between the spine head and its segment. Starting from the closest point on the segment tracing, a number of candidate lines between the spine head and the nearby dendritic segment are analyzed and the line with the brightest intensity is chosen. There will sometimes be errors in this calculation, especially when there is curvature in the dendritic segment, resulting in the starting point being mis-identified. These are easy to fix by right-clicking a spine, selecting ‘manually connect’ and then clicking on the center dendritic line to manually specify its connection point.</p>
+
+<p>The number of candidate connection points to search is specified in the <a href="stackdb-options-panel">options panel</a> - Stack DB - Search Line Pnts When Connecting Spine/Bouton’.</p>
+
+<h3 id="spine-intensity-analysis">Spine intensity analysis</h3>
+
+<p>See <a href="intensity">intensity</a> analysis.</p>
+
+<h3 id="linking-corresponding-annotations">Linking corresponding annotations</h3>
+
+<p>A key feature of Map Manager is to connect/link corresponding annotations between time-points in a time-series map. Annotations can be automatically connected in a time-series <a href="map-plot">map plot</a> using right-click - Dynamics - Connect Objects To Next.</p>
+
+<h4 id="connectinglinking-corresponding-3d-annotations">Connecting/linking corresponding 3D annotations</h4>
+
+<p>This is done by user specified ‘3D pivot point’ annotations in each time-point of a time-series. 3D pivot point annotations must be manually positioned to correspond to a structure that is present in each time-point of a time-series. Map Manager can then snap to corresponding regions of a 3D stack between timepoints by snapping to the same 3D offset with respect to each time-points 3D pivot point.</p>
+
+<p>The allowable distance to automatically connect two annotations can be set in the <a href="stackdb-options-panel">options panel</a> - Object Map - Connect points within this distance (um).</p>
+
+<h4 id="connectinglinking-corresponding-spines">Connecting/linking corresponding spines</h4>
+
+<p>Spine annotations are connected/linked between time-points when they are at the same (um) position along a dendritic tracing. Because each tracing in each time-point will be slightly different, Map Manager uses a ‘segment pivot point’ for each segment to specify a ‘0’ distance along a dendritic tracing. These segment pivot points must be manually positioned to correspond to a structure (e.g. a persistent spine) that is present in all time-points.</p>
+
+<p>Set the ‘segment pivot point’ for a given dendritic tracing in a stack window by clicking a point in the tracing, right-click and select ‘Set As Segment Pivot’.</p>
+
+<p>The allowable distance to automatically connect two spine annotations can be set in the <a href="stackdb-options-panel">options panel</a> - Object Map - Connect spines within this distance (um).</p>
+
+
+
+<div class="post-tags">
+  
+  
+  
+    <b>Tags:</b>  
+  
+  
+  
+    <a href="/tags/#Analysis">Analysis</a>
+  
+
+   <!--
+   <a href="javascript:window.print()">print</a>
+    -->
+
+   <!--
+   <BR>
+   <a href="_posts/2016-07-07-Algorithms.pdf">print pdf</a>
+   <BR>
+   -->
+    
+</div>
+
+
+                    </div>
+                
+            </div>
+
+            
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                      Copyright &copy; 2025 - Robert Cudmore -
+
+ <a href="http://robertcudmore.org">robertcudmore.org</a>
+
+<!--
+Documentation for <a href="https://mapmanager.github.io">Map Manager</a>
+-->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                    
+                    //console.log(order, li);
+                }
+
+                //20160327 removed, this was no doing anything???
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    //console.log(section);
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108451899-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108451899-1');
+</script>
+        
+    </body>
+</html>
