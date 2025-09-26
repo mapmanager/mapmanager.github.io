@@ -10,11 +10,13 @@ git checkout gh-pages
 
 echo "Copying built site..."
 cp -r _site/* .
-cp _site/.nojekyll . 2>/dev/null || true
+# cp _site/.nojekyll . 2>/dev/null || true
+cp _site/.nojekyll . 2>/dev/null
 
 echo "Committing and pushing..."
 git add .
-git commit -m "Deploy site $(date)" || true
+#git commit -m "Deploy site $(date)" || true
+git commit -m "Deploy site $(date)"
 git push origin gh-pages
 
 echo "Switching back to master..."
