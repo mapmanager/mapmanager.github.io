@@ -1,38 +1,32 @@
 #!/usr/bin/env bash
-# Deploy Jekyll site to gh-pages branch using git worktree
+# Lightweight Jekyll deploy script
 set -euo pipefail
 
-BRANCH="gh-pages"
-DEPLOY_DIR=".deploy"
+# Config
+REMOTE=origin
+BRANCH=gh-pages
+BUILD_DIR=_site
 
-echo "==> Cleaning up any stale worktrees..."
-git worktree prune
-rm -rf "$DEPLOY_DIR"
-
-# Ensure gh-pages branch exists
-if ! git show-ref --quiet refs/heads/$BRANCH; then
-  echo "==> Creating $BRANCH branch..."
-  git branch $BRANCH
-fi
-
-echo "==> Adding worktree for $BRANCH..."
-git worktree add -B $BRANCH "$DEPLOY_DIR" origin/$BRANCH || git worktree add -B $BRANCH "$DEPLOY_DIR"
-
-echo "==> Building Jekyll site..."
+echo "Building Jekyll site..."
 bundle exec jekyll build
 
-echo "==> Syncing built site into $DEPLOY_DIR..."
-rsync -av --delete _site/ "$DEPLOY_DIR/"
+echo "Preparing temporary git repo in $BUILD_DIR..."
+cd "$BUILD_DIR"
 
-echo "==> Committing and pushing..."
-cd "$DEPLOY_DIR"
-git add --all
-git commit -m "Deploy site $(date)" || echo "Nothing to commit"
-git push origin $BRANCH
-cd -
+# Init repo if needed
+if [ ! -d ".git" ]; then
+  git init
+  git remote add $REMOTE "$(git -C .. config --get remote.$REMOTE.url)"
+fi
 
-echo "==> Cleaning up temporary worktree..."
-git worktree remove "$DEPLOY_DIR" --force
-rm -rf "$DEPLOY_DIR"
+# Reset state each deploy
+git checkout -B $BRANCH
 
-echo "==> Deployment complete!"
+echo "Committing build..."
+git add -A
+git commit -m "Deploy site $(date)" || echo "No changes to commit."
+
+echo "Pushing to $REMOTE/$BRANCH..."
+git push -f $REMOTE HEAD:$BRANCH
+
+echo "Deployment complete!"
