@@ -17,7 +17,11 @@ docker run --rm \
 
 # Commit into gh-pages worktree
 echo "Setting up gh-pages worktree..."
-git worktree add /tmp/site-build $BRANCH || true
+if ! git worktree add /tmp/site-build $BRANCH; then
+    echo "Failed to create worktree. Trying to remove existing worktree first..."
+    git worktree remove /tmp/site-build 2>/dev/null || true
+    git worktree add /tmp/site-build $BRANCH
+fi
 
 echo "Copying built site to gh-pages..."
 rsync -av --delete $BUILD_DIR/ /tmp/site-build/
@@ -29,7 +33,7 @@ git commit -m "Deploy site $(date)" || true
 git push origin $BRANCH
 
 echo "Cleaning up worktree..."
-cd /srv/jekyll
+cd "$(dirname "$0")/.."
 git worktree remove /tmp/site-build
 
 echo "Deployment complete!"
