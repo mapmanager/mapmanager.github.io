@@ -62,7 +62,9 @@ git push origin $BRANCH
 # Step 7: Clean up
 echo "🧹 Cleaning up..."
 cd - > /dev/null
-git worktree remove "$DEPLOY_DIR" --force
+if git worktree list | grep -q "$DEPLOY_DIR"; then
+    git worktree remove "$DEPLOY_DIR" --force
+fi
 rm -rf "$DEPLOY_DIR"
 
 echo "✅ Deployment complete!"
