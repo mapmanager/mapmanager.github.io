@@ -2,7 +2,7 @@
 title: 'Map Manager'
 subtitle: ''
 description: 'Software to annotate image volume time-series'
-url: 'https://mapmanager.net'
+url: 'https://mapmanager.github.io'
 
 social:
   name: Robert Cudmore
@@ -23,7 +23,7 @@ navigation: 2
 
 # URL to source code, used in _includes/footer.html
 author: 'Robert Cudmore'
-codeurl: 'https://mapmanager.net'
+codeurl: 'https://mapmanager.github.io'
 myhomepage: 'http://robertcudmore.org'
 
 # Default categories (in order) to appear in the navigation
